@@ -1,3 +1,35 @@
+// // import { defineConfig, devices } from '@playwright/test';
+
+// // export default defineConfig({
+// //   testDir: './tests',
+// //   fullyParallel: true,
+// //   forbidOnly: !!process.env.CI,
+// //   retries: process.env.CI ? 2 : 0,
+// //   workers: process.env.CI ? 1 : undefined,
+// //   reporter: [
+// //     ['html'],
+// //     ['json', { outputFile: 'test-results/results.json' }]
+// //   ],
+// //   use: {
+// //     baseURL: process.env.BASE_URL || 'https://mpstaging.multiportal.io',
+// //     ignoreHTTPSErrors: true, // ✅ Allow self-signed/invalid certs
+// //     trace: 'on-first-retry',
+// //     screenshot: 'only-on-failure',
+// //     video: 'retain-on-failure',
+// //     headless: false,
+// //     viewport: { width: 1920, height: 1080 },
+// //   },
+// //   projects: [
+// //     {
+// //       name: 'chromium',
+// //       use: { ...devices['Desktop Chrome'], viewport: { width: 1920, height: 1080 } },
+// //     },
+// //     { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
+// //     { name: 'webkit', use: { ...devices['Desktop Safari'] } },
+// //   ],
+
+// // });
+
 // import { defineConfig, devices } from '@playwright/test';
 
 // export default defineConfig({
@@ -12,23 +44,58 @@
 //   ],
 //   use: {
 //     baseURL: process.env.BASE_URL || 'https://mpstaging.multiportal.io',
-//     ignoreHTTPSErrors: true, // ✅ Allow self-signed/invalid certs
+//     ignoreHTTPSErrors: true,
 //     trace: 'on-first-retry',
 //     screenshot: 'only-on-failure',
 //     video: 'retain-on-failure',
-//     headless: false,
-//     viewport: { width: 1920, height: 1080 },
+//     headless: true,
+//     viewport: null,
+//     launchOptions: {
+//       args: [ '--no-sandbox',
+//       '--disable-setuid-sandbox',
+//       '--disable-gpu',
+//       '--disable-dev-shm-usage',
+//       '--disable-software-rasterizer',
+//       '--start-maximized'],
+//     },
 //   },
 //   projects: [
 //     {
 //       name: 'chromium',
-//       use: { ...devices['Desktop Chrome'], viewport: { width: 1920, height: 1080 } },
+//       use: {
+//         ...devices['Desktop Chrome'],
+//         viewport: null,                // allow full window size
+//         deviceScaleFactor: undefined,  // remove to avoid the error
+//         launchOptions: {
+//           args: ['--start-maximized'],
+//         },
+//       },
 //     },
-//     { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
-//     { name: 'webkit', use: { ...devices['Desktop Safari'] } },
+//     {
+//       name: 'firefox',
+//       use: {
+//         ...devices['Desktop Firefox'],
+//         viewport: null,
+//         deviceScaleFactor: undefined,
+//         launchOptions: {
+//           args: ['--start-maximized'],
+//         },
+//       },
+//     },
+//     {
+//       name: 'webkit',
+//       use: {
+//         ...devices['Desktop Safari'],
+//         viewport: null,
+//         deviceScaleFactor: undefined,
+//         launchOptions: {
+//           args: ['--start-maximized'],
+//         },
+//       },
+//     },
 //   ],
-
 // });
+
 
 import { defineConfig, devices } from '@playwright/test';
 
@@ -48,15 +115,17 @@ export default defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-    headless: true,
+    headless: true, // ✅ force headless for CI
     viewport: null,
     launchOptions: {
-      args: [ '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--disable-gpu',
-      '--disable-dev-shm-usage',
-      '--disable-software-rasterizer',
-      '--start-maximized'],
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-software-rasterizer',
+        '--start-maximized'
+      ],
     },
   },
   projects: [
@@ -64,10 +133,18 @@ export default defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        viewport: null,                // allow full window size
-        deviceScaleFactor: undefined,  // remove to avoid the error
+        headless: true,
+        viewport: null,
+        deviceScaleFactor: undefined,
         launchOptions: {
-          args: ['--start-maximized'],
+          args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-gpu',
+            '--disable-dev-shm-usage',
+            '--disable-software-rasterizer',
+            '--start-maximized'
+          ],
         },
       },
     },
@@ -75,10 +152,18 @@ export default defineConfig({
       name: 'firefox',
       use: {
         ...devices['Desktop Firefox'],
+        headless: true,
         viewport: null,
         deviceScaleFactor: undefined,
         launchOptions: {
-          args: ['--start-maximized'],
+          args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-gpu',
+            '--disable-dev-shm-usage',
+            '--disable-software-rasterizer',
+            '--start-maximized'
+          ],
         },
       },
     },
@@ -86,10 +171,18 @@ export default defineConfig({
       name: 'webkit',
       use: {
         ...devices['Desktop Safari'],
+        headless: true,
         viewport: null,
         deviceScaleFactor: undefined,
         launchOptions: {
-          args: ['--start-maximized'],
+          args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-gpu',
+            '--disable-dev-shm-usage',
+            '--disable-software-rasterizer',
+            '--start-maximized'
+          ],
         },
       },
     },
