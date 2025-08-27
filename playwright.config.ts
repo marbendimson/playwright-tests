@@ -51,7 +51,12 @@ export default defineConfig({
     headless: true,
     viewport: null,
     launchOptions: {
-      args: ['--start-maximized'],
+      args: [ '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-gpu',
+      '--disable-dev-shm-usage',
+      '--disable-software-rasterizer',
+      '--start-maximized'],
     },
   },
   projects: [
