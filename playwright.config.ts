@@ -115,77 +115,29 @@ export default defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-    headless: true, // ✅ force headless for CI
-    viewport: null,
+    headless: true,       // ✅ headless for CI
+    viewport: { width: 1920, height: 1080 },
     launchOptions: {
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
-        '--disable-gpu',
         '--disable-dev-shm-usage',
-        '--disable-software-rasterizer',
-        '--start-maximized'
+        '--disable-gpu',
       ],
     },
   },
   projects: [
     {
       name: 'chromium',
-      use: {
-        ...devices['Desktop Chrome'],
-        headless: true,
-        viewport: null,
-        deviceScaleFactor: undefined,
-        launchOptions: {
-          args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-gpu',
-            '--disable-dev-shm-usage',
-            '--disable-software-rasterizer',
-            '--start-maximized'
-          ],
-        },
-      },
+      use: { ...devices['Desktop Chrome'], headless: true }
     },
     {
       name: 'firefox',
-      use: {
-        ...devices['Desktop Firefox'],
-        headless: true,
-        viewport: null,
-        deviceScaleFactor: undefined,
-        launchOptions: {
-          args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-gpu',
-            '--disable-dev-shm-usage',
-            '--disable-software-rasterizer',
-            '--start-maximized'
-          ],
-        },
-      },
+      use: { ...devices['Desktop Firefox'], headless: true }
     },
     {
       name: 'webkit',
-      use: {
-        ...devices['Desktop Safari'],
-        headless: true,
-        viewport: null,
-        deviceScaleFactor: undefined,
-        launchOptions: {
-          args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-gpu',
-            '--disable-dev-shm-usage',
-            '--disable-software-rasterizer',
-            '--start-maximized'
-          ],
-        },
-      },
+      use: { ...devices['Desktop Safari'], headless: true }
     },
   ],
 });
-
