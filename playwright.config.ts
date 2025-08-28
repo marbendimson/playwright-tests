@@ -155,6 +155,8 @@ export default defineConfig({
     ['html'],
     ['json', { outputFile: 'test-results/results.json' }]
   ],
+
+  // Default for all projects
   use: {
     baseURL: process.env.BASE_URL || 'https://mpstaging.multiportal.io',
     ignoreHTTPSErrors: true,
@@ -162,29 +164,30 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     headless: true,
-    viewport: { width: 1920, height: 1080 },
-    launchOptions: {
-      args: [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-dev-shm-usage',
-        '--disable-gpu',
-      ],
-    },
   },
+
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'], headless: true }
+      use: {
+        ...devices['Desktop Chrome'],
+        headless: true,
+        viewport: null, // let Chromium resize window itself
+        launchOptions: {
+          args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-gpu',
+            '--start-maximized', // ✅ safe here only
+          ],
+        },
+      },
     },
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'], headless: true }
-    },
-    {
-      name: 'webkit',
       use: {
-        browserName: 'webkit',
+        ...devices['Desktop Firefox'],
         headless: true,
         viewport: { width: 1920, height: 1080 },
         launchOptions: {
@@ -196,5 +199,21 @@ export default defineConfig({
         },
       },
     },
+    {
+      name: 'webkit',
+      use: {
+        browserName: 'webkit',
+        headless: true,
+        viewport: { width: 1920, height: 1080 }, // mimic fullscreen
+        launchOptions: {
+          args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+          ],
+        },
+      },
+    },
   ],
 });
+
