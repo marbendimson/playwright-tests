@@ -97,6 +97,52 @@
 // });
 
 
+// import { defineConfig, devices } from '@playwright/test';
+
+// export default defineConfig({
+//   testDir: './tests',
+//   fullyParallel: true,
+//   forbidOnly: !!process.env.CI,
+//   retries: process.env.CI ? 2 : 0,
+//   workers: process.env.CI ? 1 : undefined,
+//   reporter: [
+//     ['html'],
+//     ['json', { outputFile: 'test-results/results.json' }]
+//   ],
+//   use: {
+//     baseURL: process.env.BASE_URL || 'https://mpstaging.multiportal.io',
+//     ignoreHTTPSErrors: true,
+//     trace: 'on-first-retry',
+//     screenshot: 'only-on-failure',
+//     video: 'retain-on-failure',
+//     headless: true,       // ✅ headless for CI
+//     viewport: { width: 1920, height: 1080 },
+//     launchOptions: {
+//       args: [
+//         '--no-sandbox',
+//         '--disable-setuid-sandbox',
+//         '--disable-dev-shm-usage',
+//         '--disable-gpu',
+//       ],
+//     },
+//   },
+//   projects: [
+//     {
+//       name: 'chromium',
+//       use: { ...devices['Desktop Chrome'], headless: true }
+//     },
+//     {
+//       name: 'firefox',
+//       use: { ...devices['Desktop Firefox'], headless: true }
+//     },
+//     {
+//       name: 'webkit',
+//       use: { ...devices['Desktop Safari'], headless: true }
+//     },
+//   ],
+// });
+
+
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
@@ -115,7 +161,7 @@ export default defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-    headless: true,       // ✅ headless for CI
+    headless: true,
     viewport: { width: 1920, height: 1080 },
     launchOptions: {
       args: [
@@ -137,7 +183,18 @@ export default defineConfig({
     },
     {
       name: 'webkit',
-      use: { ...devices['Desktop Safari'], headless: true }
+      use: {
+        browserName: 'webkit',
+        headless: true,
+        viewport: { width: 1920, height: 1080 },
+        launchOptions: {
+          args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+          ],
+        },
+      },
     },
   ],
 });
