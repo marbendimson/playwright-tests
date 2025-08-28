@@ -179,7 +179,7 @@ export default defineConfig({
             '--disable-setuid-sandbox',
             '--disable-dev-shm-usage',
             '--disable-gpu',
-            '--start-maximized', // ✅ safe here only
+            //'--start-maximized', // ✅ safe here only
           ],
         },
       },
