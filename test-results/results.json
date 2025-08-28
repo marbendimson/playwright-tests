@@ -2,7 +2,7 @@
   "config": {
     "configFile": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\playwright.config.ts",
     "rootDir": "C:/Users/marben.dimson/Desktop/Auto/HN/MP/tests",
-    "forbidOnly": true,
+    "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
     "globalTeardown": null,
@@ -11,10 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "ci": {
-        "commitHref": "http://localhost:8080/job/psample/3/"
-      },
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -38,12 +35,9 @@
       {
         "outputDir": "C:/Users/marben.dimson/Desktop/Auto/HN/MP/test-results",
         "repeatEach": 1,
-        "retries": 2,
+        "retries": 0,
         "metadata": {
-          "ci": {
-            "commitHref": "http://localhost:8080/job/psample/3/"
-          },
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "chromium",
         "name": "chromium",
@@ -57,12 +51,9 @@
       {
         "outputDir": "C:/Users/marben.dimson/Desktop/Auto/HN/MP/test-results",
         "repeatEach": 1,
-        "retries": 2,
+        "retries": 0,
         "metadata": {
-          "ci": {
-            "commitHref": "http://localhost:8080/job/psample/3/"
-          },
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "firefox",
         "name": "firefox",
@@ -76,12 +67,9 @@
       {
         "outputDir": "C:/Users/marben.dimson/Desktop/Auto/HN/MP/test-results",
         "repeatEach": 1,
-        "retries": 2,
+        "retries": 0,
         "metadata": {
-          "ci": {
-            "commitHref": "http://localhost:8080/job/psample/3/"
-          },
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "webkit",
         "name": "webkit",
@@ -97,58 +85,224 @@
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.54.1",
-    "workers": 1,
+    "workers": 2,
     "webServer": null
   },
   "suites": [
     {
-      "title": "VDC\\2_Verify_validation_message_if_naming_Virtual_machine_start_in_hyphens.spec.ts",
-      "file": "VDC/2_Verify_validation_message_if_naming_Virtual_machine_start_in_hyphens.spec.ts",
+      "title": "Network\\TS_001_Verify_internalNetwork_page.spec.ts",
+      "file": "Network/TS_001_Verify_internalNetwork_page.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "Create VM - All in One Flow",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "Internal Networks Page",
+          "file": "Network/TS_001_Verify_internalNetwork_page.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "should login and display Internal Networks page",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 13364,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-27T05:43:31.549Z",
+                  "timeout": 30000,
                   "annotations": [],
-                  "attachments": []
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8884,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-27T23:23:01.095Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
+              "id": "23d6b9a00d37c2abcc5a-a234b6fe55f42c14d176",
+              "file": "Network/TS_001_Verify_internalNetwork_page.spec.ts",
+              "line": 7,
+              "column": 7
             }
-          ],
-          "id": "ae48471b4d964a4d74f1-d6d843eee1f93810adb1",
-          "file": "VDC/2_Verify_validation_message_if_naming_Virtual_machine_start_in_hyphens.spec.ts",
-          "line": 8,
-          "column": 5
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Network\\TS_002_Verify_create_internal.spec.ts",
+      "file": "Network/TS_002_Verify_create_internal.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Internal Networks Page",
+          "file": "Network/TS_002_Verify_create_internal.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should login and display Internal Networks page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 13797,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-27T23:23:01.093Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3b7a6cb93fee2326045d-f965c01ff230242d192b",
+              "file": "Network/TS_002_Verify_create_internal.spec.ts",
+              "line": 8,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Network\\TS_003_Verify_EditInternalNetwork.spec.ts",
+      "file": "Network/TS_003_Verify_EditInternalNetwork.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Internal Networks Page",
+          "file": "Network/TS_003_Verify_EditInternalNetwork.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should login and display Internal Networks page, then edit a network",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9876,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "VDC \"VDC Autotest (updatetestDC)\" not found or already selected — skipping.\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-08-27T23:23:10.386Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7cabcaf150ec1a76dd7d-7d2625b5c31399358d2d",
+              "file": "Network/TS_003_Verify_EditInternalNetwork.spec.ts",
+              "line": 8,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Network\\TS_004_Verify_deleteInternalNetwork.spec.ts",
+      "file": "Network/TS_004_Verify_deleteInternalNetwork.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Internal Networks Page",
+          "file": "Network/TS_004_Verify_deleteInternalNetwork.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should login and display Internal Networks page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 9423,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-27T23:23:15.329Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a3c4310a6d3d04cd7e8e-d8269a420c6a73486b35",
+              "file": "Network/TS_004_Verify_deleteInternalNetwork.spec.ts",
+              "line": 8,
+              "column": 7
+            }
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-08-27T05:43:30.295Z",
-    "duration": 15132.765,
-    "expected": 1,
+    "startTime": "2025-08-27T23:22:59.700Z",
+    "duration": 25249.864,
+    "expected": 4,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

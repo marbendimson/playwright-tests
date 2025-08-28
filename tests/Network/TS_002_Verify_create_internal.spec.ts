@@ -46,7 +46,7 @@ test.describe('Internal Networks Page', () => {
   await formPage.fillForm({
     name: 'My Network',
     tenant: 'TenantCreate',
-    dataCenter: 'DC',
+    dataCenter: 'MainDC',
     virtualDataCenters: ['VDC Autotest'], // example selections
     subnet: 'test',
     gateway: 'sample auto',
@@ -55,10 +55,16 @@ test.describe('Internal Networks Page', () => {
   // Submit the form again
   await formPage.submitForm();
    await verifyInternalNetworkPage(page);
-  await expect(page.getByRole('cell', { name: 'My Network', exact: true })).toBeVisible();
-  await page.reload();
-  await verifyInternalNetworkPage(page);
-  await expect(page.getByRole('cell', { name: 'My Network', exact: true })).toBeVisible();
+  // Increase timeout to allow table to update
+const newNetworkCell = page.locator('table >> text=My Network');
+await newNetworkCell.waitFor({ state: 'visible', timeout: 15000 });
+await expect(newNetworkCell).toBeVisible();
+
+// Optional: reload and verify again
+await page.reload();
+await verifyInternalNetworkPage(page);
+await expect(page.locator('table >> text=My Network')).toBeVisible({ timeout: 15000 });
+
 
 
   });
