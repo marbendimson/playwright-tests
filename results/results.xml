@@ -1,0 +1,6 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="10.271626">
+<testsuite name="Network\TS_001_Verify_internalNetwork_page.spec.ts" timestamp="2025-08-29T02:58:00.238Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.561" errors="0">
+<testcase name="Internal Networks Page › should login and display Internal Networks page" classname="Network\TS_001_Verify_internalNetwork_page.spec.ts" time="8.561">
+</testcase>
+</testsuite>
+</testsuites>
