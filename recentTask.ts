@@ -184,7 +184,7 @@ export async function verifyAndRemoveCompletedTask(page: Page, taskName: string,
 
 export async function verifyVMCreation(
   page: Page,
-  timeoutMs = 300000 // 5 minutes
+  timeoutMs = 320000 // 5 minutes
 ): Promise<void> {
   const taskPanel = page.locator('#fixedTaskList');
   const toggleIcon = page.locator('#taskListToggleIcon');

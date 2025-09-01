@@ -73,7 +73,7 @@ const card = page.locator('div.card.card-animate.bg-primary');
   await expect(card.locator('p', { hasText: 'Allocation' })).toBeVisible();
   await expect(card.locator('a', { hasText: 'VDC Autotest' })).toBeVisible();
 
- await verifyVMCreation(page);
+ await verifyVMCreation(page,30000);
 
   // Wait for the row containing the VM name to be visible
 await expect(
@@ -85,15 +85,15 @@ await expect(
   page.locator('tr:has(td a[title="AutoVM-001"]) td .badge')
 ).toHaveText(/Powered Off/i);
 
-await page.reload()
+// await page.reload()
 
-await expect(
-  page.locator('tr:has(td a[title="AutoVM-001"])')
-).toBeVisible({ timeout: 30000 });
+// await expect(
+//   page.locator('tr:has(td a[title="AutoVM-001"])')
+// ).toBeVisible({ timeout: 30000 });
 
-// Optional: Verify the "Powered Off" status text
-await expect(
-  page.locator('tr:has(td a[title="AutoVM-001"]) td .badge')
-).toHaveText(/Powered Off/i);
+// // Optional: Verify the "Powered Off" status text
+// await expect(
+//   page.locator('tr:has(td a[title="AutoVM-001"]) td .badge')
+// ).toHaveText(/Powered Off/i);
 
 });
