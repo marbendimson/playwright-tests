@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import { env, getUserByRole } from '../../global.env';
 import { loginSelectors } from '../../selectors';
 import { IsoUploadForm } from '../../ISOupload';
+import path from 'path';
 
 test.describe('Virtual Machine Template Page — ISO Upload Flow', () => {
   test('Should display the ISO Upload form and allow uploading via URL @dev @staging @preprod', async ({ page }) => {
@@ -38,7 +39,7 @@ test.describe('Virtual Machine Template Page — ISO Upload Flow', () => {
     // Fill the upload form
     const form = new IsoUploadForm(page);
 
-    await form.selectDataCenter('DC');
+    await form.selectDataCenter('MainDC');
     await form.setVisibility(true, 'TenantCreate', 'VDC Autotest');
 
     const nextButton = page.locator('#data-center-submit');
@@ -52,7 +53,9 @@ test.describe('Virtual Machine Template Page — ISO Upload Flow', () => {
      await expect(isoHeading).toBeVisible();
 
     // Perform upload via URL (replace with actual URL string as needed)
-    await form.chooseUploadMethod('local', 'C:\\Users\\marben.dimson\\Desktop\\TinyCore-current.iso');
+    const isoPath = path.resolve(__dirname, '../fixtures/TinyCore-current.iso');
+    await form.chooseUploadMethod('local', isoPath);
+
     //await form.chooseUploadMethod('url', 'https://ubuntu.mirror.serversaustralia.com.au/ubuntu-releases/24.10/ubuntu-24.10-live-server-amd64.iso');
 
     const nextStepButton = page.locator('#iso-selection-submit');
@@ -68,7 +71,7 @@ test.describe('Virtual Machine Template Page — ISO Upload Flow', () => {
 
 
     // Confirm upload details :s
-    await expect(page.locator('.c-data_center_id')).toHaveText('DC');
+    await expect(page.locator('.c-data_center_id')).toHaveText('MainDC');
     await expect(page.locator('.c-upload_method')).toContainText('Upload via local computer');
     await expect(page.locator('.c-upload_method')).toContainText('TinyCore-current.iso');
     await expect(page.locator('.c-iso_name')).toHaveText('Test only-public');

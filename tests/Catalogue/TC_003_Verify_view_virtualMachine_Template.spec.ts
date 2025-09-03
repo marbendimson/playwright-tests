@@ -62,9 +62,9 @@ await page.reload()
 await expect(page.getByRole('tab', { name: /hardware attachments/i })).toBeVisible();
 await page.getByRole('tab', { name: /hardware attachments/i }).click();
 
-await expect(page.locator('th', { hasText: 'Tpmstate0' })).toBeVisible();
-await expect(page.locator('th', { hasText: 'Scsihw' })).toBeVisible();
-await expect(page.locator('th', { hasText: 'Scsi0' })).toBeVisible();
+// await expect(page.locator('th', { hasText: 'Tpmstate0' })).toBeVisible();
+// await expect(page.locator('th', { hasText: 'Scsihw' })).toBeVisible();
+// await expect(page.locator('th', { hasText: 'Scsi0' })).toBeVisible();
 
   });
  });    

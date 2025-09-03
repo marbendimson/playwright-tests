@@ -4,8 +4,8 @@ import { loginSelectors } from '../../selectors';
 import { verifyInternalNetworkPage } from '../../network_internal';
 import path from 'path';
 
-test.describe('Verify Global Configuration Page ', () => {
-  test('should be able to successfully view Global config page', async ({ page }) => {
+test.describe('Verify select small logo ', () => {
+  test('should be able to successfully select and display small logo ', async ({ page }) => {
     const user = getUserByRole('Service Provider');
 
     await page.goto(env.baseURL + '/login');

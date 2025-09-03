@@ -4,10 +4,19 @@ import { loginSelectors } from '../../selectors';
 import { IsoUploadForm } from '../../ISOupload';
 
 test.describe('Virtual Machine Template Page — ISO Upload Flow', () => {
-  test('Should display the ISO Upload form and allow uploading via URL @dev @staging @preprod', async ({ page }) => {
+  test('Should display the ISO Upload form and allow uploading via Public URL @dev @staging @preprod', async ({ page }) => {
+    // =========================
+    // Test data
+    // =========================
     const user = getUserByRole('Service Provider');
+    const isoUrl = 'http://tinycorelinux.net/15.x/x86_64/release/TinyCorePure64-15.0.iso';
+    const isoFileName = 'TinyCorePure64-15.0.iso';
+    const isoFriendlyName = 'Test URL-public';
+    const isoDescription = 'Test upload ISO storage via automation';
 
+    // =========================
     // Login
+    // =========================
     await page.goto(`${env.baseURL}/login`);
     await page.fill(loginSelectors.username, user.username);
     await page.fill(loginSelectors.password, user.password);
@@ -15,88 +24,81 @@ test.describe('Virtual Machine Template Page — ISO Upload Flow', () => {
     await page.waitForLoadState('networkidle');
     await expect(page.locator(loginSelectors.success)).toBeVisible({ timeout: 15000 });
 
+    // =========================
     // Navigate to ISO Upload
+    // =========================
     const catalogueNav = page.locator('span:has-text("Catalogue")');
-    await expect(catalogueNav, 'Catalogue navigation should be visible').toBeVisible();
+    await expect(catalogueNav).toBeVisible();
     await catalogueNav.click();
 
     const isoNav = page.getByRole('link', { name: 'ISOs' });
-    await expect(isoNav, 'ISOs link should be visible').toBeVisible();
+    await expect(isoNav).toBeVisible();
     await isoNav.click();
 
-    // Validate ISO Storage page
-    await expect(page.getByRole('heading', { level: 4, name: 'ISO Storage' }), 'ISO Storage heading should be visible').toBeVisible();
+    await expect(page.getByRole('heading', { level: 4, name: 'ISO Storage' })).toBeVisible();
 
     const uploadLink = page.getByRole('link', { name: /upload/i });
-    await expect(uploadLink, 'Upload ISO link should be visible').toBeVisible();
+    await expect(uploadLink).toBeVisible();
     await uploadLink.click();
 
-    await expect(page.getByRole('link', { name: /Import ISO from Proxmox/i }), 'Import from Proxmox link should be visible').toBeVisible();
+    await expect(page.getByRole('link', { name: /Import ISO from Proxmox/i })).toBeVisible();
 
-    // Fill the upload form
+    // =========================
+    // Step 1 — Data Center & Visibility
+    // =========================
     const form = new IsoUploadForm(page);
 
-    await form.selectDataCenter('DC');
-    await form.setVisibility(true, 'TenantCreate', 'VDC Autotest');
+    await form.selectDataCenter('MainDC');
+    await form.setVisibility(true, 'TenantCreate', 'VDC Autotest'); // true = Public
+    await form.nextFromStep1();
 
-    const nextButton = page.locator('#data-center-submit');
-    await expect(nextButton, 'Next Step button should be visible and enabled').toBeVisible();
-    await expect(nextButton).toBeEnabled();
-    await nextButton.click();
+    // =========================
+    // Step 2 — Upload Method
+    // =========================
+    await expect(page.getByRole('heading', { name: 'Select ISO Upload Method' })).toBeVisible();
+    await form.chooseUploadMethod('url', isoUrl);
 
-    // Validate upload method step
-    await expect(page.getByRole('heading', { name: 'Select ISO Upload Method' }), 'Upload method section should appear').toBeVisible();
-
-    // Perform upload via URL (replace with actual URL string as needed)
-    //await form.chooseUploadMethod('local', 'C:\\Users\\marben.dimson\\Desktop\\TinyCore-current.iso');
-    await form.chooseUploadMethod('url', 'http://tinycorelinux.net/15.x/x86_64/release/TinyCorePure64-15.0.iso');
-
-    const uploadedFileName = page.getByText('TinyCorePure64-15.0.iso', { exact: true });
+    // Verify uploaded filename is displayed
+    const uploadedFileName = page.locator('.file-name-container').getByText(isoFileName, { exact: true });
     await expect(uploadedFileName).toBeVisible();
-    await expect(uploadedFileName).toHaveText('TinyCorePure64-15.0.iso');
+    await expect(uploadedFileName).toHaveText(isoFileName);
 
-    const nextStepButton = page.locator('#iso-selection-submit');
-    await expect(nextStepButton, 'Next Step button should be visible').toBeVisible();
-    await expect(nextStepButton, 'Next Step button should be enabled').toBeEnabled();
-    await nextStepButton.click();
+    await form.nextFromStep2();
 
-    //input name and ISO description
-    await form.fillIsoMetadata('Test URL-public ', 'Test upload ISO storage via automation');
-    const nextButton1 = page.locator('#iso-name-submit');
-    await expect(nextButton1, 'Next Step button should be visible and enabled').toBeVisible();
-    await expect(nextButton1).toBeEnabled();
-    await nextButton1.click();
+    // =========================
+    // Step 3 — ISO Metadata
+    // =========================
+    await expect(page.getByRole('heading', { level: 5, name: 'Give Your ISO a Friendly Name' })).toBeVisible();
+    await form.fillIsoMetadata(isoFriendlyName, isoDescription);
+    await form.nextFromStep3();
 
+    // =========================
+    // Step 4 — Confirmation
+    // =========================
+    await form.verifyConfirmation({
+      dataCenter: 'MainDC',
+      uploadMethod: 'Upload via URL',
+      fileName: isoFileName,
+      isoName: isoFriendlyName,
+      description: isoDescription,
+    });
 
-    // Confirm upload details :
-    await expect(page.locator('.c-data_center_id')).toHaveText('DC');
-    await expect(page.locator('.c-upload_method')).toContainText('Upload via URL');
-    await expect(page.locator('.c-upload_method')).toContainText('TinyCorePure64-15.0.iso');
-    await expect(page.locator('.c-iso_name')).toHaveText('Test URL-public');
+    await form.confirmUpload();
 
-    const confirmButton = page.locator('#submit-button');
-    await expect(confirmButton, 'Upload ISO button should be visible and enabled').toBeVisible();
-    await expect(confirmButton).toBeEnabled();
-    await confirmButton.click();
+    // =========================
+    // Success confirmation
+    // =========================
+    const successAlert = page.locator('div.alert-success', { hasText: 'ISO Uploaded' });
+    await expect(successAlert).toBeVisible();
+    await expect(successAlert).toContainText('ISO Uploaded');
 
+    // =========================
+    // Verify ISO appears in list
+    // =========================
+    const td = page.locator('td', { hasText: isoFriendlyName });
+    await expect(td).toBeVisible({ timeout: 10000 });
 
-    const successAlert = page.locator('div.alert-success', {hasText: 'ISO Uploaded Succesfully',});
-    await expect(successAlert, 'Success message should appear after upload').toBeVisible();
-    await expect(successAlert).toHaveText('ISO Uploaded Succesfully');
-
-    const td = page.locator('td', { hasText: 'Test URL-public' });
-await td.waitFor({ state: 'visible' });
-await expect(td).toBeVisible();
-
-await page.reload()
-
-await td.waitFor({ state: 'visible' });
-await expect(td).toBeVisible();
-
-
-
-
-
-
+    await page.reload();
+    await expect(td).toBeVisible({ timeout: 10000 });
   });
 });

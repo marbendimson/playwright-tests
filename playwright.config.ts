@@ -185,23 +185,43 @@ export default defineConfig({
         '--disable-setuid-sandbox',
         '--disable-dev-shm-usage',
         '--disable-gpu',
+        
       ],
     },
   },
 
-  projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+ projects: [
+  {
+    name: 'chromium',
+    use: {
+      ...devices['Desktop Chrome'],
+      viewport: null, // full screen
+       deviceScaleFactor: undefined,
+      launchOptions: {
+        args: ['--start-maximized'],
+      },
     },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+  },
+  {
+    name: 'firefox',
+    use: {
+      ...devices['Desktop Firefox'],
+      viewport: null, // full screen
+       deviceScaleFactor: undefined,
+      launchOptions: {
+        args: ['--start-maximized'],
+      },
     },
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+  },
+  {
+    name: 'webkit',
+    use: {
+      ...devices['Desktop Safari'],
+      // Do not maximize WebKit
+      viewport: { width: 1280, height: 800 }, // keep default or custom fixed size
     },
-  ],
+  },
+],
+
 });
 

@@ -26,7 +26,7 @@ test.describe('Login Success Tests', () => {
   const searchInput = page.locator('#companysearch-name'); // replace with correct selector
   await expect(searchInput).toBeVisible();
   await expect(searchInput).toBeEnabled();
-  await searchInput.fill('finaltest');
+  await searchInput.fill('QA_testingCreate');
 
   const searchButton = page.locator('button:has-text("Search")'); // replace with correct selector
   await expect(searchButton).toBeVisible();
@@ -41,7 +41,7 @@ test.describe('Login Success Tests', () => {
   await expect(nameHeader).toBeVisible();
   await expect(nameHeader).toHaveText('Name');
 
-  const resultCell = page.locator('td:has-text("finaltest")'); // replace with actual td selector if needed
+  const resultCell = page.locator('td:has-text("QA_testingCreate")'); // replace with actual td selector if needed
   await expect(resultCell).toBeVisible();
 
   // 🔄 Refresh and wait for page to reload

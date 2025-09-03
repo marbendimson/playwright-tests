@@ -10,7 +10,9 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {},
+    "metadata": {
+      "actualWorkers": 1
+    },
     "preserveOutput": "always",
     "reporter": [
       [
@@ -47,7 +49,9 @@
         "outputDir": "C:/Users/marben.dimson/Desktop/Auto/HN/MP/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 1
+        },
         "id": "chromium",
         "name": "chromium",
         "testDir": "C:/Users/marben.dimson/Desktop/Auto/HN/MP/tests",
@@ -61,7 +65,9 @@
         "outputDir": "C:/Users/marben.dimson/Desktop/Auto/HN/MP/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 1
+        },
         "id": "firefox",
         "name": "firefox",
         "testDir": "C:/Users/marben.dimson/Desktop/Auto/HN/MP/tests",
@@ -75,7 +81,9 @@
         "outputDir": "C:/Users/marben.dimson/Desktop/Auto/HN/MP/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 1
+        },
         "id": "webkit",
         "name": "webkit",
         "testDir": "C:/Users/marben.dimson/Desktop/Auto/HN/MP/tests",
@@ -93,18 +101,641 @@
     "workers": 1,
     "webServer": null
   },
-  "suites": [],
-  "errors": [
+  "suites": [
     {
-      "message": "Error: No tests found.\nMake sure that arguments are regular expressions matching test files.\nYou may need to escape symbols like \"$\" or \"*\" and quote the arguments.",
-      "stack": "Error: No tests found.\nMake sure that arguments are regular expressions matching test files.\nYou may need to escape symbols like \"$\" or \"*\" and quote the arguments."
+      "title": "Catalogue\\TC_001_Verify_Virtual_Machine_Templatepage.spec.ts",
+      "file": "Catalogue/TC_001_Verify_Virtual_Machine_Templatepage.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify Virtual Machine Template page",
+          "file": "Catalogue/TC_001_Verify_Virtual_Machine_Templatepage.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod",
+              "ok": true,
+              "tags": [
+                "dev",
+                "staging",
+                "preprod"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12052,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T05:36:00.976Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "64c28dfb457264206fda-c4c4b2b5140c1c3a3e4c",
+              "file": "Catalogue/TC_001_Verify_Virtual_Machine_Templatepage.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Catalogue\\TC_001.5Verify_delete_VMTemplate.spec.ts",
+      "file": "Catalogue/TC_001.5Verify_delete_VMTemplate.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify Virtual Machine Template page",
+          "file": "Catalogue/TC_001.5Verify_delete_VMTemplate.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod",
+              "ok": true,
+              "tags": [
+                "dev",
+                "staging",
+                "preprod"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11837,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T05:36:13.343Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "341fa675f3c75dab072d-35024dc66a3567da92de",
+              "file": "Catalogue/TC_001.5Verify_delete_VMTemplate.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Catalogue\\TC_002_Verify_Import_Virtual_Machine_public.spec.ts",
+      "file": "Catalogue/TC_002_Verify_Import_Virtual_Machine_public.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify Virtual Machine Template page",
+          "file": "Catalogue/TC_002_Verify_Import_Virtual_Machine_public.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod",
+              "ok": true,
+              "tags": [
+                "dev",
+                "staging",
+                "preprod"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10750,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T05:36:25.201Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a9b8052536de5ff5e211-56cbbb21e39c85d7793d",
+              "file": "Catalogue/TC_002_Verify_Import_Virtual_Machine_public.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Catalogue\\TC_003_Verify_view_virtualMachine_Template.spec.ts",
+      "file": "Catalogue/TC_003_Verify_view_virtualMachine_Template.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify view virtual machine template page",
+          "file": "Catalogue/TC_003_Verify_view_virtualMachine_Template.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should successfully display virtual machine Template page without any UI and Typo issues  @dev @staging @preprod",
+              "ok": true,
+              "tags": [
+                "dev",
+                "staging",
+                "preprod"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10168,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "No VM Template card found. Skipping validation.\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-09-03T05:36:35.973Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1b550c066382302fc573-3beda35be9a061322c61",
+              "file": "Catalogue/TC_003_Verify_view_virtualMachine_Template.spec.ts",
+              "line": 6,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Catalogue\\TC_004_Verify_ISOpage.spec.ts",
+      "file": "Catalogue/TC_004_Verify_ISOpage.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify view virtual machine template page",
+          "file": "Catalogue/TC_004_Verify_ISOpage.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should successfully display virtual machine Template page without any UI and Typo issues  @dev @staging @preprod",
+              "ok": true,
+              "tags": [
+                "dev",
+                "staging",
+                "preprod"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9211,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T05:36:46.162Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "dc24bc4d4ce3ca1d70aa-88ac4d8936036e9b89de",
+              "file": "Catalogue/TC_004_Verify_ISOpage.spec.ts",
+              "line": 6,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Catalogue\\TC_005_Verify_upload_ISO_storage_as_public.spec.ts",
+      "file": "Catalogue/TC_005_Verify_upload_ISO_storage_as_public.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Virtual Machine Template Page — ISO Upload Flow",
+          "file": "Catalogue/TC_005_Verify_upload_ISO_storage_as_public.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should display the ISO Upload form and allow uploading via URL @dev @staging @preprod",
+              "ok": true,
+              "tags": [
+                "dev",
+                "staging",
+                "preprod"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13068,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T05:36:55.398Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "df73d0c90bd08a222ccf-a6b0aac796685f59a82c",
+              "file": "Catalogue/TC_005_Verify_upload_ISO_storage_as_public.spec.ts",
+              "line": 8,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Catalogue\\TC_006_Verify_uploading_of_ISO_storage_from_specificVirtualDataCenter.spec.ts",
+      "file": "Catalogue/TC_006_Verify_uploading_of_ISO_storage_from_specificVirtualDataCenter.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Virtual Machine Template Page — ISO Upload Flow",
+          "file": "Catalogue/TC_006_Verify_uploading_of_ISO_storage_from_specificVirtualDataCenter.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should display the ISO Upload form and allow uploading via URL @dev @staging @preprod",
+              "ok": true,
+              "tags": [
+                "dev",
+                "staging",
+                "preprod"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14351,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T05:37:08.483Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2d396e82878faa7066b1-3fcfd48ebd0290a5e0c5",
+              "file": "Catalogue/TC_006_Verify_uploading_of_ISO_storage_from_specificVirtualDataCenter.spec.ts",
+              "line": 8,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Catalogue\\TC_007_Verify_download_ISO_storage_from_URL.spec.ts",
+      "file": "Catalogue/TC_007_Verify_download_ISO_storage_from_URL.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Virtual Machine Template Page — ISO Upload Flow",
+          "file": "Catalogue/TC_007_Verify_download_ISO_storage_from_URL.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should display the ISO Upload form and allow uploading via Public URL @dev @staging @preprod",
+              "ok": true,
+              "tags": [
+                "dev",
+                "staging",
+                "preprod"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15291,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T05:37:22.857Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "87508284af4217b22d12-ce282843dea85d759f07",
+              "file": "Catalogue/TC_007_Verify_download_ISO_storage_from_URL.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Catalogue\\TC_008_Verify_download_ISO_storage_for_specific_virtualdatacenter.spec.ts",
+      "file": "Catalogue/TC_008_Verify_download_ISO_storage_for_specific_virtualdatacenter.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Virtual Machine Template Page — ISO Upload Flow",
+          "file": "Catalogue/TC_008_Verify_download_ISO_storage_for_specific_virtualdatacenter.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should display the ISO Upload form and allow uploading via URL @dev @staging @preprod",
+              "ok": true,
+              "tags": [
+                "dev",
+                "staging",
+                "preprod"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16753,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T05:37:38.175Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f58652d077bbccdbc22c-291ad9163e4b40ee16d6",
+              "file": "Catalogue/TC_008_Verify_download_ISO_storage_for_specific_virtualdatacenter.spec.ts",
+              "line": 8,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Catalogue\\Verify_delete_ISO_from_Proxmox.spec.ts",
+      "file": "Catalogue/Verify_delete_ISO_from_Proxmox.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Virtual Machine Template Page — ISO Upload Flow",
+          "file": "Catalogue/Verify_delete_ISO_from_Proxmox.spec.ts",
+          "line": 6,
+          "column": 15,
+          "specs": [
+            {
+              "title": "Should display the ISO Upload form and allow uploading via URL @dev @staging @preprod",
+              "ok": true,
+              "tags": [
+                "dev",
+                "staging",
+                "preprod"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\Catalogue\\Verify_delete_ISO_from_Proxmox.spec.ts",
+                        "line": 6,
+                        "column": 15
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T05:37:54.945Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c587e43640ff87ebc5e3-f33520cd858cb6201fe5",
+              "file": "Catalogue/Verify_delete_ISO_from_Proxmox.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Catalogue\\Verify_deleteISO_without_deleting_proxmoxData.spec.ts",
+      "file": "Catalogue/Verify_deleteISO_without_deleting_proxmoxData.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Virtual Machine Template Page — ISO Upload Flow",
+          "file": "Catalogue/Verify_deleteISO_without_deleting_proxmoxData.spec.ts",
+          "line": 6,
+          "column": 15,
+          "specs": [
+            {
+              "title": "Should display the ISO Upload form and allow uploading via URL @dev @staging @preprod",
+              "ok": true,
+              "tags": [
+                "dev",
+                "staging",
+                "preprod"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\Catalogue\\Verify_deleteISO_without_deleting_proxmoxData.spec.ts",
+                        "line": 6,
+                        "column": 15
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T05:37:54.946Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "20f0588c0e5600cb46cf-c5b49946c37e874110c9",
+              "file": "Catalogue/Verify_deleteISO_without_deleting_proxmoxData.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
     }
   ],
+  "errors": [],
   "stats": {
-    "startTime": "2025-09-01T23:25:32.239Z",
-    "duration": 34.159999999999854,
-    "expected": 0,
-    "skipped": 0,
+    "startTime": "2025-09-03T05:35:59.760Z",
+    "duration": 115392.258,
+    "expected": 9,
+    "skipped": 2,
     "unexpected": 0,
     "flaky": 0
   }

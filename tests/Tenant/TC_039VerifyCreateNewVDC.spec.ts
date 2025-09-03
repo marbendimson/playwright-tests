@@ -41,15 +41,15 @@ const vdcForm = new VirtualDataCenterForm(page);
 
 await vdcForm.fillForm({
 
-dataCenter:'6',
+dataCenter:'1',
 vdcName : 'VDC Autotest',
 allocationType : '1',
 cpuCores :'4',
 memoryGiB : '16',
 overcommitment : '1',
-storagePolicyValue : '9',
+storagePolicyValue : '1',
 StorageInput : '100',
-backStorageValue : '6',
+backStorageValue : 'Backupstorage',
 backInput : '100',
 
 // primaryStorageLabel : 'updateautoStorage',

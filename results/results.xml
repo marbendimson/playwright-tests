@@ -1,2 +1,62 @@
-<testsuites id="" name="" tests="0" failures="0" skipped="0" errors="0" time="0.03415999999999986">
+<testsuites id="" name="" tests="11" failures="0" skipped="2" errors="0" time="115.392258">
+<testsuite name="Catalogue\TC_001_Verify_Virtual_Machine_Templatepage.spec.ts" timestamp="2025-09-03T05:35:59.838Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.052" errors="0">
+<testcase name="Verify Virtual Machine Template page › should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod" classname="Catalogue\TC_001_Verify_Virtual_Machine_Templatepage.spec.ts" time="12.052">
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_001.5Verify_delete_VMTemplate.spec.ts" timestamp="2025-09-03T05:35:59.838Z" hostname="chromium" tests="1" failures="0" skipped="0" time="11.837" errors="0">
+<testcase name="Verify Virtual Machine Template page › should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod" classname="Catalogue\TC_001.5Verify_delete_VMTemplate.spec.ts" time="11.837">
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_002_Verify_Import_Virtual_Machine_public.spec.ts" timestamp="2025-09-03T05:35:59.838Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.75" errors="0">
+<testcase name="Verify Virtual Machine Template page › should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod" classname="Catalogue\TC_002_Verify_Import_Virtual_Machine_public.spec.ts" time="10.75">
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_003_Verify_view_virtualMachine_Template.spec.ts" timestamp="2025-09-03T05:35:59.838Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.168" errors="0">
+<testcase name="Verify view virtual machine template page › Should successfully display virtual machine Template page without any UI and Typo issues  @dev @staging @preprod" classname="Catalogue\TC_003_Verify_view_virtualMachine_Template.spec.ts" time="10.168">
+<system-err>
+<![CDATA[No VM Template card found. Skipping validation.
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_004_Verify_ISOpage.spec.ts" timestamp="2025-09-03T05:35:59.838Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.211" errors="0">
+<testcase name="Verify view virtual machine template page › Should successfully display virtual machine Template page without any UI and Typo issues  @dev @staging @preprod" classname="Catalogue\TC_004_Verify_ISOpage.spec.ts" time="9.211">
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_005_Verify_upload_ISO_storage_as_public.spec.ts" timestamp="2025-09-03T05:35:59.838Z" hostname="chromium" tests="1" failures="0" skipped="0" time="13.068" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should display the ISO Upload form and allow uploading via URL @dev @staging @preprod" classname="Catalogue\TC_005_Verify_upload_ISO_storage_as_public.spec.ts" time="13.068">
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_006_Verify_uploading_of_ISO_storage_from_specificVirtualDataCenter.spec.ts" timestamp="2025-09-03T05:35:59.838Z" hostname="chromium" tests="1" failures="0" skipped="0" time="14.351" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should display the ISO Upload form and allow uploading via URL @dev @staging @preprod" classname="Catalogue\TC_006_Verify_uploading_of_ISO_storage_from_specificVirtualDataCenter.spec.ts" time="14.351">
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_007_Verify_download_ISO_storage_from_URL.spec.ts" timestamp="2025-09-03T05:35:59.838Z" hostname="chromium" tests="1" failures="0" skipped="0" time="15.291" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should display the ISO Upload form and allow uploading via Public URL @dev @staging @preprod" classname="Catalogue\TC_007_Verify_download_ISO_storage_from_URL.spec.ts" time="15.291">
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_008_Verify_download_ISO_storage_for_specific_virtualdatacenter.spec.ts" timestamp="2025-09-03T05:35:59.838Z" hostname="chromium" tests="1" failures="0" skipped="0" time="16.753" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should display the ISO Upload form and allow uploading via URL @dev @staging @preprod" classname="Catalogue\TC_008_Verify_download_ISO_storage_for_specific_virtualdatacenter.spec.ts" time="16.753">
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\Verify_delete_ISO_from_Proxmox.spec.ts" timestamp="2025-09-03T05:35:59.838Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should display the ISO Upload form and allow uploading via URL @dev @staging @preprod" classname="Catalogue\Verify_delete_ISO_from_Proxmox.spec.ts" time="0">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\Verify_deleteISO_without_deleting_proxmoxData.spec.ts" timestamp="2025-09-03T05:35:59.838Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should display the ISO Upload form and allow uploading via URL @dev @staging @preprod" classname="Catalogue\Verify_deleteISO_without_deleting_proxmoxData.spec.ts" time="0">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
 </testsuites>

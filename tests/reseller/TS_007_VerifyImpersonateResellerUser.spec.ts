@@ -61,7 +61,7 @@ await expect(page.locator('h4.mb-sm-0')).toHaveText('Dashboard', { timeout: 1000
   const UserRoleLink = page.getByRole('link', { name: 'User Roles' });
   await expect(UserRoleLink).toBeVisible();
 
-  await page.getByRole('link', { name: 'Return to My Account' }).click({ clickCount: 5 });
+  await page.getByRole('link', { name: 'Return to My Account' }).click();
 
   await expect(page.locator('h4.mb-sm-0')).toHaveText('Dashboard');
    });
