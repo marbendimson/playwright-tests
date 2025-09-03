@@ -7,8 +7,14 @@ export class CataloguePage {
   constructor(private page: Page) {}
 
   async goToTemplatesPage() {
-    await this.page.locator('span[data-key="t-catalogue"]').click();
-    await this.page.getByRole('link', { name: 'Templates' }).click();
+    const catalogue = this.page.locator('span[data-key="t-catalogue"]');
+    await catalogue.waitFor({ state: 'visible', timeout: 10000 });
+    await catalogue.click();
+
+    const templatesLink = this.page.getByRole('link', { name: 'Templates' });
+    await expect(templatesLink).toBeVisible({ timeout: 10000 });
+    await templatesLink.click();
+
     await expect(
       this.page.getByRole('heading', { level: 4, name: 'Virtual Machine Templates' })
     ).toBeVisible();
