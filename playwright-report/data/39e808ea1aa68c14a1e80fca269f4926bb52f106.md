@@ -1,0 +1,179 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - button [ref=e7] [cursor=pointer]
+          - generic [ref=e13]:
+            - textbox "Search..." [ref=e15]
+            - generic [ref=e16]: 󰍉
+            - text: 󰅙
+        - generic [ref=e17]:
+          - button "Header Language" [ref=e19] [cursor=pointer]:
+            - img "Header Language" [ref=e20] [cursor=pointer]
+          - button "" [ref=e22] [cursor=pointer]:
+            - generic [ref=e23] [cursor=pointer]: 
+          - button "" [ref=e25] [cursor=pointer]:
+            - generic [ref=e26] [cursor=pointer]: 
+          - generic [ref=e27]:
+            - button "Header Avatar Quality Assurance Service Provider Administrator" [ref=e28] [cursor=pointer]:
+              - generic [ref=e29] [cursor=pointer]:
+                - img "Header Avatar" [ref=e30] [cursor=pointer]
+                - generic [ref=e31] [cursor=pointer]:
+                  - generic [ref=e32] [cursor=pointer]: Quality Assurance
+                  - generic [ref=e33] [cursor=pointer]: Service Provider Administrator
+            - text: 󰀄 󱂛 󰡾 󰃤 󰂾 󰍃 󰍃
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - link [ref=e36] [cursor=pointer]:
+          - /url: /
+          - img [ref=e38] [cursor=pointer]
+        - text: 
+      - text:  󰍃
+      - region "scrollable content" [ref=e43]:
+        - list [ref=e46]:
+          - region "scrollable content" [ref=e50]:
+            - generic [ref=e51]:
+              - listitem [ref=e52]:
+                - link "󰨝 Dashboard" [ref=e53] [cursor=pointer]:
+                  - /url: /dashboard
+                  - generic [ref=e54] [cursor=pointer]: 󰨝
+                  - generic [ref=e55] [cursor=pointer]: Dashboard
+              - listitem [ref=e56]:
+                - link "󰀏 Resellers" [ref=e57] [cursor=pointer]:
+                  - /url: /reseller
+                  - generic [ref=e58] [cursor=pointer]: 󰀏
+                  - generic [ref=e59] [cursor=pointer]: Resellers
+              - listitem [ref=e60]:
+                - link "󰀎 Tenants" [ref=e61] [cursor=pointer]:
+                  - /url: /tenants
+                  - generic [ref=e62] [cursor=pointer]: 󰀎
+                  - generic [ref=e63] [cursor=pointer]: Tenants
+              - listitem [ref=e64]:
+                - link "󰒋 Virtual Data Centers" [ref=e65] [cursor=pointer]:
+                  - /url: /virtual-data-center/index
+                  - generic [ref=e66] [cursor=pointer]: 󰒋
+                  - generic [ref=e67] [cursor=pointer]: Virtual Data Centers
+              - listitem [ref=e68]:
+                - button "󰌖 Catalogue 󰅂" [expanded] [ref=e69] [cursor=pointer]:
+                  - generic [ref=e70] [cursor=pointer]: 󰌖
+                  - generic [ref=e71] [cursor=pointer]: Catalogue
+                  - text: 󰅂
+                - list [ref=e73]:
+                  - listitem [ref=e74]:
+                    - link "Templates" [ref=e75] [cursor=pointer]:
+                      - /url: /catalogue/index
+                      - generic [ref=e76] [cursor=pointer]: Templates
+                  - listitem [ref=e77]:
+                    - link "ISOs" [ref=e78] [cursor=pointer]:
+                      - /url: /iso/index
+                      - generic [ref=e79] [cursor=pointer]: ISOs
+              - listitem [ref=e80]:
+                - button "󰛳 Networking 󰅂" [ref=e81] [cursor=pointer]:
+                  - generic [ref=e82] [cursor=pointer]: 󰛳
+                  - generic [ref=e83] [cursor=pointer]: Networking
+                  - text: 󰅂
+              - listitem [ref=e84]:
+                - button "󱀩 Reports 󰅂" [ref=e85] [cursor=pointer]:
+                  - generic [ref=e86] [cursor=pointer]: 󱀩
+                  - generic [ref=e87] [cursor=pointer]: Reports
+                  - text: 󰅂
+              - listitem [ref=e88]:
+                - link "󱥠 User Roles" [ref=e89] [cursor=pointer]:
+                  - /url: /user/role
+                  - generic [ref=e90] [cursor=pointer]: 󱥠
+                  - generic [ref=e91] [cursor=pointer]: User Roles
+              - listitem [ref=e92]:
+                - link "󰒒 Backup Management" [ref=e93] [cursor=pointer]:
+                  - /url: /scheduled-backup/index
+                  - generic [ref=e94] [cursor=pointer]: 󰒒
+                  - generic [ref=e95] [cursor=pointer]: Backup Management
+              - listitem [ref=e96]:
+                - button "󰒓 Settings 󰅂" [ref=e97] [cursor=pointer]:
+                  - generic [ref=e98] [cursor=pointer]: 󰒓
+                  - generic [ref=e99] [cursor=pointer]: Settings
+                  - text: 󰅂
+                - text: 󰅂
+    - generic [ref=e103]:
+      - generic [ref=e106]:
+        - heading "Virtual Machine Templates" [level=4] [ref=e107]
+        - list [ref=e109]:
+          - navigation "breadcrumb" [ref=e110]:
+            - list [ref=e111]:
+              - listitem [ref=e112]:
+                - link "Home" [ref=e113] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e114]: 󰅂 Catalogue
+              - listitem [ref=e115]: 󰅂 Virtual Machine Templates
+      - generic [ref=e116]:
+        - link "Import VM Template from Proxmox" [ref=e119] [cursor=pointer]:
+          - /url: /catalogue/vm-template-import
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - text: Showing
+            - generic [ref=e125]: 1-3
+            - text: of
+            - generic [ref=e126]: "3"
+            - text: items.
+          - table [ref=e127]:
+            - rowgroup [ref=e128]:
+              - row "Name CPU Cores Public Memory Virtual Data Center Name Data Center Storage OS Family Proxmox Node ID Proxmox VM ID" [ref=e129]:
+                - cell "Name" [ref=e130]
+                - cell "CPU Cores" [ref=e131]
+                - cell "Public" [ref=e132]
+                - cell "Memory" [ref=e133]
+                - cell "Virtual Data Center Name" [ref=e134]
+                - cell "Data Center" [ref=e135]
+                - cell "Storage" [ref=e136]
+                - cell "OS Family" [ref=e137]
+                - cell "Proxmox Node ID" [ref=e138]
+                - cell "Proxmox VM ID" [ref=e139]
+            - rowgroup [ref=e140]:
+              - row "testvm-7380ad8a 2 No 2.00 GiB test MainDC 2.00 GiB linux lab-pve-07 496" [ref=e141]:
+                - cell "testvm-7380ad8a" [ref=e142]:
+                  - link "testvm-7380ad8a" [ref=e143] [cursor=pointer]:
+                    - /url: /catalogue/view?id=78539289-07d8-4cca-8e56-1fddae41bb15
+                - cell "2" [ref=e144]
+                - cell "No" [ref=e145]
+                - cell "2.00 GiB" [ref=e146]
+                - cell "test" [ref=e147]
+                - cell "MainDC" [ref=e148]
+                - cell "2.00 GiB" [ref=e149]
+                - cell "linux" [ref=e150]
+                - cell "lab-pve-07" [ref=e151]
+                - cell "496" [ref=e152]
+              - row "Testing-8c6744c9 4 No 4.00 GiB VDCupdate endpoint MainDC 53.50 GiB other lab-pve-05 776" [ref=e153]:
+                - cell "Testing-8c6744c9" [ref=e154]:
+                  - link "Testing-8c6744c9" [ref=e155] [cursor=pointer]:
+                    - /url: /catalogue/view?id=e7e2385c-6545-4c4e-8d67-e5faf1bdfc31
+                - cell "4" [ref=e156]
+                - cell "No" [ref=e157]
+                - cell "4.00 GiB" [ref=e158]
+                - cell "VDCupdate endpoint" [ref=e159]
+                - cell "MainDC" [ref=e160]
+                - cell "53.50 GiB" [ref=e161]
+                - cell "other" [ref=e162]
+                - cell "lab-pve-05" [ref=e163]
+                - cell "776" [ref=e164]
+              - row "Testing-8c6744c9-8c6744c9 4 No 4.00 GiB test MainDC 53.50 GiB other lab-pve-05 776" [ref=e165]:
+                - cell "Testing-8c6744c9-8c6744c9" [ref=e166]:
+                  - link "Testing-8c6744c9-8c6744c9" [ref=e167] [cursor=pointer]:
+                    - /url: /catalogue/view?id=afe6d3c6-2cf0-47b3-84bf-d225324fff87
+                - cell "4" [ref=e168]
+                - cell "No" [ref=e169]
+                - cell "4.00 GiB" [ref=e170]
+                - cell "test" [ref=e171]
+                - cell "MainDC" [ref=e172]
+                - cell "53.50 GiB" [ref=e173]
+                - cell "other" [ref=e174]
+                - cell "lab-pve-05" [ref=e175]
+                - cell "776" [ref=e176]
+  - generic [ref=e178]:
+    - heading "Recent Tasks" [level=6] [ref=e179]: Recent Tasks
+    - button "" [ref=e181] [cursor=pointer]:
+      - generic [ref=e182] [cursor=pointer]: 
+  - img
+```

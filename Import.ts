@@ -7,7 +7,7 @@ export class CataloguePage {
   constructor(private page: Page) {}
 
   async goToTemplatesPage() {
-    await this.page.locator('span:has-text("Catalogue")').click();
+    await this.page.locator('span[data-key="t-catalogue"]').click();
     await this.page.getByRole('link', { name: 'Templates' }).click();
     await expect(
       this.page.getByRole('heading', { level: 4, name: 'Virtual Machine Templates' })

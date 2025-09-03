@@ -117,7 +117,7 @@
           "specs": [
             {
               "title": "should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod",
-              "ok": true,
+              "ok": false,
               "tags": [
                 "dev",
                 "staging",
@@ -134,18 +134,58 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 12052,
-                      "errors": [],
+                      "status": "failed",
+                      "duration": 20283,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('button', { name: /AutoVM-001/i }).first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: /AutoVM-001/i }).first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('button', { name: /AutoVM-001/i }).first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: /AutoVM-001/i }).first()\u001b[22m\n\n    at VmTemplateImportPage.chooseVmTemplate (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\Import.ts:90:28)\n    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\Catalogue\\TC_001_Verify_Virtual_Machine_Templatepage.spec.ts:27:32",
+                        "location": {
+                          "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\Import.ts",
+                          "column": 28,
+                          "line": 90
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\Import.ts:90\n\n\u001b[0m \u001b[90m 88 |\u001b[39m       vmOption \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/^\\[\\d+\\]/\u001b[39m })\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n \u001b[90m 89 |\u001b[39m     }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 90 |\u001b[39m     \u001b[36mawait\u001b[39m expect(vmOption)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 91 |\u001b[39m     \u001b[36mawait\u001b[39m vmOption\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 92 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m'#vm-selection-submit'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 93 |\u001b[39m   }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\Import.ts",
+                            "column": 28,
+                            "line": 90
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('button', { name: /AutoVM-001/i }).first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: /AutoVM-001/i }).first()\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\Import.ts:90\n\n\u001b[0m \u001b[90m 88 |\u001b[39m       vmOption \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/^\\[\\d+\\]/\u001b[39m })\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n \u001b[90m 89 |\u001b[39m     }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 90 |\u001b[39m     \u001b[36mawait\u001b[39m expect(vmOption)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 91 |\u001b[39m     \u001b[36mawait\u001b[39m vmOption\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 92 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m'#vm-selection-submit'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 93 |\u001b[39m   }\u001b[0m\n\u001b[2m    at VmTemplateImportPage.chooseVmTemplate (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\Import.ts:90:28)\u001b[22m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\Catalogue\\TC_001_Verify_Virtual_Machine_Templatepage.spec.ts:27:32\u001b[22m"
+                        }
+                      ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-03T05:36:00.976Z",
+                      "startTime": "2025-09-03T07:31:24.662Z",
                       "annotations": [],
-                      "attachments": []
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\Catalogue-TC_001_Verify_Vi-3dcd6-ropdown-dev-staging-preprod-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\Catalogue-TC_001_Verify_Vi-3dcd6-ropdown-dev-staging-preprod-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\Catalogue-TC_001_Verify_Vi-3dcd6-ropdown-dev-staging-preprod-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\Import.ts",
+                        "column": 28,
+                        "line": 90
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
               "id": "64c28dfb457264206fda-c4c4b2b5140c1c3a3e4c",
@@ -172,7 +212,7 @@
           "specs": [
             {
               "title": "should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod",
-              "ok": true,
+              "ok": false,
               "tags": [
                 "dev",
                 "staging",
@@ -187,20 +227,64 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11837,
-                      "errors": [],
-                      "stdout": [],
+                      "status": "failed",
+                      "duration": 8447,
+                      "error": {
+                        "message": "Error: No template matching \"AutoVM-001\" found.",
+                        "stack": "Error: No template matching \"AutoVM-001\" found.\n    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\Catalogue\\TC_001.5Verify_delete_VMTemplate.spec.ts:33:9",
+                        "location": {
+                          "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\Catalogue\\TC_001.5Verify_delete_VMTemplate.spec.ts",
+                          "column": 9,
+                          "line": 33
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mtemplateName) {\n \u001b[90m 32 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m'All templates found:'\u001b[39m\u001b[33m,\u001b[39m allTemplates)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m   \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'No template matching \"AutoVM-001\" found.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[90m// Proceed with delete\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\Catalogue\\TC_001.5Verify_delete_VMTemplate.spec.ts",
+                            "column": 9,
+                            "line": 33
+                          },
+                          "message": "Error: No template matching \"AutoVM-001\" found.\n\n\u001b[0m \u001b[90m 31 |\u001b[39m \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mtemplateName) {\n \u001b[90m 32 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m'All templates found:'\u001b[39m\u001b[33m,\u001b[39m allTemplates)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m   \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'No template matching \"AutoVM-001\" found.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[90m// Proceed with delete\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\Catalogue\\TC_001.5Verify_delete_VMTemplate.spec.ts:33:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "All templates found: [ \u001b[32m'testvm-7380ad8a'\u001b[39m, \u001b[32m'Testing-8c6744c9'\u001b[39m, \u001b[32m'Testing-8c6744c9-8c6744c9'\u001b[39m ]\n"
+                        }
+                      ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-03T05:36:13.343Z",
+                      "startTime": "2025-09-03T07:31:47.329Z",
                       "annotations": [],
-                      "attachments": []
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\Catalogue-TC_001.5Verify_d-2354a-ropdown-dev-staging-preprod-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\Catalogue-TC_001.5Verify_d-2354a-ropdown-dev-staging-preprod-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\Catalogue-TC_001.5Verify_d-2354a-ropdown-dev-staging-preprod-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\Catalogue\\TC_001.5Verify_delete_VMTemplate.spec.ts",
+                        "column": 9,
+                        "line": 33
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
               "id": "341fa675f3c75dab072d-35024dc66a3567da92de",
@@ -227,7 +311,7 @@
           "specs": [
             {
               "title": "should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod",
-              "ok": true,
+              "ok": false,
               "tags": [
                 "dev",
                 "staging",
@@ -242,20 +326,60 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 2,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 10750,
-                      "errors": [],
+                      "status": "failed",
+                      "duration": 19366,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('button', { name: /AutoVM-001/i }).first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: /AutoVM-001/i }).first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('button', { name: /AutoVM-001/i }).first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: /AutoVM-001/i }).first()\u001b[22m\n\n    at VmTemplateImportPage.chooseVmTemplate (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\Import.ts:90:28)\n    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\Catalogue\\TC_002_Verify_Import_Virtual_Machine_public.spec.ts:26:32",
+                        "location": {
+                          "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\Import.ts",
+                          "column": 28,
+                          "line": 90
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\Import.ts:90\n\n\u001b[0m \u001b[90m 88 |\u001b[39m       vmOption \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/^\\[\\d+\\]/\u001b[39m })\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n \u001b[90m 89 |\u001b[39m     }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 90 |\u001b[39m     \u001b[36mawait\u001b[39m expect(vmOption)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 91 |\u001b[39m     \u001b[36mawait\u001b[39m vmOption\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 92 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m'#vm-selection-submit'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 93 |\u001b[39m   }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\Import.ts",
+                            "column": 28,
+                            "line": 90
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  getByRole('button', { name: /AutoVM-001/i }).first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: /AutoVM-001/i }).first()\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\Import.ts:90\n\n\u001b[0m \u001b[90m 88 |\u001b[39m       vmOption \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/^\\[\\d+\\]/\u001b[39m })\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n \u001b[90m 89 |\u001b[39m     }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 90 |\u001b[39m     \u001b[36mawait\u001b[39m expect(vmOption)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 91 |\u001b[39m     \u001b[36mawait\u001b[39m vmOption\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 92 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m'#vm-selection-submit'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 93 |\u001b[39m   }\u001b[0m\n\u001b[2m    at VmTemplateImportPage.chooseVmTemplate (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\Import.ts:90:28)\u001b[22m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\Catalogue\\TC_002_Verify_Import_Virtual_Machine_public.spec.ts:26:32\u001b[22m"
+                        }
+                      ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-03T05:36:25.201Z",
+                      "startTime": "2025-09-03T07:31:57.642Z",
                       "annotations": [],
-                      "attachments": []
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\Catalogue-TC_002_Verify_Im-ffaa3-ropdown-dev-staging-preprod-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\Catalogue-TC_002_Verify_Im-ffaa3-ropdown-dev-staging-preprod-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\Catalogue-TC_002_Verify_Im-ffaa3-ropdown-dev-staging-preprod-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\Import.ts",
+                        "column": 28,
+                        "line": 90
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
               "id": "a9b8052536de5ff5e211-56cbbb21e39c85d7793d",
@@ -297,10 +421,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 3,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 10168,
+                      "duration": 9442,
                       "errors": [],
                       "stdout": [],
                       "stderr": [
@@ -309,7 +433,7 @@
                         }
                       ],
                       "retry": 0,
-                      "startTime": "2025-09-03T05:36:35.973Z",
+                      "startTime": "2025-09-03T07:32:18.684Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -356,15 +480,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 3,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 9211,
+                      "duration": 8587,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-03T05:36:46.162Z",
+                      "startTime": "2025-09-03T07:32:28.427Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -411,15 +535,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 3,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 13068,
+                      "duration": 11461,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-03T05:36:55.398Z",
+                      "startTime": "2025-09-03T07:32:37.041Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -466,15 +590,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 3,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 14351,
+                      "duration": 12529,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-03T05:37:08.483Z",
+                      "startTime": "2025-09-03T07:32:48.529Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -521,15 +645,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 3,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 15291,
+                      "duration": 14283,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-03T05:37:22.857Z",
+                      "startTime": "2025-09-03T07:33:01.083Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -576,15 +700,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 3,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 16753,
+                      "duration": 14526,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-03T05:37:38.175Z",
+                      "startTime": "2025-09-03T07:33:15.389Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -648,7 +772,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-03T05:37:54.945Z",
+                      "startTime": "2025-09-03T07:33:29.922Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -712,7 +836,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-03T05:37:54.946Z",
+                      "startTime": "2025-09-03T07:33:29.922Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -732,11 +856,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-03T05:35:59.760Z",
-    "duration": 115392.258,
-    "expected": 9,
+    "startTime": "2025-09-03T07:31:23.203Z",
+    "duration": 126927.83099999999,
+    "expected": 6,
     "skipped": 2,
-    "unexpected": 0,
+    "unexpected": 3,
     "flaky": 0
   }
 }
