@@ -67,8 +67,13 @@ export class IsoUploadForm {
   // =========================
   // Step 1 — Data Center & Visibility
   // =========================
-  async selectDataCenter(dataCenterName: string) {
+ async selectDataCenter(dataCenterName: string) {
     await expect(this.dataCenterSelect).toBeVisible({ timeout: 10000 });
+    await this.page.waitForFunction(
+  (selector) => document.querySelectorAll(selector).length > 1,
+  '#isouploadform-data_center_id option',
+  { timeout: 10000 }
+);
     await this.dataCenterSelect.selectOption({ label: dataCenterName });
   }
 
@@ -174,6 +179,7 @@ export class IsoUploadForm {
     await this.page.locator('.select2-results__option', { hasText: optionText }).click();
   }
 }
+
 
 // =======================================
 // ISO Storage Page Object

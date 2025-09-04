@@ -103,72 +103,65 @@
   },
   "suites": [
     {
-      "title": "VDC\\1_Verify_create_VM.spec.ts",
-      "file": "VDC/1_Verify_create_VM.spec.ts",
+      "title": "Catalogue\\TC_007_Verify_download_ISO_storage_from_URL.spec.ts",
+      "file": "Catalogue/TC_007_Verify_download_ISO_storage_from_URL.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "Create VM - All in One Flow",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "Virtual Machine Template Page — ISO Upload Flow",
+          "file": "Catalogue/TC_007_Verify_download_ISO_storage_from_URL.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "Should display the ISO Upload form and allow uploading via Public URL @dev @staging @preprod",
+              "ok": true,
+              "tags": [
+                "dev",
+                "staging",
+                "preprod"
+              ],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 29302,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "ℹ️ Only one boot device present, skipping reorder.\n"
-                    },
-                    {
-                      "text": "Current VM status: \"in_progress\", waiting...\n"
-                    },
-                    {
-                      "text": "Current VM status: \"in_progress\", waiting...\n"
-                    },
-                    {
-                      "text": "Current VM status: \"in_progress\", waiting...\n"
-                    }
-                  ],
-                  "stderr": [
-                    {
-                      "text": "⚠️ No network available modal detected.\n"
-                    },
-                    {
-                      "text": "⚠️ ISO \"not specified\" not found or not provided. Removing CD/DVD drive.\n"
-                    }
-                  ],
-                  "retry": 0,
-                  "startTime": "2025-09-04T01:58:00.183Z",
+                  "timeout": 30000,
                   "annotations": [],
-                  "attachments": []
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13436,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-04T02:25:26.914Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
+              "id": "87508284af4217b22d12-ce282843dea85d759f07",
+              "file": "Catalogue/TC_007_Verify_download_ISO_storage_from_URL.spec.ts",
+              "line": 7,
+              "column": 7
             }
-          ],
-          "id": "3a92170dffa2ff91f1e3-886109a553753752136f",
-          "file": "VDC/1_Verify_create_VM.spec.ts",
-          "line": 9,
-          "column": 5
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-04T01:57:58.976Z",
-    "duration": 31004.075,
+    "startTime": "2025-09-04T02:25:25.496Z",
+    "duration": 15393.039,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
