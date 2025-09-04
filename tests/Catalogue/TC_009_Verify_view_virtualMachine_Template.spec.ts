@@ -12,12 +12,11 @@ test.describe('Verify view virtual machine template page', () => {
     await page.waitForLoadState('networkidle');
     await expect(page.locator(loginSelectors.success)).toBeVisible({ timeout: 15000 });
 
-    const CatalogueNav = page.locator('span:has-text("Catalogue")');
-  await expect(CatalogueNav).toBeVisible();
-  await expect(CatalogueNav).toBeEnabled();
+    const catalogueNav= page.locator('a.nav-link.menu-link:has(span[data-key="t-catalogue"])');
+  await expect(catalogueNav).toBeVisible({ timeout: 10000 });
+  await catalogueNav.click();
 
-  // Click 'Tenant' menu link
-  await CatalogueNav.click();
+  
 
   const templateNav = page.getByRole('link', { name: 'Templates' });
   await expect(templateNav).toBeVisible();

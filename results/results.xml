@@ -1,6 +1,18 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="11.710794">
-<testsuite name="Catalogue\TC_004_Verify_ISOpage.spec.ts" timestamp="2025-09-04T01:02:30.473Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.844" errors="0">
-<testcase name="Verify view virtual machine template page › Should successfully display virtual machine Template page without UI or typo issues @dev @staging @preprod" classname="Catalogue\TC_004_Verify_ISOpage.spec.ts" time="9.844">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="31.004075">
+<testsuite name="VDC\1_Verify_create_VM.spec.ts" timestamp="2025-09-04T01:57:59.026Z" hostname="chromium" tests="1" failures="0" skipped="0" time="29.302" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VDC\1_Verify_create_VM.spec.ts" time="29.302">
+<system-out>
+<![CDATA[ℹ️ Only one boot device present, skipping reorder.
+Current VM status: "in_progress", waiting...
+Current VM status: "in_progress", waiting...
+Current VM status: "in_progress", waiting...
+]]>
+</system-out>
+<system-err>
+<![CDATA[⚠️ No network available modal detected.
+⚠️ ISO "not specified" not found or not provided. Removing CD/DVD drive.
+]]>
+</system-err>
 </testcase>
 </testsuite>
 </testsuites>

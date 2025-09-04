@@ -103,65 +103,72 @@
   },
   "suites": [
     {
-      "title": "Catalogue\\TC_004_Verify_ISOpage.spec.ts",
-      "file": "Catalogue/TC_004_Verify_ISOpage.spec.ts",
+      "title": "VDC\\1_Verify_create_VM.spec.ts",
+      "file": "VDC/1_Verify_create_VM.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-          "title": "Verify view virtual machine template page",
-          "file": "Catalogue/TC_004_Verify_ISOpage.spec.ts",
-          "line": 5,
-          "column": 6,
-          "specs": [
+          "title": "Create VM - All in One Flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "Should successfully display virtual machine Template page without UI or typo issues @dev @staging @preprod",
-              "ok": true,
-              "tags": [
-                "dev",
-                "staging",
-                "preprod"
-              ],
-              "tests": [
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 29302,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 9844,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-04T01:02:31.638Z",
-                      "annotations": [],
-                      "attachments": []
+                      "text": "ℹ️ Only one boot device present, skipping reorder.\n"
+                    },
+                    {
+                      "text": "Current VM status: \"in_progress\", waiting...\n"
+                    },
+                    {
+                      "text": "Current VM status: \"in_progress\", waiting...\n"
+                    },
+                    {
+                      "text": "Current VM status: \"in_progress\", waiting...\n"
                     }
                   ],
-                  "status": "expected"
+                  "stderr": [
+                    {
+                      "text": "⚠️ No network available modal detected.\n"
+                    },
+                    {
+                      "text": "⚠️ ISO \"not specified\" not found or not provided. Removing CD/DVD drive.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2025-09-04T01:58:00.183Z",
+                  "annotations": [],
+                  "attachments": []
                 }
               ],
-              "id": "dc24bc4d4ce3ca1d70aa-1a479a36f9e653078c27",
-              "file": "Catalogue/TC_004_Verify_ISOpage.spec.ts",
-              "line": 6,
-              "column": 7
+              "status": "expected"
             }
-          ]
+          ],
+          "id": "3a92170dffa2ff91f1e3-886109a553753752136f",
+          "file": "VDC/1_Verify_create_VM.spec.ts",
+          "line": 9,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-04T01:02:30.296Z",
-    "duration": 11710.794,
+    "startTime": "2025-09-04T01:57:58.976Z",
+    "duration": 31004.075,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

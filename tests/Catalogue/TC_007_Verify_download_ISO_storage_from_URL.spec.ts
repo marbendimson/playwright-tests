@@ -27,9 +27,9 @@ test.describe('Virtual Machine Template Page — ISO Upload Flow', () => {
     // =========================
     // Navigate to ISO Upload
     // =========================
-    const catalogueNav = page.locator('span:has-text("Catalogue")');
-    await expect(catalogueNav).toBeVisible();
-    await catalogueNav.click();
+    const catalogueNav= page.locator('a.nav-link.menu-link:has(span[data-key="t-catalogue"])');
+  await expect(catalogueNav).toBeVisible({ timeout: 10000 });
+  await catalogueNav.click();
 
     const isoNav = page.getByRole('link', { name: 'ISOs' });
     await expect(isoNav).toBeVisible();

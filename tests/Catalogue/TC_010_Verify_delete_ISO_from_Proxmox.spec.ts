@@ -19,9 +19,9 @@ test.describe('Virtual Machine Template Page — ISO Storage Management', () => 
 
 
      // Navigate to Catalogue → ISOs
-    const CatalogueNav = page.locator('span[data-key="t-catalogue"]');
-    await expect(CatalogueNav).toBeVisible();
-    await CatalogueNav.click();
+     const catalogueNav= page.locator('a.nav-link.menu-link:has(span[data-key="t-catalogue"])');
+  await expect(catalogueNav).toBeVisible({ timeout: 10000 });
+  await catalogueNav.click();
 
    const isoNav = page.getByRole('link', { name: 'ISOs', exact: true });
 await expect(isoNav).toBeVisible();
