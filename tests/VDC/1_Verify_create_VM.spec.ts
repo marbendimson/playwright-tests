@@ -76,9 +76,12 @@ const card = page.locator('div.card.card-animate.bg-primary');
  await verifyVMCreation(page,30000);
 
   // Wait for the row containing the VM name to be visible
-await expect(
-  page.locator('tr:has(td a[title="AutoVM-001"])')
-).toBeVisible({ timeout: 60000 });
+// Wait for the first matching VM row to be visible
+const vmRow = page.locator('tr:has(td a[title="AutoVM-001"])').first();
+await vmRow.waitFor({ timeout: 60000 });
+await expect(vmRow).toBeVisible();
+
+
 
 // Optional: Verify the "Powered Off" status text
 await expect(

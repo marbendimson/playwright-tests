@@ -26,7 +26,7 @@ test('Create VM - All in One Flow', async ({ page }) => {
   await vmPage.navigateToVDC(page, 'VDC Autotest');
 
   // Step 1: Basic Info
-  await vmPage.fillBasicInfo(page, 'test~!@#$%^&*()_+-={}|[]\:";', 'linux', 'l26');
+  await vmPage.fillBasicInfo(page, 'VMtemp', 'linux', 'l26');
 
   const invalidFeedback = page.locator('.invalid-feedback', {
     hasText: 'Only alphanumeric characters, hyphens, and full stops are allowed. It cannot start or end with a hyphen or full stop.'

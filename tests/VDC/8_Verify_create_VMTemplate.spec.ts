@@ -23,7 +23,7 @@ test('Create VM - All in One Flow', async ({ page }) => {
   // Navigate to VDC
  await fillGeneralConfig(page, 'TestVM-Template', 'linux');
 
-await selectTemplate(page, 'stagingnewVM');
+await selectTemplate(page, 'AutoVM-001');
 await configureSystemSetup(page, '1');
 
 

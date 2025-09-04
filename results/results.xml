@@ -1,6 +1,1152 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="15.393039">
-<testsuite name="Catalogue\TC_007_Verify_download_ISO_storage_from_URL.spec.ts" timestamp="2025-09-04T02:25:25.741Z" hostname="chromium" tests="1" failures="0" skipped="0" time="13.436" errors="0">
-<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should display the ISO Upload form and allow uploading via Public URL @dev @staging @preprod" classname="Catalogue\TC_007_Verify_download_ISO_storage_from_URL.spec.ts" time="13.436">
+<testsuites id="" name="" tests="31" failures="24" skipped="0" errors="0" time="802.402243">
+<testsuite name="VDC\1_Verify_create_VM.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="30.474" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VDC\1_Verify_create_VM.spec.ts" time="30.474">
+<failure message="1_Verify_create_VM.spec.ts:9:5 Create VM - All in One Flow" type="FAILURE">
+<![CDATA[  [chromium] › VDC\1_Verify_create_VM.spec.ts:9:5 › Create VM - All in One Flow ────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.waitForTimeout: Test timeout of 30000ms exceeded.
+
+       at ..\recentTask.ts:221
+
+      219 |
+      220 |     // Wait a short interval before retrying
+    > 221 |     await page.waitForTimeout(3000); // 3s
+          |                ^
+      222 |   }
+      223 |
+      224 |   // Timeout reached
+        at verifyVMCreation (C:\Users\marben.dimson\Desktop\Auto\HN\MP\recentTask.ts:221:16)
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\1_Verify_create_VM.spec.ts:76:2
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-1_Verify_create_VM-Create-VM---All-in-One-Flow-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-1_Verify_create_VM-Create-VM---All-in-One-Flow-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-1_Verify_create_VM-Create-VM---All-in-One-Flow-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[ℹ️ Only one boot device present, skipping reorder.
+Current VM status: "in_progress", waiting...
+Current VM status: "in_progress", waiting...
+Current VM status: "in_progress", waiting...
+Current VM status: "in_progress", waiting...
+
+[[ATTACHMENT|..\test-results\VDC-1_Verify_create_VM-Create-VM---All-in-One-Flow-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-1_Verify_create_VM-Create-VM---All-in-One-Flow-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-1_Verify_create_VM-Create-VM---All-in-One-Flow-chromium\error-context.md]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[⚠️ No network available modal detected.
+⚠️ ISO "not specified" not found or not provided. Removing CD/DVD drive.
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="VDC\10_VerifyNamingVirtualMachineTemplateEndinHyphen.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="15.501" errors="0">
+<testcase name="Create VM Template name start or ends in Hyphen" classname="VDC\10_VerifyNamingVirtualMachineTemplateEndinHyphen.spec.ts" time="15.501">
+<failure message="10_VerifyNamingVirtualMachineTemplateEndinHyphen.spec.ts:9:5 Create VM Template name start or ends in Hyphen" type="FAILURE">
+<![CDATA[  [chromium] › VDC\10_VerifyNamingVirtualMachineTemplateEndinHyphen.spec.ts:9:5 › Create VM Template name start or ends in Hyphen 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('h5:has-text("General Configuration")')
+    Expected: visible
+    Received: <element(s) not found>
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('h5:has-text("General Configuration")')
+        - waiting for" https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba" navigation to finish...
+        - navigated to "https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba"
+
+
+       at ..\vmtemplate.ts:37
+
+      35 | // ---------- Step 1: General Configuration ----------
+      36 | export async function fillGeneralConfig(page: Page, vmName: string, osType: 'windows' | 'linux' | 'unix' | 'other') {
+    > 37 |   await expect(page.locator('h5:has-text("General Configuration")')).toBeVisible();
+         |                                                                      ^
+      38 |
+      39 |   // Fill VM name
+      40 |   await page.fill('input[name="VMCloneForm[name]"]', vmName);
+        at fillGeneralConfig (C:\Users\marben.dimson\Desktop\Auto\HN\MP\vmtemplate.ts:37:70)
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\10_VerifyNamingVirtualMachineTemplateEndinHyphen.spec.ts:24:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-10_VerifyNamingVirtual-548ac-ame-start-or-ends-in-Hyphen-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-10_VerifyNamingVirtual-548ac-ame-start-or-ends-in-Hyphen-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-10_VerifyNamingVirtual-548ac-ame-start-or-ends-in-Hyphen-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-10_VerifyNamingVirtual-548ac-ame-start-or-ends-in-Hyphen-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-10_VerifyNamingVirtual-548ac-ame-start-or-ends-in-Hyphen-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-10_VerifyNamingVirtual-548ac-ame-start-or-ends-in-Hyphen-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\11_VerfiyNamingVirtualMachineTemplateSpecialCharacters.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="15.139" errors="0">
+<testcase name="Create VM Template naming with special characters " classname="VDC\11_VerfiyNamingVirtualMachineTemplateSpecialCharacters.spec.ts" time="15.139">
+<failure message="11_VerfiyNamingVirtualMachineTemplateSpecialCharacters.spec.ts:9:5 Create VM Template naming with special characters " type="FAILURE">
+<![CDATA[  [chromium] › VDC\11_VerfiyNamingVirtualMachineTemplateSpecialCharacters.spec.ts:9:5 › Create VM Template naming with special characters  
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('h5:has-text("General Configuration")')
+    Expected: visible
+    Received: <element(s) not found>
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('h5:has-text("General Configuration")')
+
+
+       at ..\vmtemplate.ts:37
+
+      35 | // ---------- Step 1: General Configuration ----------
+      36 | export async function fillGeneralConfig(page: Page, vmName: string, osType: 'windows' | 'linux' | 'unix' | 'other') {
+    > 37 |   await expect(page.locator('h5:has-text("General Configuration")')).toBeVisible();
+         |                                                                      ^
+      38 |
+      39 |   // Fill VM name
+      40 |   await page.fill('input[name="VMCloneForm[name]"]', vmName);
+        at fillGeneralConfig (C:\Users\marben.dimson\Desktop\Auto\HN\MP\vmtemplate.ts:37:70)
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\11_VerfiyNamingVirtualMachineTemplateSpecialCharacters.spec.ts:24:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-11_VerfiyNamingVirtual-1ce91-ng-with-special-characters--chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-11_VerfiyNamingVirtual-1ce91-ng-with-special-characters--chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-11_VerfiyNamingVirtual-1ce91-ng-with-special-characters--chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-11_VerfiyNamingVirtual-1ce91-ng-with-special-characters--chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-11_VerfiyNamingVirtual-1ce91-ng-with-special-characters--chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-11_VerfiyNamingVirtual-1ce91-ng-with-special-characters--chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\2_Verify_validation_message_if_naming_Virtual_machine_start_in_hyphens.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.779" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VDC\2_Verify_validation_message_if_naming_Virtual_machine_start_in_hyphens.spec.ts" time="10.779">
+</testcase>
+</testsuite>
+<testsuite name="VDC\3_Verify_validation_message_if_naming_Virtual_machine _end_in_hyphens.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="0" skipped="0" time="11.379" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VDC\3_Verify_validation_message_if_naming_Virtual_machine _end_in_hyphens.spec.ts" time="11.379">
+</testcase>
+</testsuite>
+<testsuite name="VDC\4_Verify_validation_message_if_specials_characters_used_to_name_Virtual_machine.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="0" skipped="0" time="11.229" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VDC\4_Verify_validation_message_if_specials_characters_used_to_name_Virtual_machine.spec.ts" time="11.229">
+</testcase>
+</testsuite>
+<testsuite name="VDC\5_Verify _validation_message_if_leave_empty_hardware_settings.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="0" skipped="0" time="11.86" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VDC\5_Verify _validation_message_if_leave_empty_hardware_settings.spec.ts" time="11.86">
+</testcase>
+</testsuite>
+<testsuite name="VDC\6_Verify_validation_message_when_input_0_value_hardware_settings.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="30.682" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VDC\6_Verify_validation_message_when_input_0_value_hardware_settings.spec.ts" time="30.682">
+<failure message="6_Verify_validation_message_when_input_0_value_hardware_settings.spec.ts:8:5 Create VM - All in One Flow" type="FAILURE">
+<![CDATA[  [chromium] › VDC\6_Verify_validation_message_when_input_0_value_hardware_settings.spec.ts:8:5 › Create VM - All in One Flow 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.selectOption: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('#cpu-dropdown')
+        - locator resolved to <select id="cpu-dropdown" class="form-select" name="VirtualMachine[cpu]">…</select>
+      - attempting select option action
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+        - waiting 20ms
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+          - waiting 100ms
+        37 × waiting for element to be visible and enabled
+           - did not find some options
+         - retrying select option action
+           - waiting 500ms
+
+
+       at ..\vm-page.ts:133
+
+      131 | await expect(label).toBeVisible();
+      132 | await label.click();
+    > 133 |   await page.selectOption('#cpu-dropdown', options.cpuType);
+          |              ^
+      134 |   await page.fill('#virtualmachine-memory', options.memory.toString());
+      135 |   await expect(page.locator('#virtualmachine-memory')).toHaveValue(options.memory.toString());
+      136 |   const nextButton = page.locator('button[data-nexttab="steparrow-storage-configuration-tab"]');
+        at Object.configureHardware (C:\Users\marben.dimson\Desktop\Auto\HN\MP\vm-page.ts:133:14)
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\6_Verify_validation_message_when_input_0_value_hardware_settings.spec.ts:35:2
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-6_Verify_validation_me-2c4ed-Create-VM---All-in-One-Flow-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-6_Verify_validation_me-2c4ed-Create-VM---All-in-One-Flow-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-6_Verify_validation_me-2c4ed-Create-VM---All-in-One-Flow-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-6_Verify_validation_me-2c4ed-Create-VM---All-in-One-Flow-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-6_Verify_validation_me-2c4ed-Create-VM---All-in-One-Flow-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-6_Verify_validation_me-2c4ed-Create-VM---All-in-One-Flow-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\7_VerifyLeaveEmptyStoragePolicy.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="30.687" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VDC\7_VerifyLeaveEmptyStoragePolicy.spec.ts" time="30.687">
+<failure message="7_VerifyLeaveEmptyStoragePolicy.spec.ts:8:5 Create VM - All in One Flow" type="FAILURE">
+<![CDATA[  [chromium] › VDC\7_VerifyLeaveEmptyStoragePolicy.spec.ts:8:5 › Create VM - All in One Flow ───────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.selectOption: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('#cpu-dropdown')
+        - locator resolved to <select id="cpu-dropdown" class="form-select" name="VirtualMachine[cpu]">…</select>
+      - attempting select option action
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+        - waiting 20ms
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+          - waiting 100ms
+        37 × waiting for element to be visible and enabled
+           - did not find some options
+         - retrying select option action
+           - waiting 500ms
+
+
+       at ..\vm-page.ts:133
+
+      131 | await expect(label).toBeVisible();
+      132 | await label.click();
+    > 133 |   await page.selectOption('#cpu-dropdown', options.cpuType);
+          |              ^
+      134 |   await page.fill('#virtualmachine-memory', options.memory.toString());
+      135 |   await expect(page.locator('#virtualmachine-memory')).toHaveValue(options.memory.toString());
+      136 |   const nextButton = page.locator('button[data-nexttab="steparrow-storage-configuration-tab"]');
+        at Object.configureHardware (C:\Users\marben.dimson\Desktop\Auto\HN\MP\vm-page.ts:133:14)
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\7_VerifyLeaveEmptyStoragePolicy.spec.ts:35:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-7_VerifyLeaveEmptyStor-ea0cd-Create-VM---All-in-One-Flow-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-7_VerifyLeaveEmptyStor-ea0cd-Create-VM---All-in-One-Flow-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-7_VerifyLeaveEmptyStor-ea0cd-Create-VM---All-in-One-Flow-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-7_VerifyLeaveEmptyStor-ea0cd-Create-VM---All-in-One-Flow-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-7_VerifyLeaveEmptyStor-ea0cd-Create-VM---All-in-One-Flow-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-7_VerifyLeaveEmptyStor-ea0cd-Create-VM---All-in-One-Flow-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\8_Verify_create_VMTemplate.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="15.187" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VDC\8_Verify_create_VMTemplate.spec.ts" time="15.187">
+<failure message="8_Verify_create_VMTemplate.spec.ts:9:5 Create VM - All in One Flow" type="FAILURE">
+<![CDATA[  [chromium] › VDC\8_Verify_create_VMTemplate.spec.ts:9:5 › Create VM - All in One Flow ────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('h5:has-text("General Configuration")')
+    Expected: visible
+    Received: <element(s) not found>
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('h5:has-text("General Configuration")')
+        - waiting for" https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba" navigation to finish...
+        - navigated to "https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba"
+
+
+       at ..\vmtemplate.ts:37
+
+      35 | // ---------- Step 1: General Configuration ----------
+      36 | export async function fillGeneralConfig(page: Page, vmName: string, osType: 'windows' | 'linux' | 'unix' | 'other') {
+    > 37 |   await expect(page.locator('h5:has-text("General Configuration")')).toBeVisible();
+         |                                                                      ^
+      38 |
+      39 |   // Fill VM name
+      40 |   await page.fill('input[name="VMCloneForm[name]"]', vmName);
+        at fillGeneralConfig (C:\Users\marben.dimson\Desktop\Auto\HN\MP\vmtemplate.ts:37:70)
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\8_Verify_create_VMTemplate.spec.ts:24:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-8_Verify_create_VMTemplate-Create-VM---All-in-One-Flow-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-8_Verify_create_VMTemplate-Create-VM---All-in-One-Flow-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-8_Verify_create_VMTemplate-Create-VM---All-in-One-Flow-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-8_Verify_create_VMTemplate-Create-VM---All-in-One-Flow-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-8_Verify_create_VMTemplate-Create-VM---All-in-One-Flow-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-8_Verify_create_VMTemplate-Create-VM---All-in-One-Flow-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\9_VerifyNamingVirtualMachineTemplatestartinHyphen.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="15.233" errors="0">
+<testcase name="Create VM Template name start or ends in Hyphen" classname="VDC\9_VerifyNamingVirtualMachineTemplatestartinHyphen.spec.ts" time="15.233">
+<failure message="9_VerifyNamingVirtualMachineTemplatestartinHyphen.spec.ts:9:5 Create VM Template name start or ends in Hyphen" type="FAILURE">
+<![CDATA[  [chromium] › VDC\9_VerifyNamingVirtualMachineTemplatestartinHyphen.spec.ts:9:5 › Create VM Template name start or ends in Hyphen 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('h5:has-text("General Configuration")')
+    Expected: visible
+    Received: <element(s) not found>
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('h5:has-text("General Configuration")')
+        - waiting for" https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba" navigation to finish...
+        - navigated to "https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba"
+
+
+       at ..\vmtemplate.ts:37
+
+      35 | // ---------- Step 1: General Configuration ----------
+      36 | export async function fillGeneralConfig(page: Page, vmName: string, osType: 'windows' | 'linux' | 'unix' | 'other') {
+    > 37 |   await expect(page.locator('h5:has-text("General Configuration")')).toBeVisible();
+         |                                                                      ^
+      38 |
+      39 |   // Fill VM name
+      40 |   await page.fill('input[name="VMCloneForm[name]"]', vmName);
+        at fillGeneralConfig (C:\Users\marben.dimson\Desktop\Auto\HN\MP\vmtemplate.ts:37:70)
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\9_VerifyNamingVirtualMachineTemplatestartinHyphen.spec.ts:24:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-9_VerifyNamingVirtualM-6c27e-ame-start-or-ends-in-Hyphen-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-9_VerifyNamingVirtualM-6c27e-ame-start-or-ends-in-Hyphen-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-9_VerifyNamingVirtualM-6c27e-ame-start-or-ends-in-Hyphen-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-9_VerifyNamingVirtualM-6c27e-ame-start-or-ends-in-Hyphen-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-9_VerifyNamingVirtualM-6c27e-ame-start-or-ends-in-Hyphen-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-9_VerifyNamingVirtualM-6c27e-ame-start-or-ends-in-Hyphen-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\TC_VerifyDeleteTenant.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.514" errors="0">
+<testcase name="should verify modal contents and delete tenant" classname="VDC\TC_VerifyDeleteTenant.spec.ts" time="12.514">
+</testcase>
+</testsuite>
+<testsuite name="VDC\TS_017VerifyDeleteReseller.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.937" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="VDC\TS_017VerifyDeleteReseller.spec.ts" time="10.937">
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_Backup_section.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.331" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_Backup_section.spec.ts" time="32.331">
+<failure message="Verify_Backup_section.spec.ts:7:5 Update Backup Job modal - full workflow with verification" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_Backup_section.spec.ts:7:5 › Update Backup Job modal - full workflow with verification 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('a:has-text("VDC Autotest")').first()
+
+
+      28 |
+      29 |   // Click the first link matching the VDC name
+    > 30 |   await page.locator(`a:has-text("VDC Autotest")`).first().click();
+         |                                                            ^
+      31 |
+      32 |    //Verify display Task log section 
+      33 |   const backupTab = page.locator('a.nav-link[data-tab="backups"]');
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_Backup_section.spec.ts:30:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_Backup_section--089ad--workflow-with-verification-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_Backup_section--089ad--workflow-with-verification-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_Backup_section--089ad--workflow-with-verification-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_Backup_section--089ad--workflow-with-verification-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_Backup_section--089ad--workflow-with-verification-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_Backup_section--089ad--workflow-with-verification-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_clone_vm.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="31.951" errors="0">
+<testcase name="Clone ViMachinertual  › Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_clone_vm.spec.ts" time="31.951">
+<failure message="Verify_clone_vm.spec.ts:11:7 Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_clone_vm.spec.ts:11:7 › Clone ViMachinertual  › Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('a:has-text("VDC Autotest")').first()
+
+
+      33 |
+      34 |    // Click only the link that matches the VDC name
+    > 35 |     await page.locator(`a:has-text("VDC Autotest")`).first().click();
+         |                                                              ^
+      36 |
+      37 |    const vmRow = page.locator('table tbody tr').filter({
+      38 |   has: page.locator('td:has-text("AutoVM-001")')
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_clone_vm.spec.ts:35:62
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_clone_vm-Clone--9a916-rovider-dev-staging-preprod-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_clone_vm-Clone--9a916-rovider-dev-staging-preprod-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_clone_vm-Clone--9a916-rovider-dev-staging-preprod-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_clone_vm-Clone--9a916-rovider-dev-staging-preprod-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_clone_vm-Clone--9a916-rovider-dev-staging-preprod-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_clone_vm-Clone--9a916-rovider-dev-staging-preprod-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_Convert_VM.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.086" errors="0">
+<testcase name="Clone Virtual Machine › Should be able to successfully Convert Virtual Machine to Template - Service Provider @dev @staging @preprod" classname="VDC\Verify_Convert_VM.spec.ts" time="32.086">
+<failure message="Verify_Convert_VM.spec.ts:7:7 Should be able to successfully Convert Virtual Machine to Template - Service Provider @dev @staging @preprod" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_Convert_VM.spec.ts:7:7 › Clone Virtual Machine › Should be able to successfully Convert Virtual Machine to Template - Service Provider @dev @staging @preprod 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('a:has-text("VDC Autotest")').first()
+
+
+      24 |
+      25 |     // Click specific VDC
+    > 26 |     await page.locator('a:has-text("VDC Autotest")').first().click();
+         |                                                              ^
+      27 |
+      28 |     // Locate the VM row (scoped to table)
+      29 |     const vmRow = page.locator('table tbody tr').filter({
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_Convert_VM.spec.ts:26:62
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_Convert_VM-Clon-efeb5-rovider-dev-staging-preprod-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_Convert_VM-Clon-efeb5-rovider-dev-staging-preprod-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_Convert_VM-Clon-efeb5-rovider-dev-staging-preprod-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_Convert_VM-Clon-efeb5-rovider-dev-staging-preprod-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_Convert_VM-Clon-efeb5-rovider-dev-staging-preprod-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_Convert_VM-Clon-efeb5-rovider-dev-staging-preprod-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_create_Backup_Job.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.162" errors="0">
+<testcase name="Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_create_Backup_Job.spec.ts" time="32.162">
+<failure message="Verify_create_Backup_Job.spec.ts:9:5 Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_create_Backup_Job.spec.ts:9:5 › Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('a:has-text("VDC Autotest")').first()
+
+
+      29 |
+      30 |   // Click the first link matching the VDC name
+    > 31 |   await page.locator(`a:has-text("VDC Autotest")`).first().click();
+         |                                                            ^
+      32 |
+      33 |   //Navigate to Backup Job Tab 
+      34 |    const backupJobsTab = page.locator('a.nav-link', { hasText: 'Backup Jobs' });
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_create_Backup_Job.spec.ts:31:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_create_Backup_J-aa563-rovider-dev-staging-preprod-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_create_Backup_J-aa563-rovider-dev-staging-preprod-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_create_Backup_J-aa563-rovider-dev-staging-preprod-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_create_Backup_J-aa563-rovider-dev-staging-preprod-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_create_Backup_J-aa563-rovider-dev-staging-preprod-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_create_Backup_J-aa563-rovider-dev-staging-preprod-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_delete_Backupjob.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.144" errors="0">
+<testcase name="Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_delete_Backupjob.spec.ts" time="32.144">
+<failure message="Verify_delete_Backupjob.spec.ts:9:5 Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_delete_Backupjob.spec.ts:9:5 › Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('a:has-text("VDC Autotest")').first()
+
+
+      29 |
+      30 |   // Click the first link matching the VDC name
+    > 31 |   await page.locator(`a:has-text("VDC Autotest")`).first().click();
+         |                                                            ^
+      32 |
+      33 |   //Navigate to Backup Job Tab 
+      34 |    const backupJobsTab = page.locator('a.nav-link', { hasText: 'Backup Jobs' });
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_delete_Backupjob.spec.ts:31:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_delete_Backupjo-b9a52-rovider-dev-staging-preprod-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_delete_Backupjo-b9a52-rovider-dev-staging-preprod-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_delete_Backupjo-b9a52-rovider-dev-staging-preprod-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_delete_Backupjo-b9a52-rovider-dev-staging-preprod-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_delete_Backupjo-b9a52-rovider-dev-staging-preprod-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_delete_Backupjo-b9a52-rovider-dev-staging-preprod-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_delete_VDC.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.019" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_delete_VDC.spec.ts" time="32.019">
+<failure message="Verify_delete_VDC.spec.ts:7:5 Update Backup Job modal - full workflow with verification" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_delete_VDC.spec.ts:7:5 › Update Backup Job modal - full workflow with verification 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('a:has-text("Update_VDC Autotest")').first()
+
+
+      28 |
+      29 |   // Click the first link matching the VDC name
+    > 30 |   await page.locator(`a:has-text("Update_VDC Autotest")`).first().click();
+         |                                                                   ^
+      31 |
+      32 |   await handleDeleteVDC(page, 'Update_VDC Autotest', 'cancel');
+      33 |
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_delete_VDC.spec.ts:30:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_delete_VDC-Upda-93064--workflow-with-verification-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_delete_VDC-Upda-93064--workflow-with-verification-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_delete_VDC-Upda-93064--workflow-with-verification-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_delete_VDC-Upda-93064--workflow-with-verification-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_delete_VDC-Upda-93064--workflow-with-verification-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_delete_VDC-Upda-93064--workflow-with-verification-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_delete_vm.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.118" errors="0">
+<testcase name="Delete Virtual Machine › Should be able to successfully delete Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_delete_vm.spec.ts" time="32.118">
+<failure message="Verify_delete_vm.spec.ts:8:7 Should be able to successfully delete Virtual Machine - Service Provider @dev @staging @preprod" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_delete_vm.spec.ts:8:7 › Delete Virtual Machine › Should be able to successfully delete Virtual Machine - Service Provider @dev @staging @preprod 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('a:has-text("VDC Autotest")').first()
+
+
+      31 |
+      32 |   // Click only the link that matches the VDC name
+    > 33 |   await page.locator(`a:has-text("VDC Autotest")`).first().click();
+         |                                                            ^
+      34 |
+      35 |   await verifyVDCDetailsVisible(page);
+      36 |   // Delete VM AND delete Proxmox data
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_delete_vm.spec.ts:33:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_delete_vm-Delet-b37d4-rovider-dev-staging-preprod-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_delete_vm-Delet-b37d4-rovider-dev-staging-preprod-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_delete_vm-Delet-b37d4-rovider-dev-staging-preprod-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_delete_vm-Delet-b37d4-rovider-dev-staging-preprod-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_delete_vm-Delet-b37d4-rovider-dev-staging-preprod-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_delete_vm-Delet-b37d4-rovider-dev-staging-preprod-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_Edit_VirtualDataCenter.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.14" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_Edit_VirtualDataCenter.spec.ts" time="32.14">
+<failure message="Verify_Edit_VirtualDataCenter.spec.ts:8:5 Update Backup Job modal - full workflow with verification" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_Edit_VirtualDataCenter.spec.ts:8:5 › Update Backup Job modal - full workflow with verification 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('a:has-text("VDC Autotest")').first()
+
+
+      29 |
+      30 |   // Click the first link matching the VDC name
+    > 31 |   await page.locator(`a:has-text("VDC Autotest")`).first().click();
+         |                                                            ^
+      32 | //Verify Click edit VDC form 
+      33 |  const editBtn = page.getByRole('link', { name: 'Edit' });
+      34 | await expect(editBtn).toBeVisible();
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_Edit_VirtualDataCenter.spec.ts:31:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_Edit_VirtualDat-459ba--workflow-with-verification-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_Edit_VirtualDat-459ba--workflow-with-verification-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_Edit_VirtualDat-459ba--workflow-with-verification-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_Edit_VirtualDat-459ba--workflow-with-verification-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_Edit_VirtualDat-459ba--workflow-with-verification-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_Edit_VirtualDat-459ba--workflow-with-verification-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_RemoveRecentTask.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="19.415" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="VDC\Verify_RemoveRecentTask.spec.ts" time="19.415">
+<failure message="Verify_RemoveRecentTask.spec.ts:7:7 should login successfully with Service Provider @dev @staging @preprod" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_RemoveRecentTask.spec.ts:7:7 › Login Success Tests › should login successfully with Service Provider @dev @staging @preprod 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('.swal2-popup.swal2-modal.swal2-icon-warning')
+    Expected: visible
+    Received: <element(s) not found>
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('.swal2-popup.swal2-modal.swal2-icon-warning')
+
+
+       at ..\recentTask.ts:103
+
+      101 |   // 4. Handle SweetAlert2 confirmation modal
+      102 |   const swalWarning = page.locator('.swal2-popup.swal2-modal.swal2-icon-warning');
+    > 103 |   await expect(swalWarning).toBeVisible({ timeout: 10000 });
+          |                             ^
+      104 |
+      105 |   if (confirm) {
+      106 |     // ✅ Confirm removal
+        at verifyAndRemoveCompletedTask (C:\Users\marben.dimson\Desktop\Auto\HN\MP\recentTask.ts:103:29)
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_RemoveRecentTask.spec.ts:25:4
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_RemoveRecentTas-e21de-rovider-dev-staging-preprod-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_RemoveRecentTas-e21de-rovider-dev-staging-preprod-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_RemoveRecentTas-e21de-rovider-dev-staging-preprod-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_RemoveRecentTas-e21de-rovider-dev-staging-preprod-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_RemoveRecentTas-e21de-rovider-dev-staging-preprod-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_RemoveRecentTas-e21de-rovider-dev-staging-preprod-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_rename_VM.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.086" errors="0">
+<testcase name="Clone ViMachinertual  › Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_rename_VM.spec.ts" time="32.086">
+<failure message="Verify_rename_VM.spec.ts:12:7 Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_rename_VM.spec.ts:12:7 › Clone ViMachinertual  › Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('a:has-text("VDC Autotest")').first()
+
+
+      34 |
+      35 |    // Click only the link that matches the VDC name
+    > 36 |     await page.locator(`a:has-text("VDC Autotest")`).first().click();
+         |                                                              ^
+      37 |
+      38 |     const vmRow = page.locator('table tbody tr').filter({
+      39 |   has: page.locator('td:has-text("AutoVM-001")')
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_rename_VM.spec.ts:36:62
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_rename_VM-Clone-4bce9-rovider-dev-staging-preprod-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_rename_VM-Clone-4bce9-rovider-dev-staging-preprod-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_rename_VM-Clone-4bce9-rovider-dev-staging-preprod-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_rename_VM-Clone-4bce9-rovider-dev-staging-preprod-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_rename_VM-Clone-4bce9-rovider-dev-staging-preprod-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_rename_VM-Clone-4bce9-rovider-dev-staging-preprod-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_run_Backupjob.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.054" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_run_Backupjob.spec.ts" time="32.054">
+<failure message="Verify_run_Backupjob.spec.ts:7:5 Update Backup Job modal - full workflow with verification" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_run_Backupjob.spec.ts:7:5 › Update Backup Job modal - full workflow with verification 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('a:has-text("VDC Autotest")').first()
+
+
+      28 |
+      29 |   // Click the first link matching the VDC name
+    > 30 |   await page.locator(`a:has-text("VDC Autotest")`).first().click();
+         |                                                            ^
+      31 |
+      32 |   //Navigate to Backup Job Tab 
+      33 |    const backupJobsTab = page.locator('a.nav-link', { hasText: 'Backup Jobs' });
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_run_Backupjob.spec.ts:30:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_run_Backupjob-U-82d8b--workflow-with-verification-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_run_Backupjob-U-82d8b--workflow-with-verification-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_run_Backupjob-U-82d8b--workflow-with-verification-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_run_Backupjob-U-82d8b--workflow-with-verification-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_run_Backupjob-U-82d8b--workflow-with-verification-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_run_Backupjob-U-82d8b--workflow-with-verification-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_start_VM.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.12" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_start_VM.spec.ts" time="32.12">
+<failure message="Verify_start_VM.spec.ts:8:5 Update Backup Job modal - full workflow with verification" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_start_VM.spec.ts:8:5 › Update Backup Job modal - full workflow with verification 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('a:has-text("VDC Autotest")').first()
+
+
+      29 |
+      30 |   // Click the first link matching the VDC name
+    > 31 |   await page.locator(`a:has-text("VDC Autotest")`).first().click();
+         |                                                            ^
+      32 |
+      33 |   //const vmRow = page.locator('tr', { hasText: 'AutoVM-001' });
+      34 |
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_start_VM.spec.ts:31:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_start_VM-Update-1a737--workflow-with-verification-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_start_VM-Update-1a737--workflow-with-verification-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_start_VM-Update-1a737--workflow-with-verification-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_start_VM-Update-1a737--workflow-with-verification-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_start_VM-Update-1a737--workflow-with-verification-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_start_VM-Update-1a737--workflow-with-verification-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_takeBackup.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.006" errors="0">
+<testcase name="Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_takeBackup.spec.ts" time="32.006">
+<failure message="Verify_takeBackup.spec.ts:9:5 Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_takeBackup.spec.ts:9:5 › Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('a:has-text("VDC Autotest")').first()
+
+
+      29 |
+      30 |   // Click the first link matching the VDC name
+    > 31 |   await page.locator(`a:has-text("VDC Autotest")`).first().click();
+         |                                                            ^
+      32 |
+      33 |   //await page.reload()
+      34 |
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_takeBackup.spec.ts:31:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_takeBackup-Shou-bfbcd-rovider-dev-staging-preprod-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_takeBackup-Shou-bfbcd-rovider-dev-staging-preprod-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_takeBackup-Shou-bfbcd-rovider-dev-staging-preprod-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_takeBackup-Shou-bfbcd-rovider-dev-staging-preprod-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_takeBackup-Shou-bfbcd-rovider-dev-staging-preprod-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_takeBackup-Shou-bfbcd-rovider-dev-staging-preprod-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_Tasklog_section.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.121" errors="0">
+<testcase name="Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_Tasklog_section.spec.ts" time="32.121">
+<failure message="Verify_Tasklog_section.spec.ts:9:5 Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_Tasklog_section.spec.ts:9:5 › Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('a:has-text("VDC Autotest")').first()
+
+
+      29 |
+      30 |   // Click the first link matching the VDC name
+    > 31 |   await page.locator(`a:has-text("VDC Autotest")`).first().click();
+         |                                                            ^
+      32 |
+      33 |   //Verify display Task log section 
+      34 |   const taskLogTab = page.locator('a.nav-link[data-tab="event-log"]');
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_Tasklog_section.spec.ts:31:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_Tasklog_section-c1492-rovider-dev-staging-preprod-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_Tasklog_section-c1492-rovider-dev-staging-preprod-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_Tasklog_section-c1492-rovider-dev-staging-preprod-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_Tasklog_section-c1492-rovider-dev-staging-preprod-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_Tasklog_section-c1492-rovider-dev-staging-preprod-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_Tasklog_section-c1492-rovider-dev-staging-preprod-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_UpdateBackup_job.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.048" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_UpdateBackup_job.spec.ts" time="32.048">
+<failure message="Verify_UpdateBackup_job.spec.ts:7:5 Update Backup Job modal - full workflow with verification" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_UpdateBackup_job.spec.ts:7:5 › Update Backup Job modal - full workflow with verification 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('a:has-text("VDC Autotest")').first()
+
+
+      28 |
+      29 |   // Click the first link matching the VDC name
+    > 30 |   await page.locator(`a:has-text("VDC Autotest")`).first().click();
+         |                                                            ^
+      31 |
+      32 |   //Navigate to Backup Job Tab 
+      33 |    const backupJobsTab = page.locator('a.nav-link', { hasText: 'Backup Jobs' });
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_UpdateBackup_job.spec.ts:30:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_UpdateBackup_jo-deab0--workflow-with-verification-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_UpdateBackup_jo-deab0--workflow-with-verification-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_UpdateBackup_jo-deab0--workflow-with-verification-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_UpdateBackup_jo-deab0--workflow-with-verification-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_UpdateBackup_jo-deab0--workflow-with-verification-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_UpdateBackup_jo-deab0--workflow-with-verification-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_ViewRecentTask.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="0" skipped="0" time="7.396" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="VDC\Verify_ViewRecentTask.spec.ts" time="7.396">
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_virtual_dataCenter_Usage.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.14" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_virtual_dataCenter_Usage.spec.ts" time="32.14">
+<failure message="Verify_virtual_dataCenter_Usage.spec.ts:7:5 Update Backup Job modal - full workflow with verification" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_virtual_dataCenter_Usage.spec.ts:7:5 › Update Backup Job modal - full workflow with verification 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('a:has-text("VDC Autotest")').first()
+
+
+      28 |
+      29 |   // Click the first link matching the VDC name
+    > 30 |   await page.locator(`a:has-text("VDC Autotest")`).first().click();
+         |                                                            ^
+      31 |
+      32 |   await openBackupTab(page);
+      33 |
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_virtual_dataCenter_Usage.spec.ts:30:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_virtual_dataCen-20a5b--workflow-with-verification-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_virtual_dataCen-20a5b--workflow-with-verification-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_virtual_dataCen-20a5b--workflow-with-verification-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_virtual_dataCen-20a5b--workflow-with-verification-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_virtual_dataCen-20a5b--workflow-with-verification-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_virtual_dataCen-20a5b--workflow-with-verification-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_VirtualDataCenter_Storage_policies.spec.ts" timestamp="2025-09-04T04:08:55.915Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.143" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_VirtualDataCenter_Storage_policies.spec.ts" time="32.143">
+<failure message="Verify_VirtualDataCenter_Storage_policies.spec.ts:7:5 Update Backup Job modal - full workflow with verification" type="FAILURE">
+<![CDATA[  [chromium] › VDC\Verify_VirtualDataCenter_Storage_policies.spec.ts:7:5 › Update Backup Job modal - full workflow with verification 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('a:has-text("VDC Autotest")').first()
+
+
+      28 |
+      29 |   // Click the first link matching the VDC name
+    > 30 |   await page.locator(`a:has-text("VDC Autotest")`).first().click();
+         |                                                            ^
+      31 |
+      32 |   await verifyStoragePolicySection(page);
+      33 |
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\VDC\Verify_VirtualDataCenter_Storage_policies.spec.ts:30:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_VirtualDataCent-8f4ab--workflow-with-verification-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\VDC-Verify_VirtualDataCent-8f4ab--workflow-with-verification-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\VDC-Verify_VirtualDataCent-8f4ab--workflow-with-verification-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\VDC-Verify_VirtualDataCent-8f4ab--workflow-with-verification-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_VirtualDataCent-8f4ab--workflow-with-verification-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\VDC-Verify_VirtualDataCent-8f4ab--workflow-with-verification-chromium\error-context.md]]
+]]>
+</system-out>
 </testcase>
 </testsuite>
 </testsuites>

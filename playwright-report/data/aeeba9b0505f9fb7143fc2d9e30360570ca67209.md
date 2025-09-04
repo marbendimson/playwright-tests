@@ -1,0 +1,401 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - button [ref=e7] [cursor=pointer]
+          - generic [ref=e13]:
+            - textbox "Search..." [ref=e15]
+            - generic [ref=e16]: 󰍉
+            - text: 󰅙
+        - generic [ref=e17]:
+          - button "Header Language" [ref=e19] [cursor=pointer]:
+            - img "Header Language" [ref=e20] [cursor=pointer]
+          - button "" [ref=e22] [cursor=pointer]:
+            - generic [ref=e23] [cursor=pointer]: 
+          - button "" [ref=e25] [cursor=pointer]:
+            - generic [ref=e26] [cursor=pointer]: 
+          - generic [ref=e27]:
+            - button "Header Avatar Quality Assurance Service Provider Administrator" [ref=e28] [cursor=pointer]:
+              - generic [ref=e29] [cursor=pointer]:
+                - img "Header Avatar" [ref=e30] [cursor=pointer]
+                - generic [ref=e31] [cursor=pointer]:
+                  - generic [ref=e32] [cursor=pointer]: Quality Assurance
+                  - generic [ref=e33] [cursor=pointer]: Service Provider Administrator
+            - text: 󰀄 󱂛 󰡾 󰃤 󰂾 󰍃 󰍃
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - link [ref=e36] [cursor=pointer]:
+          - /url: /
+          - img [ref=e38] [cursor=pointer]
+        - text: 
+      - text:  󰍃
+      - region "scrollable content" [ref=e43]:
+        - list [ref=e46]:
+          - region "scrollable content" [ref=e50]:
+            - generic [ref=e51]:
+              - listitem [ref=e52]:
+                - link "󰨝 Dashboard" [ref=e53] [cursor=pointer]:
+                  - /url: /dashboard
+                  - generic [ref=e54] [cursor=pointer]: 󰨝
+                  - generic [ref=e55] [cursor=pointer]: Dashboard
+              - listitem [ref=e56]:
+                - link "󰀏 Resellers" [ref=e57] [cursor=pointer]:
+                  - /url: /reseller
+                  - generic [ref=e58] [cursor=pointer]: 󰀏
+                  - generic [ref=e59] [cursor=pointer]: Resellers
+              - listitem [ref=e60]:
+                - link "󰀎 Tenants" [ref=e61] [cursor=pointer]:
+                  - /url: /tenants
+                  - generic [ref=e62] [cursor=pointer]: 󰀎
+                  - generic [ref=e63] [cursor=pointer]: Tenants
+              - listitem [ref=e64]:
+                - link "󰒋 Virtual Data Centers" [ref=e65] [cursor=pointer]:
+                  - /url: /virtual-data-center/index
+                  - generic [ref=e66] [cursor=pointer]: 󰒋
+                  - generic [ref=e67] [cursor=pointer]: Virtual Data Centers
+              - listitem [ref=e68]:
+                - button "󰌖 Catalogue 󰅂" [ref=e69] [cursor=pointer]:
+                  - generic [ref=e70] [cursor=pointer]: 󰌖
+                  - generic [ref=e71] [cursor=pointer]: Catalogue
+                  - text: 󰅂
+              - listitem [ref=e72]:
+                - button "󰛳 Networking 󰅂" [ref=e73] [cursor=pointer]:
+                  - generic [ref=e74] [cursor=pointer]: 󰛳
+                  - generic [ref=e75] [cursor=pointer]: Networking
+                  - text: 󰅂
+              - listitem [ref=e76]:
+                - button "󱀩 Reports 󰅂" [ref=e77] [cursor=pointer]:
+                  - generic [ref=e78] [cursor=pointer]: 󱀩
+                  - generic [ref=e79] [cursor=pointer]: Reports
+                  - text: 󰅂
+              - listitem [ref=e80]:
+                - link "󱥠 User Roles" [ref=e81] [cursor=pointer]:
+                  - /url: /user/role
+                  - generic [ref=e82] [cursor=pointer]: 󱥠
+                  - generic [ref=e83] [cursor=pointer]: User Roles
+              - listitem [ref=e84]:
+                - link "󰒒 Backup Management" [ref=e85] [cursor=pointer]:
+                  - /url: /scheduled-backup/index
+                  - generic [ref=e86] [cursor=pointer]: 󰒒
+                  - generic [ref=e87] [cursor=pointer]: Backup Management
+              - listitem [ref=e88]:
+                - button "󰒓 Settings 󰅂" [ref=e89] [cursor=pointer]:
+                  - generic [ref=e90] [cursor=pointer]: 󰒓
+                  - generic [ref=e91] [cursor=pointer]: Settings
+                  - text: 󰅂
+                - text: 󰅂
+    - generic [ref=e95]:
+      - generic [ref=e98]:
+        - heading "VDC Autotest" [level=4] [ref=e99]
+        - list [ref=e101]:
+          - navigation "breadcrumb" [ref=e102]:
+            - list [ref=e103]:
+              - listitem [ref=e104]:
+                - link "Home" [ref=e105] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e106]:
+                - text: 󰅂
+                - link "Virtual Data Center" [ref=e107] [cursor=pointer]:
+                  - /url: /virtual-data-center/index
+              - listitem [ref=e108]: 󰅂 VDC Autotest
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - generic [ref=e112]:
+            - generic [ref=e113]:
+              - generic [ref=e114]:
+                - paragraph [ref=e115]: Allocation
+                - heading "VDC Autotest" [level=2] [ref=e116]:
+                  - link "VDC Autotest" [ref=e117] [cursor=pointer]:
+                    - /url: /virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba
+                - generic [ref=e118]:
+                  - group "Button group with nested dropdown" [ref=e119]:
+                    - group [ref=e120]:
+                      - button "New Virtual Machine" [ref=e121] [cursor=pointer]
+                  - link "Edit" [ref=e122] [cursor=pointer]:
+                    - /url: "#/virtual-data-center/update?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba"
+                  - link "Delete" [ref=e123] [cursor=pointer]:
+                    - /url: "#/virtual-data-center/delete?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba"
+                - generic [ref=e124]:
+                  - paragraph [ref=e125]:
+                    - generic [ref=e126]:
+                      - generic [ref=e127]: "Total VMs:"
+                      - text: "5"
+                  - paragraph [ref=e128]:
+                    - generic [ref=e129]:
+                      - generic [ref=e130]: "Running VMs:"
+                      - text: "0"
+              - generic [ref=e134]: 󰒋
+            - table [ref=e136]:
+              - rowgroup [ref=e137]:
+                - row "Tenant TenantCreate" [ref=e138]:
+                  - cell "Tenant" [ref=e139]
+                  - cell "TenantCreate" [ref=e140]
+                - row "Reseller QA_testingCreate" [ref=e141]:
+                  - cell "Reseller" [ref=e142]
+                  - cell "QA_testingCreate" [ref=e143]
+          - generic [ref=e145]:
+            - generic [ref=e147]:
+              - heading "Resource Allocation" [level=4] [ref=e148]
+              - button "Sync Pool" [ref=e149] [cursor=pointer]:
+                - generic [ref=e150] [cursor=pointer]: Sync Pool
+            - generic [ref=e152]:
+              - img [ref=e154]
+              - generic [ref=e157]:
+                - generic [ref=e158]:
+                  - paragraph [ref=e159]: CPU
+                  - heading "0 / 4 CPU Cores" [level=4] [ref=e160]
+                  - paragraph [ref=e161]: running
+                - img [ref=e165]:
+                  - generic [ref=e175]:
+                    - generic: 0 %
+            - generic [ref=e177]:
+              - img [ref=e179]
+              - generic [ref=e182]:
+                - generic [ref=e183]:
+                  - paragraph [ref=e184]: Memory
+                  - heading "0 B / 16 GiB" [level=4] [ref=e185]
+                  - paragraph [ref=e186]: running
+                - img [ref=e190]:
+                  - generic [ref=e200]:
+                    - generic: 0 %
+            - generic [ref=e202]:
+              - img [ref=e204]
+              - generic [ref=e207]:
+                - generic [ref=e208]:
+                  - paragraph [ref=e209]: Storage Policy Usage
+                  - heading "25.00 GiB / 100.00 GiB" [level=4] [ref=e210]
+                - img [ref=e214]:
+                  - generic [ref=e226]:
+                    - generic: 25 %
+            - generic [ref=e228]:
+              - img [ref=e230]
+              - generic [ref=e233]:
+                - generic [ref=e234]:
+                  - paragraph [ref=e235]: Backup Storage Usage
+                  - heading "0 B / 100.00 GiB" [level=4] [ref=e236]
+                - img [ref=e240]:
+                  - generic [ref=e250]:
+                    - generic: 0 %
+        - generic [ref=e252]:
+          - tablist [ref=e254]:
+            - tab "Virtual Machines" [selected] [ref=e255] [cursor=pointer]
+            - tab "Usage" [ref=e256] [cursor=pointer]
+            - tab "Storage Policies" [ref=e257] [cursor=pointer]
+            - tab "Backups" [ref=e258] [cursor=pointer]
+            - tab "Backup Jobs" [ref=e259] [cursor=pointer]
+            - tab "Task Log" [ref=e260] [cursor=pointer]
+          - generic [ref=e262]:
+            - tabpanel [ref=e263]:
+              - generic [ref=e268]:
+                - generic [ref=e272]:
+                  - generic [ref=e274]:
+                    - textbox "Search virtual machine by Name" [ref=e276]
+                    - generic [ref=e277]: 
+                  - button " Search" [ref=e279] [cursor=pointer]:
+                    - generic [ref=e280] [cursor=pointer]: 
+                    - text: Search
+                - generic [ref=e282]:
+                  - generic [ref=e283]:
+                    - text: Showing
+                    - generic [ref=e284]: 1-5
+                    - text: of
+                    - generic [ref=e285]: "5"
+                    - text: items.
+                  - table [ref=e286]:
+                    - rowgroup [ref=e287]:
+                      - row "Name Status CPU Memory Storage" [ref=e288]:
+                        - cell "Name" [ref=e289]:
+                          - link "Name" [ref=e290] [cursor=pointer]:
+                            - /url: /virtual-data-center/get-virtual-machine-list?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba&view=list&sort=name
+                        - cell "Status" [ref=e291]
+                        - cell "CPU" [ref=e292]
+                        - cell "Memory" [ref=e293]
+                        - cell "Storage" [ref=e294]
+                        - cell [ref=e295]
+                    - rowgroup [ref=e296]:
+                      - row "AutoVM-001 Powered Off 4 CPU Cores 5.00 GiB 5.00 GiB Details " [ref=e297]:
+                        - cell "AutoVM-001" [ref=e298]:
+                          - link "AutoVM-001" [ref=e299] [cursor=pointer]:
+                            - /url: /virtual-machine/view?id=e91fe934-0644-4657-b939-dcbac0618493
+                        - cell "Powered Off" [ref=e300]:
+                          - generic [ref=e301]: Powered Off
+                        - cell "4 CPU Cores" [ref=e302]
+                        - cell "5.00 GiB" [ref=e303]
+                        - cell "5.00 GiB" [ref=e304]
+                        - cell "Details " [ref=e305]:
+                          - group [ref=e306]:
+                            - button "Actions" [ref=e307] [cursor=pointer]
+                          - link "Details" [ref=e308] [cursor=pointer]:
+                            - /url: /virtual-machine/view?id=e91fe934-0644-4657-b939-dcbac0618493
+                          - link "" [ref=e309] [cursor=pointer]:
+                            - /url: "#/virtual-machine/delete?id=e91fe934-0644-4657-b939-dcbac0618493"
+                            - generic [ref=e310] [cursor=pointer]: 
+                      - row "AutoVM-001 Powered Off 4 CPU Cores 5.00 GiB 5.00 GiB Details " [ref=e311]:
+                        - cell "AutoVM-001" [ref=e312]:
+                          - link "AutoVM-001" [ref=e313] [cursor=pointer]:
+                            - /url: /virtual-machine/view?id=962c37d3-426b-4235-a573-b5f4667f9c8d
+                        - cell "Powered Off" [ref=e314]:
+                          - generic [ref=e315]: Powered Off
+                        - cell "4 CPU Cores" [ref=e316]
+                        - cell "5.00 GiB" [ref=e317]
+                        - cell "5.00 GiB" [ref=e318]
+                        - cell "Details " [ref=e319]:
+                          - group [ref=e320]:
+                            - button "Actions" [ref=e321] [cursor=pointer]
+                          - link "Details" [ref=e322] [cursor=pointer]:
+                            - /url: /virtual-machine/view?id=962c37d3-426b-4235-a573-b5f4667f9c8d
+                          - link "" [ref=e323] [cursor=pointer]:
+                            - /url: "#/virtual-machine/delete?id=962c37d3-426b-4235-a573-b5f4667f9c8d"
+                            - generic [ref=e324] [cursor=pointer]: 
+                      - row "AutoVM-001 Powered Off 4 CPU Cores 5.00 GiB 5.00 GiB Details " [ref=e325]:
+                        - cell "AutoVM-001" [ref=e326]:
+                          - link "AutoVM-001" [ref=e327] [cursor=pointer]:
+                            - /url: /virtual-machine/view?id=1c8c628a-c809-4337-be8e-417babae6fff
+                        - cell "Powered Off" [ref=e328]:
+                          - generic [ref=e329]: Powered Off
+                        - cell "4 CPU Cores" [ref=e330]
+                        - cell "5.00 GiB" [ref=e331]
+                        - cell "5.00 GiB" [ref=e332]
+                        - cell "Details " [ref=e333]:
+                          - group [ref=e334]:
+                            - button "Actions" [ref=e335] [cursor=pointer]
+                          - link "Details" [ref=e336] [cursor=pointer]:
+                            - /url: /virtual-machine/view?id=1c8c628a-c809-4337-be8e-417babae6fff
+                          - link "" [ref=e337] [cursor=pointer]:
+                            - /url: "#/virtual-machine/delete?id=1c8c628a-c809-4337-be8e-417babae6fff"
+                            - generic [ref=e338] [cursor=pointer]: 
+                      - row "AutoVM-001 Powered Off 4 CPU Cores 5.00 GiB 5.00 GiB Details " [ref=e339]:
+                        - cell "AutoVM-001" [ref=e340]:
+                          - link "AutoVM-001" [ref=e341] [cursor=pointer]:
+                            - /url: /virtual-machine/view?id=3619b5af-8d7b-42e5-acb6-c19526305d4e
+                        - cell "Powered Off" [ref=e342]:
+                          - generic [ref=e343]: Powered Off
+                        - cell "4 CPU Cores" [ref=e344]
+                        - cell "5.00 GiB" [ref=e345]
+                        - cell "5.00 GiB" [ref=e346]
+                        - cell "Details " [ref=e347]:
+                          - group [ref=e348]:
+                            - button "Actions" [ref=e349] [cursor=pointer]
+                          - link "Details" [ref=e350] [cursor=pointer]:
+                            - /url: /virtual-machine/view?id=3619b5af-8d7b-42e5-acb6-c19526305d4e
+                          - link "" [ref=e351] [cursor=pointer]:
+                            - /url: "#/virtual-machine/delete?id=3619b5af-8d7b-42e5-acb6-c19526305d4e"
+                            - generic [ref=e352] [cursor=pointer]: 
+                      - row "AutoVM-001 Powered Off - - - Details " [ref=e353]:
+                        - cell "AutoVM-001" [ref=e354]:
+                          - link "AutoVM-001" [ref=e355] [cursor=pointer]:
+                            - /url: /virtual-machine/view?id=777003d8-1c12-4334-a3f1-7b03ec91bdf4
+                        - cell "Powered Off" [ref=e356]:
+                          - generic [ref=e357]: Powered Off
+                        - cell "-" [ref=e358]
+                        - cell "-" [ref=e359]
+                        - cell "-" [ref=e360]
+                        - cell "Details " [ref=e361]:
+                          - group [ref=e362]:
+                            - button "Actions" [ref=e363] [cursor=pointer]
+                          - link "Details" [ref=e364] [cursor=pointer]:
+                            - /url: /virtual-machine/view?id=777003d8-1c12-4334-a3f1-7b03ec91bdf4
+                          - link "" [ref=e365] [cursor=pointer]:
+                            - /url: "#/virtual-machine/delete?id=777003d8-1c12-4334-a3f1-7b03ec91bdf4"
+                            - generic [ref=e366] [cursor=pointer]: 
+            - text:  
+  - generic [ref=e368]:
+    - heading "Recent Tasks" [level=6] [ref=e369]: Recent Tasks
+    - button "" [ref=e371] [cursor=pointer]:
+      - generic [ref=e372] [cursor=pointer]: 
+  - dialog "New Virtual Machine" [active] [ref=e373]:
+    - generic [ref=e374]:
+      - generic [ref=e375]:
+        - heading "New Virtual Machine" [level=5] [ref=e376]
+        - button "Close" [ref=e377] [cursor=pointer]
+      - generic [ref=e381]:
+        - tablist [ref=e383]:
+          - tab "General Configuration"
+          - tab "System Settings"
+          - tab "Hardware Settings" [selected]
+          - tab "Storage Configuration"
+          - tab "Network Configuration"
+          - tab "CD/DVD Drive"
+          - tab "Boot Order"
+        - generic [ref=e384]:
+          - text:   󰌽           
+          - tabpanel "Hardware Settings" [ref=e385]:
+            - generic [ref=e386]:
+              - generic [ref=e387]:
+                - paragraph [ref=e388]: 3/6
+                - heading "Hardware Settings" [level=5] [ref=e389]
+                - paragraph [ref=e390]: Configure the hardware settings for your new virtual machine, including CPU, memory, and other essential options.
+              - generic [ref=e391]:
+                - generic [ref=e392]: CPU
+                - generic [ref=e394]:
+                  - generic [ref=e396]:
+                    - generic [ref=e397]:
+                      - spinbutton [ref=e398]: "0"
+                      - generic [ref=e399]: Sockets
+                    - generic [ref=e400]: Sockets must be no less than 1.
+                  - generic [ref=e402]:
+                    - generic [ref=e403]:
+                      - spinbutton [ref=e404]: "0"
+                      - generic [ref=e405]: Cores
+                    - generic [ref=e406]: Cores must be no less than 1.
+                  - generic [ref=e408]:
+                    - text: "Total Cores:"
+                    - generic [ref=e409]: "0"
+                  - generic [ref=e410]:
+                    - generic [ref=e411]: Choose CPU Vendor
+                    - generic [ref=e412]:
+                      - generic [ref=e416] [cursor=pointer]:
+                        - text: 
+                        - generic [ref=e418] [cursor=pointer]: 
+                        - generic [ref=e419] [cursor=pointer]: Intel
+                      - generic [ref=e423] [cursor=pointer]:
+                        - generic [ref=e425] [cursor=pointer]: 
+                        - generic [ref=e426] [cursor=pointer]: AMD
+                      - generic [ref=e430] [cursor=pointer]:
+                        - generic [ref=e432] [cursor=pointer]: 
+                        - generic [ref=e433] [cursor=pointer]: QEMU
+                  - generic [ref=e436]:
+                    - generic [ref=e437]: CPU Type
+                    - combobox "CPU Type" [ref=e438]:
+                      - option "Select CPU Model..." [selected]
+                      - option "KnightsMill"
+                      - option "Nehalem"
+                      - option "Nehalem-IBRS"
+                      - option "Penryn"
+                      - option "pentium"
+                      - option "pentium2"
+                      - option "pentium3"
+                      - option "SandyBridge"
+                      - option "SandyBridge-IBRS"
+                      - option "SapphireRapids"
+                      - option "SapphireRapids-v2"
+                      - option "Skylake-Client"
+                      - option "Skylake-Client-IBRS"
+                      - option "Skylake-Client-noTSX-IBRS"
+                      - option "Skylake-Client-v4"
+                      - option "Skylake-Server"
+                      - option "Skylake-Server-IBRS"
+                      - option "Skylake-Server-noTSX-IBRS"
+                      - option "Skylake-Server-v4"
+                      - option "Skylake-Server-v5"
+                      - option "Westmere"
+                      - option "Westmere-IBRS"
+                - generic [ref=e440]:
+                  - generic [ref=e441]: Memory
+                  - generic [ref=e443]:
+                    - spinbutton "Memory in Gibibytes" [ref=e444]
+                    - generic [ref=e445]: GiB
+            - generic [ref=e446]:
+              - button " Back" [ref=e447] [cursor=pointer]:
+                - generic [ref=e448] [cursor=pointer]: 
+                - text: Back
+              - button " Next Step" [ref=e449] [cursor=pointer]:
+                - generic [ref=e450] [cursor=pointer]: 
+                - text: Next Step
+          - text:       
+  - img
+```
