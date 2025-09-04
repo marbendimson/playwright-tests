@@ -19,10 +19,10 @@ test('Update Backup Job modal - full workflow with verification', async ({ page 
   await expect(page.locator(loginSelectors.success)).toBeVisible({ timeout: 15000 });
 
   // Navigate to Virtual Data Centers
-  const VDCNav = page.locator('span[data-key="t-Virtual Data Centers"]');
-  await expect(VDCNav).toBeVisible({ timeout: 10000 });
-  await expect(VDCNav).toBeEnabled();
-  await VDCNav.click();
+  const vdcNav = page.locator('a.nav-link.menu-link:has(span[data-key="t-Virtual Data Centers"])');
+await expect(vdcNav).toBeVisible({ timeout: 10000 });
+await vdcNav.scrollIntoViewIfNeeded();
+await vdcNav.click();
 
   // Confirm VDC page loaded
   await expect(page.getByRole('heading', { name: 'Virtual Data Center' })).toBeVisible();
@@ -62,3 +62,4 @@ await VdcsaveButton.click();
   await expect(page.getByRole('heading', { level: 4, name: 'Update_VDC Autotest' })).toBeVisible();
 
 });
+

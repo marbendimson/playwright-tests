@@ -24,10 +24,10 @@ test.describe('Clone ViMachinertual ', () => {
      // Wait for Virtual Data Centers page header or any unique element on that page to confirm navigation
   
     // Locate and click Virtual Data Centers navigation
-    const VDCNav = page.locator('span[data-key="t-Virtual Data Centers"]');
-    await expect(VDCNav).toBeVisible({ timeout: 10000 });
-    await expect(VDCNav).toBeEnabled();
-    await VDCNav.click();
+   const vdcNav = page.locator('a.nav-link.menu-link:has(span[data-key="t-Virtual Data Centers"])');
+await expect(vdcNav).toBeVisible({ timeout: 10000 });
+await vdcNav.scrollIntoViewIfNeeded();
+await vdcNav.click();
 
     // Optional: further verification or steps after landing on VDC page
     await expect(page.getByRole('heading', { name: 'Virtual Data Center' })).toBeVisible();

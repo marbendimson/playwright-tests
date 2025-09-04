@@ -11,7 +11,10 @@ export async function loginAsServiceProvider(page: Page, baseUrl: string, userna
 }
 export async function navigateToVDC(page: Page, vdcName: string) {
   // Go to Virtual Data Centers menu
-  await page.click('span:has-text("Virtual Data Centers")');
+  const vdcNav = page.locator('a.nav-link.menu-link:has(span[data-key="t-Virtual Data Centers"])');
+await expect(vdcNav).toBeVisible({ timeout: 10000 });
+await vdcNav.scrollIntoViewIfNeeded();
+await vdcNav.click();
   
   // Wait until page heading appears
   await expect(page.getByRole('heading', { name: 'Virtual Data Center' })).toBeVisible();
