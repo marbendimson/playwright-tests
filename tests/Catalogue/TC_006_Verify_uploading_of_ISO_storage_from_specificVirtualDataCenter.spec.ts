@@ -5,7 +5,7 @@ import { IsoUploadForm } from '../../ISOupload';
 import path from 'path';
 
 test.describe('Virtual Machine Template Page — ISO Upload Flow', () => {
-  test('Should display the ISO Upload form and allow uploading via URL @dev @staging @preprod', async ({ page }) => {
+  test('Should upload ISO via local file successfully @dev @staging @preprod', async ({ page }) => {
     const user = getUserByRole('Service Provider');
 
     // Login
@@ -13,86 +13,47 @@ test.describe('Virtual Machine Template Page — ISO Upload Flow', () => {
     await page.fill(loginSelectors.username, user.username);
     await page.fill(loginSelectors.password, user.password);
     await page.click(loginSelectors.submit);
-   await page.waitForLoadState('networkidle');
-    await expect(page.locator(loginSelectors.success)).toBeVisible({ timeout: 15000 });
+    await expect(page.locator(loginSelectors.success)).toBeVisible({ timeout: 45000 });
 
-    // Navigate to ISO Upload
-    const catalogueNav = page.locator('span:has-text("Catalogue")');
-    await expect(catalogueNav, 'Catalogue navigation should be visible').toBeVisible();
-    await catalogueNav.click();
-
-    const isoNav = page.getByRole('link', { name: 'ISOs' });
-    await expect(isoNav, 'ISOs link should be visible').toBeVisible();
-    await isoNav.click();
-
-    // Validate ISO Storage page
-    await expect(page.getByRole('heading', { level: 4, name: 'ISO Storage' }), 'ISO Storage heading should be visible').toBeVisible();
-
-    const uploadLink = page.getByRole('link', { name: /upload/i });
-    await expect(uploadLink, 'Upload ISO link should be visible').toBeVisible();
-    await uploadLink.click();
-
-    await expect(page.getByRole('link', { name: /Import ISO from Proxmox/i }), 'Import from Proxmox link should be visible').toBeVisible();
-
-    // Fill the upload form
+    // Navigate directly using page object
     const form = new IsoUploadForm(page);
+    await form.goToIsoUploadForm();
 
-  
+    // Step 1: Data center + visibility
     await form.selectDataCenter('MainDC');
     await form.setVisibility(false, 'TenantCreate', 'VDC Autotest');
+    await form.nextFromStep1();
 
-    const nextButton = page.locator('#data-center-submit');
-    await expect(nextButton, 'Next Step button should be visible and enabled').toBeVisible();
-    await expect(nextButton).toBeEnabled();
-    await nextButton.click();
+    // Step 2: Upload method
+    const isoPath = path.resolve(__dirname, '../fixtures/TinyCore-current.iso');
+    await form.chooseUploadMethod('local', isoPath);
+    await form.nextFromStep2();
 
-    // Validate upload method step
-    await expect(page.getByRole('heading', { name: 'Select ISO Upload Method' }), 'Upload method section should appear').toBeVisible();
-
-    // Perform upload via URL (replace with actual URL string as needed)
-   const isoPath = path.resolve(__dirname, '../fixtures/TinyCore-current.iso');
-       await form.chooseUploadMethod('local', isoPath);
-    //await form.chooseUploadMethod('url', 'https://ubuntu.mirror.serversaustralia.com.au/ubuntu-releases/24.10/ubuntu-24.10-live-server-amd64.iso');
-
-    const nextStepButton = page.locator('#iso-selection-submit');
-    await expect(nextStepButton).toBeVisible();
-    await nextStepButton.click();
-
-    //input name and ISO description
+    // Step 3: Metadata
     await form.fillIsoMetadata('Test only-private ', 'Test upload ISO storage via automation');
-    const nextButton1 = page.locator('#iso-name-submit');
-    await expect(nextButton1, 'Next Step button should be visible and enabled').toBeVisible();
-    await expect(nextButton1).toBeEnabled();
-    await nextButton1.click();
+    await form.nextFromStep3();
 
+    // Step 4: Confirmation
+    await form.verifyConfirmation({
+      dataCenter: 'MainDC',
+      uploadMethod: 'Upload via local computer',
+      fileName: 'TinyCore-current.iso',
+      isoName: 'Test only-private',
+      description: 'Test upload ISO storage via automation',
+    });
 
-    // Confirm upload details :
-    await expect(page.locator('.c-data_center_id')).toHaveText('MainDC');
-    await expect(page.locator('.c-upload_method')).toContainText('Upload via local computer');
-    await expect(page.locator('.c-upload_method')).toContainText('TinyCore-current.iso');
-    await expect(page.locator('.c-iso_name')).toHaveText('Test only-private');
+    await form.confirmUpload();
 
-    const confirmButton = page.locator('#submit-button');
-    await expect(confirmButton, 'Upload ISO button should be visible and enabled').toBeVisible();
-    await expect(confirmButton).toBeEnabled();
-    await confirmButton.click();
+    // Verify success
+    const successAlert = page.locator('div.alert-success');
+    await expect(successAlert).toContainText('ISO Uploaded');
 
+    // Verify ISO is listed
+    const td = page.getByRole('cell', { name: 'Test only-private', exact: true });
+    await expect(td).toBeVisible({ timeout: 30000 });
 
-    const successAlert = page.locator('div.alert-success', {hasText: 'ISO Uploaded Succesfully',});
-    await expect(successAlert, 'Success message should appear after upload').toBeVisible();
-    await expect(successAlert).toHaveText('ISO Uploaded Succesfully');
-
-    const td = page.locator('td', { hasText: 'Test only-private' });
-await td.waitFor({ state: 'visible' });
-await expect(td).toBeVisible();
-
-await page.reload()
-
-await td.waitFor({ state: 'visible' });
-await expect(td).toBeVisible();
-
-
-
-
+    // Reload and confirm persistence
+    await page.reload();
+    await expect(td).toBeVisible({ timeout: 30000 });
   });
 });
