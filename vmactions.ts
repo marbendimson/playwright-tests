@@ -1,67 +1,301 @@
 import { expect, Locator, Page } from '@playwright/test';
 
-// Utility: Open Actions dropdown within a specific VM row
 export async function openActionsDropdown(vmRow: Locator) {
   const actionsBtn = vmRow.locator('button#btnGroupDrop1').first();
 
-  // Ensure row is visible
+  // ✅ First wait until row is visible
+  await expect(vmRow).toBeVisible({ timeout: 60000 });
+
+  // ✅ Then scroll into view
   await vmRow.scrollIntoViewIfNeeded();
-  await expect(vmRow).toBeVisible({ timeout: 10000 });
+
+  // Hover to reveal the actions menu
   await vmRow.hover();
 
-  await expect(actionsBtn).toBeVisible();
+  // Wait for the actions button
+  await expect(actionsBtn).toBeVisible({ timeout: 10000 });
   await expect(actionsBtn).toBeEnabled();
+
+  // Click the actions button
   await actionsBtn.click();
 
+  // Wait for dropdown to be visible
   const dropdown = vmRow.locator('ul.dropdown-menu[aria-labelledby="btnGroupDrop1"].show');
   await expect(dropdown).toBeVisible();
+
   return dropdown;
 }
 
+// export async function waitForVMStatus(page: Page, vmName: string, expected: 'Powered On' | 'Powered Off', timeout = 180000) {
+//   const start = Date.now();
+//   const end = start + timeout;
+//   let lastStatus = '';
+
+//   while (Date.now() < end) {
+//     // Reload to ensure latest status
+//     await page.reload();
+//     const vmRow = page.locator('tr', { has: page.locator(`a[title="${vmName}"]`) }).first();
+//     const badge = vmRow.locator('td .badge');
+
+//     try {
+//       await expect(badge).toBeVisible({ timeout: 5000 });
+//       const text = (await badge.textContent())?.trim() ?? '';
+//       lastStatus = text;
+
+//       console.log(`ℹ️ VM "${vmName}" current status: "${text}"`);
+
+//       if (new RegExp(expected, 'i').test(text)) {
+//         console.log(`✅ VM "${vmName}" reached status "${expected}"`);
+//         return;
+//       }
+//     } catch (err) {
+//       console.log(`⚠️ Could not read status badge this round`);
+//     }
+
+//     // wait 5s before retry
+//     await page.waitForTimeout(5000);
+//   }
+
+//   throw new Error(`❌ Timeout: VM "${vmName}" did not reach status "${expected}". Last seen: "${lastStatus}"`);
+// }
+
+// export async function startVMByName(page: Page, vmName: string) {
+//   // 1️⃣ Locate the VM row by exact link text
+//   const vmRow = page.locator('tr', { has: page.locator(`a[title="${vmName}"]`) }).first();
+//   await expect(vmRow).toBeVisible({ timeout: 10000 });
+
+//   // 2️⃣ Open Actions dropdown
+//   const actionsBtn = vmRow.locator('button#btnGroupDrop1');
+//   await vmRow.scrollIntoViewIfNeeded();
+//   await vmRow.hover();
+//   await expect(actionsBtn).toBeVisible({ timeout: 5000 });
+//   await actionsBtn.click();
+
+//   // 3️⃣ Click Start
+//   const startBtn = vmRow.locator('ul.dropdown-menu[aria-labelledby="btnGroupDrop1"] >> a.start-btn');
+//   await expect(startBtn).toBeVisible({ timeout: 5000 });
+//   await startBtn.click();
+
+//   // 4️⃣ Wait for status to change using a polling loop
+//   const statusBadge = vmRow.locator('td .badge');
+//   await expect(statusBadge).toHaveText(/Powered On/i, { timeout: 120000 });
+
+//   // 5️⃣ Optionally, re-locate the badge and assert visibility
+//   const newVmRow = page.locator('tr', { has: page.locator(`a[title="${vmName}"]`) }).first();
+//   // const statusBadge = newVmRow.locator('div.badge', { hasText: 'Powered On' });
+//   // await expect(statusBadge).toBeVisible({ timeout: 5000 });
+// }
+
+
+
+
+// // Stop VM (if visible)
+// // export async function clickStopAction(vmRow: Locator) {
+// //   const dropdown = await openActionsDropdown(vmRow);
+// //   const stopBtn = dropdown.locator('a:has-text("Stop")');
+// //   await expect(stopBtn).toBeVisible();
+// //   await stopBtn.click();
+// //   // Add wait/assertion for stop effect if needed
+// // }
+// export async function stopVM(page: Page, vmRow: Locator) {
+//   // 1. Get status badge inside VM row
+//   const statusBadge = vmRow.locator('td .badge');
+//   await expect(statusBadge).toBeVisible({ timeout: 15000 });
+//   const statusText = (await statusBadge.textContent())?.trim();
+
+//   if (!/powered on/i.test(statusText || '')) {
+//     console.log('ℹ️ VM is not powered on, skipping stop action.');
+//     return false; // nothing to do
+//   }
+
+//   // 2. Open dropdown & click Stop
+//   const dropdown = await openActionsDropdown(vmRow);
+//   const stopBtn = dropdown.locator('a:has-text("Stop")');
+//   await expect(stopBtn).toBeVisible();
+//   await stopBtn.click();
+
+//   // 3. Handle confirmation modal
+//   const modal = page.locator('div.swal2-popup.swal2-modal.swal2-show');
+//   await expect(modal).toBeVisible({ timeout: 12000 });
+
+//   const yesBtn = modal.locator('button.swal2-confirm');
+//   await expect(yesBtn).toBeVisible();
+//   await yesBtn.click();
+
+//   // 4. Wait for status badge to update → Powered Off
+//   await expect(statusBadge).toHaveText(/Powered Off/i, { timeout: 180000 });
+
+//   console.log('✅ VM successfully stopped.');
+//   return true;
+// }
+
+/**
+ * Wait until a VM reaches the expected status (Powered On / Powered Off).
+ */
+export async function waitForVMStatus(
+  page: Page,
+  vmName: string,
+  expected: string,
+  timeout = 180_000
+) {
+  const start = Date.now();
+  let lastStatus = '';
+
+  while (Date.now() - start < timeout) {
+    await page.reload({ waitUntil: 'networkidle' });
+
+    const badge = page
+      .locator(`tr:has(td a[title="${vmName}"])`)
+      .locator('td .badge');
+
+    const text = (await badge.textContent())?.trim() ?? '';
+    lastStatus = text;
+
+    if (/in progress/i.test(text)) {
+      console.log(`⏳ VM "${vmName}" is still "in progress"...`);
+    } else if (new RegExp(expected, 'i').test(text)) {
+      console.log(`✅ VM "${vmName}" reached status "${expected}"`);
+      return true;
+    } else {
+      console.log(`ℹ️ VM "${vmName}" current status: "${text}", waiting...`);
+    }
+
+    // wait 5s before checking again
+    await page.waitForTimeout(5000);
+  }
+
+  throw new Error(
+    `❌ Timeout: VM "${vmName}" did not reach status "${expected}". Last seen: "${lastStatus}"`
+  );
+}
+
+/**
+ * Start a VM by name (idempotent: skips if already powered on).
+ */
+// export async function startVMByName(page: Page, vmName: string) {
+//   const vmRow = page.locator('tr', {
+//     has: page.locator(`a[title="${vmName}"]`),
+//   }).first();
+//   await expect(vmRow).toBeVisible({ timeout: 20_000 });
+
+//   const badge = vmRow.locator('td .badge');
+//   const currentStatus = (await badge.textContent())?.trim() ?? '';
+
+//   if (/powered on/i.test(currentStatus)) {
+//     console.log(`ℹ️ VM "${vmName}" already powered on. Skipping start.`);
+//     return true;
+//   }
+
+//   const actionsBtn = vmRow.locator('button#btnGroupDrop1');
+//   await vmRow.scrollIntoViewIfNeeded();
+//   await expect(actionsBtn).toBeVisible({ timeout: 5000 });
+
+//   // ✅ safer retry click
+//   for (let i = 0; i < 2; i++) {
+//     try {
+//       await actionsBtn.click({ timeout: 3000 });
+//       break;
+//     } catch {
+//       if (i === 0) {
+//         console.log('⚠️ Retry clicking Actions button');
+//         continue;
+//       }
+//       throw new Error(`❌ Could not click Actions button for VM "${vmName}"`);
+//     }
+//   }
+
+//   const startBtn = vmRow.locator(
+//     'ul.dropdown-menu[aria-labelledby="btnGroupDrop1"] >> a:has-text("Start")'
+//   );
+//   await expect(startBtn).toBeVisible({ timeout: 5000 });
+//   await startBtn.click();
+
+//   return waitForVMStatus(page, vmName, 'Powered On');
+// }
+
 export async function startVMByName(page: Page, vmName: string) {
-  // 1️⃣ Locate the VM row by exact link text
-  const vmRow = page.locator('tr', { has: page.locator(`a[title="${vmName}"]`) }).first();
-  await expect(vmRow).toBeVisible({ timeout: 10000 });
+  const vmRow = page.locator(`tr:has(td a[title="${vmName}"])`).first();
+  await expect(vmRow).toBeVisible({ timeout: 30_000 });
 
-  // 2️⃣ Open Actions dropdown
-  const actionsBtn = vmRow.locator('button#btnGroupDrop1');
-  await vmRow.scrollIntoViewIfNeeded();
-  await vmRow.hover();
-  await expect(actionsBtn).toBeVisible({ timeout: 5000 });
-  await actionsBtn.click();
+  const badge = vmRow.locator('td .badge');
+  const statusText = (await badge.textContent())?.trim() ?? '';
 
-  // 3️⃣ Click Start
-  const startBtn = vmRow.locator('ul.dropdown-menu[aria-labelledby="btnGroupDrop1"] >> a.start-btn');
-  await expect(startBtn).toBeVisible({ timeout: 5000 });
-  await startBtn.click();
+  if (/powered on/i.test(statusText)) {
+    console.log(`ℹ️ VM "${vmName}" already powered on. Skipping start.`);
+    return false;
+  }
 
-  // 4️⃣ Wait for status to change using a polling loop
-  await page.waitForFunction(
-    (name) => {
-      const row = Array.from(document.querySelectorAll('tr')).find(r => r.querySelector(`a[title="${name}"]`));
-      if (!row) return false;
-      return row.querySelector('div.badge')?.textContent?.includes('Powered On');
-    },
-    vmName,
-    { timeout: 20000 } // wait up to 20s
+  const dropdownBtn = vmRow.locator('button#btnGroupDrop1');
+  await expect(dropdownBtn).toBeVisible({ timeout: 5000 });
+  await dropdownBtn.click();
+
+  const startBtn = vmRow.locator(
+    'ul.dropdown-menu[aria-labelledby="btnGroupDrop1"] >> a:has-text("Start")'
   );
 
-  // 5️⃣ Optionally, re-locate the badge and assert visibility
-  const newVmRow = page.locator('tr', { has: page.locator(`a[title="${vmName}"]`) }).first();
-  const statusBadge = newVmRow.locator('div.badge', { hasText: 'Powered On' });
-  await expect(statusBadge).toBeVisible({ timeout: 5000 });
+  await expect(startBtn).toBeVisible({ timeout: 5000 });
+
+  try {
+    await startBtn.click({ timeout: 5000 });
+    console.log(`▶️ Clicked "Start" for VM "${vmName}"`);
+  } catch {
+    console.log(`⚠️ Retry clicking "Start" for VM "${vmName}"`);
+    await startBtn.click();
+  }
+
+  // confirm modal
+  const modal = page.locator('div.swal2-popup.swal2-modal.swal2-show');
+  await expect(modal).toBeVisible({ timeout: 12_000 });
+  await modal.locator('button.swal2-confirm').click();
+
+  // wait until VM is powered on
+  await waitForVMStatus(page, vmName, 'Powered On', 300_000); // default 5 min
+  console.log(`✅ VM "${vmName}" successfully started.`);
+  return true;
 }
 
 
+/**
+ * Stop a VM by row + name (idempotent: skips if already off).
+ */
+export async function stopVM(page: Page, vmRow: Locator, vmName: string) {
+  const badge = vmRow.locator('td .badge');
+  await expect(badge).toBeVisible({ timeout: 15_000 });
+  const statusText = (await badge.textContent())?.trim() ?? '';
 
+  if (/powered off/i.test(statusText)) {
+    console.log(`ℹ️ VM "${vmName}" already powered off. Skipping stop.`);
+    return false;
+  }
 
-// Stop VM (if visible)
-export async function clickStopAction(vmRow: Locator) {
-  const dropdown = await openActionsDropdown(vmRow);
-  const stopBtn = dropdown.locator('a:has-text("Stop")');
-  await expect(stopBtn).toBeVisible();
+  const dropdownBtn = vmRow.locator('button#btnGroupDrop1');
+  await expect(dropdownBtn).toBeVisible({ timeout: 5000 });
+  await dropdownBtn.click();
+
+  const stopBtn = vmRow.locator(
+    'ul.dropdown-menu[aria-labelledby="btnGroupDrop1"] >> a:has-text("Stop")'
+  );
+  await expect(stopBtn).toBeVisible({ timeout: 5000 });
   await stopBtn.click();
-  // Add wait/assertion for stop effect if needed
+
+  // confirm modal
+  const modal = page.locator('div.swal2-popup.swal2-modal.swal2-show');
+  await expect(modal).toBeVisible({ timeout: 12_000 });
+
+  await modal.locator('button.swal2-confirm').click();
+
+  await waitForVMStatus(page, vmName, 'Powered Off');
+  console.log(`✅ VM "${vmName}" successfully stopped.`);
+  return true;
+}
+export async function stopVMByName(page: Page, vmName: string) {
+  const vmRow = page.locator('tr', {
+    has: page.locator(`a[title="${vmName}"]`),
+  }).first();
+
+  await expect(vmRow).toBeVisible({ timeout: 20_000 });
+
+  return stopVM(page, vmRow, vmName);
 }
 
 // Reboot VM (if visible)

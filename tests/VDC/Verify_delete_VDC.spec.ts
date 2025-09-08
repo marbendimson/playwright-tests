@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import { env, getUserByRole } from '../../global.env';
 import { loginSelectors } from '../../selectors';
 import { handleDeleteVDC } from '../../VDC-page';
+import { verifyVDCDeletionCompleted } from '../../recentTask';
 
 
 test('Update Backup Job modal - full workflow with verification', async ({ page }) => {
@@ -26,10 +27,21 @@ await vdcNav.click();
   // Confirm VDC page loaded
   await expect(page.getByRole('heading', { name: 'Virtual Data Center' })).toBeVisible();
 
-  // Click the first link matching the VDC name
-  await page.locator(`a:has-text("Update_VDC Autotest")`).first().click();
+  const VDCselect = 'VDC Autotest';
 
-  await handleDeleteVDC(page, 'Update_VDC Autotest', 'cancel');
+  // Click the first link matching the VDC name
+  const vdcRow = page.locator('tr', { hasText: VDCselect });
+await vdcRow.getByRole('link', { name: VDCselect, exact: true }).click();
+
+await handleDeleteVDC(page, VDCselect, 'confirm');
+
+await expect(
+  page.getByRole('alert', { name: /Virtual Data Center deletion has been queued/i })
+).toBeVisible({ timeout: 10000 });
+
+
+await verifyVDCDeletionCompleted(page);
+
 
 
 })

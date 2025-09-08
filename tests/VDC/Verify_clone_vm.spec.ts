@@ -2,8 +2,7 @@ import { test, expect } from '@playwright/test';
 import { env, getUserByRole } from '../../global.env';
 import { loginSelectors } from '../../selectors';
 import { verifyVDCDetailsVisible } from '../../VDC-page';
-import {
-openCloneVMModal,cloneVM} from '../../vmactions';
+import {openCloneVMModal,cloneVM} from '../../vmactions';
 import {waitForClonedVm} from '../../cloneVMwait';
 
 
@@ -11,7 +10,7 @@ test.describe('Clone ViMachinertual ', () => {
   test('Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod', async ({ page }) => {
     const user = getUserByRole('Service Provider');
 
-    // Go to login page and login
+    // Go to login page and login,
     await page.goto(env.baseURL + '/login');
     await page.fill(loginSelectors.username, user.username);
     await page.fill(loginSelectors.password, user.password);

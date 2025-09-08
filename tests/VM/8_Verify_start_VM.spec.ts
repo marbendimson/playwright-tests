@@ -2,8 +2,10 @@ import { test, expect } from '@playwright/test';
 import { env, getUserByRole } from '../../global.env';
 import { loginSelectors } from '../../selectors';
 import { verifyVDCDetailsVisible } from '../../VDC-page';
-import { searchVirtualMachineBackup } from '../../backupjobmodal';
-import {VirtualDataCenterForm} from '../../virtualDataCenterForm';
+import {
+openActionsDropdown,startVMByName} from '../../vmactions';
+
+test.setTimeout(200000);
 
 test('Update Backup Job modal - full workflow with verification', async ({ page }) => {
 
@@ -29,38 +31,12 @@ await vdcNav.click();
 
   // Click the first link matching the VDC name
   await page.locator(`a:has-text("VDC Autotest")`).first().click();
-//Verify Click edit VDC form 
- const editBtn = page.getByRole('link', { name: 'Edit' });
-await expect(editBtn).toBeVisible();
-await expect(editBtn).toBeEnabled();
-await editBtn.click();
 
-  const vdcForm = new VirtualDataCenterForm(page);
-  
-  await vdcForm.fillForm({
-  
-  //dataCenter:'1',
-  vdcName : 'Update_VDC Autotest',
-  allocationType : '1',
-  cpuCores :'50',
-  memoryGiB : '50',
-  overcommitment : '1',
-  //storagePolicyValue : '1',
-  StorageInput : '200',
-  //backStorageValue : 'Backupstorage',
-  backInput : '200',
-  
-  // primaryStorageLabel : 'updateautoStorage',
-  // //expectedStorageLabel : '100',
-  // backupStorageValue : 'Backupstore',
-  
-  });
+  //const vmRow = page.locator('tr', { hasText: 'AutoVM-001' });
 
-const VdcsaveButton = page.locator('#submitBtn');
-await expect(VdcsaveButton).toBeEnabled();
-await VdcsaveButton.click();
-  await expect(page.getByRole('heading', { level: 4, name: 'Update_VDC Autotest' })).toBeVisible();
+  //await openActionsDropdown(vmRow);
+  await startVMByName(page, 'AutoVM-001');
+
+
 
 });
-
-

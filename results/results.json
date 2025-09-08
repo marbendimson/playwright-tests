@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -50,7 +50,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "chromium",
         "name": "chromium",
@@ -66,7 +66,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "firefox",
         "name": "firefox",
@@ -82,7 +82,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "webkit",
         "name": "webkit",
@@ -98,820 +98,27 @@
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.55.0",
-    "workers": 1,
+    "workers": 2,
     "webServer": null
   },
   "suites": [
     {
-      "title": "VDC\\1_Verify_create_VM.spec.ts",
-      "file": "VDC/1_Verify_create_VM.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Create VM - All in One Flow",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 30474,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\recentTask.ts",
-                        "column": 16,
-                        "line": 221
-                      },
-                      "message": "Error: page.waitForTimeout: Test timeout of 30000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\recentTask.ts:221\n\n\u001b[0m \u001b[90m 219 |\u001b[39m\n \u001b[90m 220 |\u001b[39m     \u001b[90m// Wait a short interval before retrying\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 221 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// 3s\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 222 |\u001b[39m   }\n \u001b[90m 223 |\u001b[39m\n \u001b[90m 224 |\u001b[39m   \u001b[90m// Timeout reached\u001b[39m\u001b[0m\n\u001b[2m    at verifyVMCreation (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\recentTask.ts:221:16)\u001b[22m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\1_Verify_create_VM.spec.ts:76:2\u001b[22m"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "ℹ️ Only one boot device present, skipping reorder.\n"
-                    },
-                    {
-                      "text": "Current VM status: \"in_progress\", waiting...\n"
-                    },
-                    {
-                      "text": "Current VM status: \"in_progress\", waiting...\n"
-                    },
-                    {
-                      "text": "Current VM status: \"in_progress\", waiting...\n"
-                    },
-                    {
-                      "text": "Current VM status: \"in_progress\", waiting...\n"
-                    }
-                  ],
-                  "stderr": [
-                    {
-                      "text": "⚠️ No network available modal detected.\n"
-                    },
-                    {
-                      "text": "⚠️ ISO \"not specified\" not found or not provided. Removing CD/DVD drive.\n"
-                    }
-                  ],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:08:57.052Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-1_Verify_create_VM-Create-VM---All-in-One-Flow-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-1_Verify_create_VM-Create-VM---All-in-One-Flow-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-1_Verify_create_VM-Create-VM---All-in-One-Flow-chromium\\error-context.md"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "3a92170dffa2ff91f1e3-886109a553753752136f",
-          "file": "VDC/1_Verify_create_VM.spec.ts",
-          "line": 9,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\10_VerifyNamingVirtualMachineTemplateEndinHyphen.spec.ts",
-      "file": "VDC/10_VerifyNamingVirtualMachineTemplateEndinHyphen.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Create VM Template name start or ends in Hyphen",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 15501,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('h5:has-text(\"General Configuration\")')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h5:has-text(\"General Configuration\")')\u001b[22m\n\u001b[2m    - waiting for\" https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\"\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('h5:has-text(\"General Configuration\")')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h5:has-text(\"General Configuration\")')\u001b[22m\n\u001b[2m    - waiting for\" https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\"\u001b[22m\n\n    at fillGeneralConfig (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts:37:70)\n    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\10_VerifyNamingVirtualMachineTemplateEndinHyphen.spec.ts:24:25",
-                    "location": {
-                      "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts",
-                      "column": 70,
-                      "line": 37
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39m..\\vmtemplate.ts:37\n\n\u001b[0m \u001b[90m 35 |\u001b[39m \u001b[90m// ---------- Step 1: General Configuration ----------\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m fillGeneralConfig(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m vmName\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m osType\u001b[33m:\u001b[39m \u001b[32m'windows'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'linux'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'unix'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'other'\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h5:has-text(\"General Configuration\")'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m\n \u001b[90m 39 |\u001b[39m   \u001b[90m// Fill VM name\u001b[39m\n \u001b[90m 40 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"VMCloneForm[name]\"]'\u001b[39m\u001b[33m,\u001b[39m vmName)\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts",
-                        "column": 70,
-                        "line": 37
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('h5:has-text(\"General Configuration\")')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h5:has-text(\"General Configuration\")')\u001b[22m\n\u001b[2m    - waiting for\" https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\vmtemplate.ts:37\n\n\u001b[0m \u001b[90m 35 |\u001b[39m \u001b[90m// ---------- Step 1: General Configuration ----------\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m fillGeneralConfig(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m vmName\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m osType\u001b[33m:\u001b[39m \u001b[32m'windows'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'linux'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'unix'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'other'\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h5:has-text(\"General Configuration\")'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m\n \u001b[90m 39 |\u001b[39m   \u001b[90m// Fill VM name\u001b[39m\n \u001b[90m 40 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"VMCloneForm[name]\"]'\u001b[39m\u001b[33m,\u001b[39m vmName)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at fillGeneralConfig (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts:37:70)\u001b[22m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\10_VerifyNamingVirtualMachineTemplateEndinHyphen.spec.ts:24:25\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:09:29.269Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-10_VerifyNamingVirtual-548ac-ame-start-or-ends-in-Hyphen-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-10_VerifyNamingVirtual-548ac-ame-start-or-ends-in-Hyphen-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-10_VerifyNamingVirtual-548ac-ame-start-or-ends-in-Hyphen-chromium\\error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts",
-                    "column": 70,
-                    "line": 37
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "131dd3be63fae10d70bb-77fa3d7f2068976c0a79",
-          "file": "VDC/10_VerifyNamingVirtualMachineTemplateEndinHyphen.spec.ts",
-          "line": 9,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\11_VerfiyNamingVirtualMachineTemplateSpecialCharacters.spec.ts",
-      "file": "VDC/11_VerfiyNamingVirtualMachineTemplateSpecialCharacters.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Create VM Template naming with special characters ",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 15139,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('h5:has-text(\"General Configuration\")')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h5:has-text(\"General Configuration\")')\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('h5:has-text(\"General Configuration\")')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h5:has-text(\"General Configuration\")')\u001b[22m\n\n    at fillGeneralConfig (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts:37:70)\n    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\11_VerfiyNamingVirtualMachineTemplateSpecialCharacters.spec.ts:24:25",
-                    "location": {
-                      "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts",
-                      "column": 70,
-                      "line": 37
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39m..\\vmtemplate.ts:37\n\n\u001b[0m \u001b[90m 35 |\u001b[39m \u001b[90m// ---------- Step 1: General Configuration ----------\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m fillGeneralConfig(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m vmName\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m osType\u001b[33m:\u001b[39m \u001b[32m'windows'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'linux'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'unix'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'other'\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h5:has-text(\"General Configuration\")'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m\n \u001b[90m 39 |\u001b[39m   \u001b[90m// Fill VM name\u001b[39m\n \u001b[90m 40 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"VMCloneForm[name]\"]'\u001b[39m\u001b[33m,\u001b[39m vmName)\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts",
-                        "column": 70,
-                        "line": 37
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('h5:has-text(\"General Configuration\")')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h5:has-text(\"General Configuration\")')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\vmtemplate.ts:37\n\n\u001b[0m \u001b[90m 35 |\u001b[39m \u001b[90m// ---------- Step 1: General Configuration ----------\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m fillGeneralConfig(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m vmName\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m osType\u001b[33m:\u001b[39m \u001b[32m'windows'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'linux'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'unix'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'other'\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h5:has-text(\"General Configuration\")'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m\n \u001b[90m 39 |\u001b[39m   \u001b[90m// Fill VM name\u001b[39m\n \u001b[90m 40 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"VMCloneForm[name]\"]'\u001b[39m\u001b[33m,\u001b[39m vmName)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at fillGeneralConfig (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts:37:70)\u001b[22m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\11_VerfiyNamingVirtualMachineTemplateSpecialCharacters.spec.ts:24:25\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:09:46.427Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-11_VerfiyNamingVirtual-1ce91-ng-with-special-characters--chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-11_VerfiyNamingVirtual-1ce91-ng-with-special-characters--chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-11_VerfiyNamingVirtual-1ce91-ng-with-special-characters--chromium\\error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts",
-                    "column": 70,
-                    "line": 37
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "a440baff56ee2d9f86c1-87db5625c9dc672f6603",
-          "file": "VDC/11_VerfiyNamingVirtualMachineTemplateSpecialCharacters.spec.ts",
-          "line": 9,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\2_Verify_validation_message_if_naming_Virtual_machine_start_in_hyphens.spec.ts",
-      "file": "VDC/2_Verify_validation_message_if_naming_Virtual_machine_start_in_hyphens.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Create VM - All in One Flow",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 10779,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:10:03.190Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "ae48471b4d964a4d74f1-d6d843eee1f93810adb1",
-          "file": "VDC/2_Verify_validation_message_if_naming_Virtual_machine_start_in_hyphens.spec.ts",
-          "line": 8,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\3_Verify_validation_message_if_naming_Virtual_machine _end_in_hyphens.spec.ts",
-      "file": "VDC/3_Verify_validation_message_if_naming_Virtual_machine _end_in_hyphens.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Create VM - All in One Flow",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 11379,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:10:14.274Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "ce98de3b8c4a3f159e18-fb5f6803f6b8a5ef5180",
-          "file": "VDC/3_Verify_validation_message_if_naming_Virtual_machine _end_in_hyphens.spec.ts",
-          "line": 8,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\4_Verify_validation_message_if_specials_characters_used_to_name_Virtual_machine.spec.ts",
-      "file": "VDC/4_Verify_validation_message_if_specials_characters_used_to_name_Virtual_machine.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Create VM - All in One Flow",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 11229,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:10:25.677Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "05f641671b293d5f4125-fb5e28fa5dcf369cee26",
-          "file": "VDC/4_Verify_validation_message_if_specials_characters_used_to_name_Virtual_machine.spec.ts",
-          "line": 8,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\5_Verify _validation_message_if_leave_empty_hardware_settings.spec.ts",
-      "file": "VDC/5_Verify _validation_message_if_leave_empty_hardware_settings.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Create VM - All in One Flow",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 11860,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:10:36.931Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "60b043e9cbdb864ce3a8-d06a632efc947202a797",
-          "file": "VDC/5_Verify _validation_message_if_leave_empty_hardware_settings.spec.ts",
-          "line": 8,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\6_Verify_validation_message_when_input_0_value_hardware_settings.spec.ts",
-      "file": "VDC/6_Verify_validation_message_when_input_0_value_hardware_settings.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Create VM - All in One Flow",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 30682,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vm-page.ts",
-                        "column": 14,
-                        "line": 133
-                      },
-                      "message": "Error: page.selectOption: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#cpu-dropdown')\u001b[22m\n\u001b[2m    - locator resolved to <select id=\"cpu-dropdown\" class=\"form-select\" name=\"VirtualMachine[cpu]\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    37 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m       - did not find some options\u001b[22m\n\u001b[2m     - retrying select option action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\vm-page.ts:133\n\n\u001b[0m \u001b[90m 131 |\u001b[39m \u001b[36mawait\u001b[39m expect(label)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 132 |\u001b[39m \u001b[36mawait\u001b[39m label\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 133 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mselectOption(\u001b[32m'#cpu-dropdown'\u001b[39m\u001b[33m,\u001b[39m options\u001b[33m.\u001b[39mcpuType)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 134 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#virtualmachine-memory'\u001b[39m\u001b[33m,\u001b[39m options\u001b[33m.\u001b[39mmemory\u001b[33m.\u001b[39mtoString())\u001b[33m;\u001b[39m\n \u001b[90m 135 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#virtualmachine-memory'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(options\u001b[33m.\u001b[39mmemory\u001b[33m.\u001b[39mtoString())\u001b[33m;\u001b[39m\n \u001b[90m 136 |\u001b[39m   \u001b[36mconst\u001b[39m nextButton \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button[data-nexttab=\"steparrow-storage-configuration-tab\"]'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at Object.configureHardware (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vm-page.ts:133:14)\u001b[22m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\6_Verify_validation_message_when_input_0_value_hardware_settings.spec.ts:35:2\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:10:48.812Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-6_Verify_validation_me-2c4ed-Create-VM---All-in-One-Flow-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-6_Verify_validation_me-2c4ed-Create-VM---All-in-One-Flow-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-6_Verify_validation_me-2c4ed-Create-VM---All-in-One-Flow-chromium\\error-context.md"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "1921006d1654b2334bfc-38fe804e7902724db81c",
-          "file": "VDC/6_Verify_validation_message_when_input_0_value_hardware_settings.spec.ts",
-          "line": 8,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\7_VerifyLeaveEmptyStoragePolicy.spec.ts",
-      "file": "VDC/7_VerifyLeaveEmptyStoragePolicy.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Create VM - All in One Flow",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 30687,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vm-page.ts",
-                        "column": 14,
-                        "line": 133
-                      },
-                      "message": "Error: page.selectOption: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#cpu-dropdown')\u001b[22m\n\u001b[2m    - locator resolved to <select id=\"cpu-dropdown\" class=\"form-select\" name=\"VirtualMachine[cpu]\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    37 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m       - did not find some options\u001b[22m\n\u001b[2m     - retrying select option action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\vm-page.ts:133\n\n\u001b[0m \u001b[90m 131 |\u001b[39m \u001b[36mawait\u001b[39m expect(label)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 132 |\u001b[39m \u001b[36mawait\u001b[39m label\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 133 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mselectOption(\u001b[32m'#cpu-dropdown'\u001b[39m\u001b[33m,\u001b[39m options\u001b[33m.\u001b[39mcpuType)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 134 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#virtualmachine-memory'\u001b[39m\u001b[33m,\u001b[39m options\u001b[33m.\u001b[39mmemory\u001b[33m.\u001b[39mtoString())\u001b[33m;\u001b[39m\n \u001b[90m 135 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#virtualmachine-memory'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(options\u001b[33m.\u001b[39mmemory\u001b[33m.\u001b[39mtoString())\u001b[33m;\u001b[39m\n \u001b[90m 136 |\u001b[39m   \u001b[36mconst\u001b[39m nextButton \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'button[data-nexttab=\"steparrow-storage-configuration-tab\"]'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at Object.configureHardware (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vm-page.ts:133:14)\u001b[22m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\7_VerifyLeaveEmptyStoragePolicy.spec.ts:35:3\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:11:20.861Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-7_VerifyLeaveEmptyStor-ea0cd-Create-VM---All-in-One-Flow-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-7_VerifyLeaveEmptyStor-ea0cd-Create-VM---All-in-One-Flow-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-7_VerifyLeaveEmptyStor-ea0cd-Create-VM---All-in-One-Flow-chromium\\error-context.md"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "68aa232dafaf8e229090-1aef56bfec78603b017c",
-          "file": "VDC/7_VerifyLeaveEmptyStoragePolicy.spec.ts",
-          "line": 8,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\8_Verify_create_VMTemplate.spec.ts",
-      "file": "VDC/8_Verify_create_VMTemplate.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Create VM - All in One Flow",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 15187,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('h5:has-text(\"General Configuration\")')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h5:has-text(\"General Configuration\")')\u001b[22m\n\u001b[2m    - waiting for\" https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\"\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('h5:has-text(\"General Configuration\")')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h5:has-text(\"General Configuration\")')\u001b[22m\n\u001b[2m    - waiting for\" https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\"\u001b[22m\n\n    at fillGeneralConfig (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts:37:70)\n    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\8_Verify_create_VMTemplate.spec.ts:24:25",
-                    "location": {
-                      "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts",
-                      "column": 70,
-                      "line": 37
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39m..\\vmtemplate.ts:37\n\n\u001b[0m \u001b[90m 35 |\u001b[39m \u001b[90m// ---------- Step 1: General Configuration ----------\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m fillGeneralConfig(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m vmName\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m osType\u001b[33m:\u001b[39m \u001b[32m'windows'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'linux'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'unix'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'other'\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h5:has-text(\"General Configuration\")'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m\n \u001b[90m 39 |\u001b[39m   \u001b[90m// Fill VM name\u001b[39m\n \u001b[90m 40 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"VMCloneForm[name]\"]'\u001b[39m\u001b[33m,\u001b[39m vmName)\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts",
-                        "column": 70,
-                        "line": 37
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('h5:has-text(\"General Configuration\")')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h5:has-text(\"General Configuration\")')\u001b[22m\n\u001b[2m    - waiting for\" https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\vmtemplate.ts:37\n\n\u001b[0m \u001b[90m 35 |\u001b[39m \u001b[90m// ---------- Step 1: General Configuration ----------\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m fillGeneralConfig(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m vmName\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m osType\u001b[33m:\u001b[39m \u001b[32m'windows'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'linux'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'unix'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'other'\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h5:has-text(\"General Configuration\")'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m\n \u001b[90m 39 |\u001b[39m   \u001b[90m// Fill VM name\u001b[39m\n \u001b[90m 40 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"VMCloneForm[name]\"]'\u001b[39m\u001b[33m,\u001b[39m vmName)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at fillGeneralConfig (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts:37:70)\u001b[22m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\8_Verify_create_VMTemplate.spec.ts:24:25\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:11:53.177Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-8_Verify_create_VMTemplate-Create-VM---All-in-One-Flow-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-8_Verify_create_VMTemplate-Create-VM---All-in-One-Flow-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-8_Verify_create_VMTemplate-Create-VM---All-in-One-Flow-chromium\\error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts",
-                    "column": 70,
-                    "line": 37
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "f1784dc8caddf7667974-b053f3dd372c87470471",
-          "file": "VDC/8_Verify_create_VMTemplate.spec.ts",
-          "line": 9,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\9_VerifyNamingVirtualMachineTemplatestartinHyphen.spec.ts",
-      "file": "VDC/9_VerifyNamingVirtualMachineTemplatestartinHyphen.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Create VM Template name start or ends in Hyphen",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 6,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 15233,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('h5:has-text(\"General Configuration\")')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h5:has-text(\"General Configuration\")')\u001b[22m\n\u001b[2m    - waiting for\" https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\"\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('h5:has-text(\"General Configuration\")')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h5:has-text(\"General Configuration\")')\u001b[22m\n\u001b[2m    - waiting for\" https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\"\u001b[22m\n\n    at fillGeneralConfig (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts:37:70)\n    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\9_VerifyNamingVirtualMachineTemplatestartinHyphen.spec.ts:24:25",
-                    "location": {
-                      "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts",
-                      "column": 70,
-                      "line": 37
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39m..\\vmtemplate.ts:37\n\n\u001b[0m \u001b[90m 35 |\u001b[39m \u001b[90m// ---------- Step 1: General Configuration ----------\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m fillGeneralConfig(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m vmName\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m osType\u001b[33m:\u001b[39m \u001b[32m'windows'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'linux'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'unix'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'other'\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h5:has-text(\"General Configuration\")'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m\n \u001b[90m 39 |\u001b[39m   \u001b[90m// Fill VM name\u001b[39m\n \u001b[90m 40 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"VMCloneForm[name]\"]'\u001b[39m\u001b[33m,\u001b[39m vmName)\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts",
-                        "column": 70,
-                        "line": 37
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('h5:has-text(\"General Configuration\")')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h5:has-text(\"General Configuration\")')\u001b[22m\n\u001b[2m    - waiting for\" https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://preprod.multiportal.io/virtual-data-center/view?id=49b5fc9f-7ef3-4c20-885b-fb14a584c9ba\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\vmtemplate.ts:37\n\n\u001b[0m \u001b[90m 35 |\u001b[39m \u001b[90m// ---------- Step 1: General Configuration ----------\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m fillGeneralConfig(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m vmName\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m osType\u001b[33m:\u001b[39m \u001b[32m'windows'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'linux'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'unix'\u001b[39m \u001b[33m|\u001b[39m \u001b[32m'other'\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h5:has-text(\"General Configuration\")'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m\n \u001b[90m 39 |\u001b[39m   \u001b[90m// Fill VM name\u001b[39m\n \u001b[90m 40 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"VMCloneForm[name]\"]'\u001b[39m\u001b[33m,\u001b[39m vmName)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at fillGeneralConfig (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts:37:70)\u001b[22m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\9_VerifyNamingVirtualMachineTemplatestartinHyphen.spec.ts:24:25\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:12:10.004Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-9_VerifyNamingVirtualM-6c27e-ame-start-or-ends-in-Hyphen-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-9_VerifyNamingVirtualM-6c27e-ame-start-or-ends-in-Hyphen-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-9_VerifyNamingVirtualM-6c27e-ame-start-or-ends-in-Hyphen-chromium\\error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\vmtemplate.ts",
-                    "column": 70,
-                    "line": 37
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "255f13cd69fa32201f73-035ca0fc0357df4306c9",
-          "file": "VDC/9_VerifyNamingVirtualMachineTemplatestartinHyphen.spec.ts",
-          "line": 9,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\TC_VerifyDeleteTenant.spec.ts",
-      "file": "VDC/TC_VerifyDeleteTenant.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "should verify modal contents and delete tenant",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 7,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 12514,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
-                    {
-                      "title": "Expect \"toPass\"",
-                      "duration": 241
-                    }
-                  ],
-                  "startTime": "2025-09-04T04:12:26.882Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "371c19da5b9b9e9b0f8a-a085a9d6cb2a97d8e719",
-          "file": "VDC/TC_VerifyDeleteTenant.spec.ts",
-          "line": 7,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\TS_017VerifyDeleteReseller.spec.ts",
-      "file": "VDC/TS_017VerifyDeleteReseller.spec.ts",
+      "title": "User_Roles\\TS_001_VerifyUserRolesPage.spec.ts",
+      "file": "User_Roles/TS_001_VerifyUserRolesPage.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Login Success Tests",
-          "file": "VDC/TS_017VerifyDeleteReseller.spec.ts",
-          "line": 5,
+          "title": "Verify User Role page  ",
+          "file": "User_Roles/TS_001_VerifyUserRolesPage.spec.ts",
+          "line": 6,
           "column": 6,
           "specs": [
             {
-              "title": "should login successfully with Service Provider @dev @staging @preprod",
+              "title": "should be able to successfully display User role page ",
               "ok": true,
-              "tags": [
-                "dev",
-                "staging",
-                "preprod"
-              ],
+              "tags": [],
               "tests": [
                 {
                   "timeout": 30000,
@@ -921,15 +128,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 10937,
+                      "duration": 9956,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-04T04:12:39.698Z",
+                      "startTime": "2025-09-08T08:05:47.240Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -937,256 +144,8 @@
                   "status": "expected"
                 }
               ],
-              "id": "7406f92b72150c896e20-988285dbacd239a07abb",
-              "file": "VDC/TS_017VerifyDeleteReseller.spec.ts",
-              "line": 6,
-              "column": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "VDC\\Verify_Backup_section.spec.ts",
-      "file": "VDC/Verify_Backup_section.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Update Backup Job modal - full workflow with verification",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 7,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 32331,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_Backup_section.spec.ts",
-                        "column": 60,
-                        "line": 30
-                      },
-                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"VDC Autotest\")').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 28 |\u001b[39m\n \u001b[90m 29 |\u001b[39m   \u001b[90m// Click the first link matching the VDC name\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`a:has-text(\"VDC Autotest\")`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m\n \u001b[90m 32 |\u001b[39m    \u001b[90m//Verify display Task log section \u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mconst\u001b[39m backupTab \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'a.nav-link[data-tab=\"backups\"]'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_Backup_section.spec.ts:30:60\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:12:50.657Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_Backup_section--089ad--workflow-with-verification-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_Backup_section--089ad--workflow-with-verification-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_Backup_section--089ad--workflow-with-verification-chromium\\error-context.md"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "e0c328fdc684e10b2c66-2806f6fcc9d821b19555",
-          "file": "VDC/Verify_Backup_section.spec.ts",
-          "line": 7,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\Verify_clone_vm.spec.ts",
-      "file": "VDC/Verify_clone_vm.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Clone ViMachinertual ",
-          "file": "VDC/Verify_clone_vm.spec.ts",
-          "line": 10,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod",
-              "ok": false,
-              "tags": [
-                "dev",
-                "staging",
-                "preprod"
-              ],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 8,
-                      "parallelIndex": 0,
-                      "status": "timedOut",
-                      "duration": 31951,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_clone_vm.spec.ts",
-                            "column": 62,
-                            "line": 35
-                          },
-                          "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"VDC Autotest\")').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 33 |\u001b[39m\n \u001b[90m 34 |\u001b[39m    \u001b[90m// Click only the link that matches the VDC name\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`a:has-text(\"VDC Autotest\")`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 36 |\u001b[39m\n \u001b[90m 37 |\u001b[39m    \u001b[36mconst\u001b[39m vmRow \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'table tbody tr'\u001b[39m)\u001b[33m.\u001b[39mfilter({\n \u001b[90m 38 |\u001b[39m   has\u001b[33m:\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'td:has-text(\"AutoVM-001\")'\u001b[39m)\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_clone_vm.spec.ts:35:62\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-04T04:13:24.452Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_clone_vm-Clone--9a916-rovider-dev-staging-preprod-chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_clone_vm-Clone--9a916-rovider-dev-staging-preprod-chromium\\video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_clone_vm-Clone--9a916-rovider-dev-staging-preprod-chromium\\error-context.md"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "7aabcc54896356119d03-54dafd1e4d6107e29699",
-              "file": "VDC/Verify_clone_vm.spec.ts",
-              "line": 11,
-              "column": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "VDC\\Verify_Convert_VM.spec.ts",
-      "file": "VDC/Verify_Convert_VM.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Clone Virtual Machine",
-          "file": "VDC/Verify_Convert_VM.spec.ts",
-          "line": 6,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Should be able to successfully Convert Virtual Machine to Template - Service Provider @dev @staging @preprod",
-              "ok": false,
-              "tags": [
-                "dev",
-                "staging",
-                "preprod"
-              ],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 9,
-                      "parallelIndex": 0,
-                      "status": "timedOut",
-                      "duration": 32086,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_Convert_VM.spec.ts",
-                            "column": 62,
-                            "line": 26
-                          },
-                          "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"VDC Autotest\")').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 24 |\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[90m// Click specific VDC\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'a:has-text(\"VDC Autotest\")'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m\n \u001b[90m 28 |\u001b[39m     \u001b[90m// Locate the VM row (scoped to table)\u001b[39m\n \u001b[90m 29 |\u001b[39m     \u001b[36mconst\u001b[39m vmRow \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'table tbody tr'\u001b[39m)\u001b[33m.\u001b[39mfilter({\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_Convert_VM.spec.ts:26:62\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-04T04:13:58.078Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_Convert_VM-Clon-efeb5-rovider-dev-staging-preprod-chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_Convert_VM-Clon-efeb5-rovider-dev-staging-preprod-chromium\\video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_Convert_VM-Clon-efeb5-rovider-dev-staging-preprod-chromium\\error-context.md"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "83ee75e33bde4138a707-c3ed8f5f9fff3bc15eb0",
-              "file": "VDC/Verify_Convert_VM.spec.ts",
+              "id": "d5578728b819e97ac938-07b3acd5c5270174cecb",
+              "file": "User_Roles/TS_001_VerifyUserRolesPage.spec.ts",
               "line": 7,
               "column": 7
             }
@@ -1195,256 +154,22 @@
       ]
     },
     {
-      "title": "VDC\\Verify_create_Backup_Job.spec.ts",
-      "file": "VDC/Verify_create_Backup_Job.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod",
-          "ok": false,
-          "tags": [
-            "dev",
-            "staging",
-            "preprod"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 10,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 32162,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_create_Backup_Job.spec.ts",
-                        "column": 60,
-                        "line": 31
-                      },
-                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"VDC Autotest\")').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 29 |\u001b[39m\n \u001b[90m 30 |\u001b[39m   \u001b[90m// Click the first link matching the VDC name\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 31 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`a:has-text(\"VDC Autotest\")`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[90m//Navigate to Backup Job Tab \u001b[39m\n \u001b[90m 34 |\u001b[39m    \u001b[36mconst\u001b[39m backupJobsTab \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'a.nav-link'\u001b[39m\u001b[33m,\u001b[39m { hasText\u001b[33m:\u001b[39m \u001b[32m'Backup Jobs'\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_create_Backup_Job.spec.ts:31:60\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:14:31.776Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_create_Backup_J-aa563-rovider-dev-staging-preprod-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_create_Backup_J-aa563-rovider-dev-staging-preprod-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_create_Backup_J-aa563-rovider-dev-staging-preprod-chromium\\error-context.md"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "b31c1e24ad2bf8ecf4af-4ae12ff0d9ee3bc4a589",
-          "file": "VDC/Verify_create_Backup_Job.spec.ts",
-          "line": 9,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\Verify_delete_Backupjob.spec.ts",
-      "file": "VDC/Verify_delete_Backupjob.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod",
-          "ok": false,
-          "tags": [
-            "dev",
-            "staging",
-            "preprod"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 11,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 32144,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_delete_Backupjob.spec.ts",
-                        "column": 60,
-                        "line": 31
-                      },
-                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"VDC Autotest\")').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 29 |\u001b[39m\n \u001b[90m 30 |\u001b[39m   \u001b[90m// Click the first link matching the VDC name\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 31 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`a:has-text(\"VDC Autotest\")`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[90m//Navigate to Backup Job Tab \u001b[39m\n \u001b[90m 34 |\u001b[39m    \u001b[36mconst\u001b[39m backupJobsTab \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'a.nav-link'\u001b[39m\u001b[33m,\u001b[39m { hasText\u001b[33m:\u001b[39m \u001b[32m'Backup Jobs'\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_delete_Backupjob.spec.ts:31:60\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:15:05.686Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_delete_Backupjo-b9a52-rovider-dev-staging-preprod-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_delete_Backupjo-b9a52-rovider-dev-staging-preprod-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_delete_Backupjo-b9a52-rovider-dev-staging-preprod-chromium\\error-context.md"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "20bca21f644ff6fc60c1-b8a41ac4b001e4b20390",
-          "file": "VDC/Verify_delete_Backupjob.spec.ts",
-          "line": 9,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\Verify_delete_VDC.spec.ts",
-      "file": "VDC/Verify_delete_VDC.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Update Backup Job modal - full workflow with verification",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 12,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 32019,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_delete_VDC.spec.ts",
-                        "column": 67,
-                        "line": 30
-                      },
-                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"Update_VDC Autotest\")').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 28 |\u001b[39m\n \u001b[90m 29 |\u001b[39m   \u001b[90m// Click the first link matching the VDC name\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`a:has-text(\"Update_VDC Autotest\")`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m\n \u001b[90m 32 |\u001b[39m   \u001b[36mawait\u001b[39m handleDeleteVDC(page\u001b[33m,\u001b[39m \u001b[32m'Update_VDC Autotest'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'cancel'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_delete_VDC.spec.ts:30:67\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:15:39.452Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_delete_VDC-Upda-93064--workflow-with-verification-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_delete_VDC-Upda-93064--workflow-with-verification-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_delete_VDC-Upda-93064--workflow-with-verification-chromium\\error-context.md"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "af06d4d11d5b16cb0a91-637ceb3b64225c4a5a1c",
-          "file": "VDC/Verify_delete_VDC.spec.ts",
-          "line": 7,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\Verify_delete_vm.spec.ts",
-      "file": "VDC/Verify_delete_vm.spec.ts",
+      "title": "User_Roles\\TS_002_Verify_Search_Available_Permissions.spec.ts",
+      "file": "User_Roles/TS_002_Verify_Search_Available_Permissions.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Delete Virtual Machine",
-          "file": "VDC/Verify_delete_vm.spec.ts",
-          "line": 7,
+          "title": "Verify User Role page  ",
+          "file": "User_Roles/TS_002_Verify_Search_Available_Permissions.spec.ts",
+          "line": 6,
           "column": 6,
           "specs": [
             {
-              "title": "Should be able to successfully delete Virtual Machine - Service Provider @dev @staging @preprod",
-              "ok": false,
-              "tags": [
-                "dev",
-                "staging",
-                "preprod"
-              ],
+              "title": "Should successfully search available permissions for Service Provider Level  ",
+              "ok": true,
+              "tags": [],
               "tests": [
                 {
                   "timeout": 30000,
@@ -1454,57 +179,25 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 13,
-                      "parallelIndex": 0,
-                      "status": "timedOut",
-                      "duration": 32118,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_delete_vm.spec.ts",
-                            "column": 60,
-                            "line": 33
-                          },
-                          "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"VDC Autotest\")').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 31 |\u001b[39m\n \u001b[90m 32 |\u001b[39m   \u001b[90m// Click only the link that matches the VDC name\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`a:has-text(\"VDC Autotest\")`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m\n \u001b[90m 35 |\u001b[39m   \u001b[36mawait\u001b[39m verifyVDCDetailsVisible(page)\u001b[33m;\u001b[39m\n \u001b[90m 36 |\u001b[39m   \u001b[90m// Delete VM AND delete Proxmox data\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_delete_vm.spec.ts:33:60\u001b[22m"
-                        }
-                      ],
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 9844,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-04T04:16:13.083Z",
+                      "startTime": "2025-09-08T08:05:47.212Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_delete_vm-Delet-b37d4-rovider-dev-staging-preprod-chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_delete_vm-Delet-b37d4-rovider-dev-staging-preprod-chromium\\video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_delete_vm-Delet-b37d4-rovider-dev-staging-preprod-chromium\\error-context.md"
-                        }
-                      ]
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
-              "id": "567f880e8df7a046b448-f779a665a495f39017fa",
-              "file": "VDC/Verify_delete_vm.spec.ts",
-              "line": 8,
+              "id": "d08502f38a1f19be76e7-ead625f19a245f934dd3",
+              "file": "User_Roles/TS_002_Verify_Search_Available_Permissions.spec.ts",
+              "line": 7,
               "column": 7
             }
           ]
@@ -1512,100 +205,22 @@
       ]
     },
     {
-      "title": "VDC\\Verify_Edit_VirtualDataCenter.spec.ts",
-      "file": "VDC/Verify_Edit_VirtualDataCenter.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Update Backup Job modal - full workflow with verification",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 14,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 32140,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_Edit_VirtualDataCenter.spec.ts",
-                        "column": 60,
-                        "line": 31
-                      },
-                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"VDC Autotest\")').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 29 |\u001b[39m\n \u001b[90m 30 |\u001b[39m   \u001b[90m// Click the first link matching the VDC name\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 31 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`a:has-text(\"VDC Autotest\")`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 32 |\u001b[39m \u001b[90m//Verify Click edit VDC form \u001b[39m\n \u001b[90m 33 |\u001b[39m  \u001b[36mconst\u001b[39m editBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Edit'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 34 |\u001b[39m \u001b[36mawait\u001b[39m expect(editBtn)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_Edit_VirtualDataCenter.spec.ts:31:60\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:16:46.834Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_Edit_VirtualDat-459ba--workflow-with-verification-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_Edit_VirtualDat-459ba--workflow-with-verification-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_Edit_VirtualDat-459ba--workflow-with-verification-chromium\\error-context.md"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "28a6d63474ed6b46d474-3a009987dbe5034f7ac4",
-          "file": "VDC/Verify_Edit_VirtualDataCenter.spec.ts",
-          "line": 8,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\Verify_RemoveRecentTask.spec.ts",
-      "file": "VDC/Verify_RemoveRecentTask.spec.ts",
+      "title": "User_Roles\\TS_003_VerifyRoles_Section.spec.ts",
+      "file": "User_Roles/TS_003_VerifyRoles_Section.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Login Success Tests",
-          "file": "VDC/Verify_RemoveRecentTask.spec.ts",
+          "title": "Verify User Role page  ",
+          "file": "User_Roles/TS_003_VerifyRoles_Section.spec.ts",
           "line": 6,
           "column": 6,
           "specs": [
             {
-              "title": "should login successfully with Service Provider @dev @staging @preprod",
-              "ok": false,
-              "tags": [
-                "dev",
-                "staging",
-                "preprod"
-              ],
+              "title": "Should successfully display list of roles, search bar, Create Role, Edit, Delete button on roles section page  ",
+              "ok": true,
+              "tags": [],
               "tests": [
                 {
                   "timeout": 30000,
@@ -1615,747 +230,227 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 15,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 10138,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-08T08:05:57.372Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6b269e3be0d6393ac516-4f4f0db2a287c93cf667",
+              "file": "User_Roles/TS_003_VerifyRoles_Section.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "User_Roles\\TS_004_Verify_Search_roles_created.spec.ts",
+      "file": "User_Roles/TS_004_Verify_Search_roles_created.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify User Role page  ",
+          "file": "User_Roles/TS_004_Verify_Search_roles_created.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should successfully search roles by name  and display \"No results found\" if not available   ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10118,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-08T08:05:57.595Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "adddc9f87a8fbe4bf6f5-61909f20911ad980187b",
+              "file": "User_Roles/TS_004_Verify_Search_roles_created.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "User_Roles\\TS_005_Verify_create_new_role.spec.ts",
+      "file": "User_Roles/TS_005_Verify_create_new_role.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify User Role page",
+          "file": "User_Roles/TS_005_Verify_create_new_role.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should create a new role with all permissions and verify it exists",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 16472,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-08T08:06:07.533Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e28d2d81309c5f9574bd-c01920b736ae1e7a6ba0",
+              "file": "User_Roles/TS_005_Verify_create_new_role.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "User_Roles\\TS_006_Verify_edit_role.spec.ts",
+      "file": "User_Roles/TS_006_Verify_edit_role.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Edit Role - Verify Permissions Retention and Update",
+          "file": "User_Roles/TS_006_Verify_edit_role.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should verify retained permissions and update role description and permissions",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 19415,
+                      "duration": 18938,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('.swal2-popup.swal2-modal.swal2-icon-warning')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.swal2-popup.swal2-modal.swal2-icon-warning')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('.swal2-popup.swal2-modal.swal2-icon-warning')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.swal2-popup.swal2-modal.swal2-icon-warning')\u001b[22m\n\n    at verifyAndRemoveCompletedTask (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\recentTask.ts:103:29)\n    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_RemoveRecentTask.spec.ts:25:4",
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('tr:has-text(\"AutoRole\")')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('tr:has-text(\"AutoRole\")')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('tr:has-text(\"AutoRole\")')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('tr:has-text(\"AutoRole\")')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n    at UserManagementPage.openEditRoleModal (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\UserRole.ts:119:21)\n    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\User_Roles\\TS_006_Verify_edit_role.spec.ts:53:38",
                         "location": {
-                          "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\recentTask.ts",
-                          "column": 29,
-                          "line": 103
+                          "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\UserRole.ts",
+                          "column": 21,
+                          "line": 119
                         },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\recentTask.ts:103\n\n\u001b[0m \u001b[90m 101 |\u001b[39m   \u001b[90m// 4. Handle SweetAlert2 confirmation modal\u001b[39m\n \u001b[90m 102 |\u001b[39m   \u001b[36mconst\u001b[39m swalWarning \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.swal2-popup.swal2-modal.swal2-icon-warning'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 103 |\u001b[39m   \u001b[36mawait\u001b[39m expect(swalWarning)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 104 |\u001b[39m\n \u001b[90m 105 |\u001b[39m   \u001b[36mif\u001b[39m (confirm) {\n \u001b[90m 106 |\u001b[39m     \u001b[90m// ✅ Confirm removal\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[90m   at \u001b[39m..\\UserRole.ts:119\n\n\u001b[0m \u001b[90m 117 |\u001b[39m   \u001b[90m// Wait for the row containing the role to appear\u001b[39m\n \u001b[90m 118 |\u001b[39m   \u001b[36mconst\u001b[39m row \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`tr:has-text(\"${roleName}\")`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 119 |\u001b[39m   \u001b[36mawait\u001b[39m expect(row)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m1\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m \u001b[90m// wait until it exists\u001b[39m\n \u001b[90m     |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 120 |\u001b[39m\n \u001b[90m 121 |\u001b[39m   \u001b[90m// Find the Edit link inside that row\u001b[39m\n \u001b[90m 122 |\u001b[39m   \u001b[36mconst\u001b[39m editLink \u001b[33m=\u001b[39m row\u001b[33m.\u001b[39mlocator(\u001b[32m'a:has-text(\"Edit\")'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
-                            "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\recentTask.ts",
-                            "column": 29,
-                            "line": 103
+                            "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\UserRole.ts",
+                            "column": 21,
+                            "line": 119
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('.swal2-popup.swal2-modal.swal2-icon-warning')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.swal2-popup.swal2-modal.swal2-icon-warning')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\recentTask.ts:103\n\n\u001b[0m \u001b[90m 101 |\u001b[39m   \u001b[90m// 4. Handle SweetAlert2 confirmation modal\u001b[39m\n \u001b[90m 102 |\u001b[39m   \u001b[36mconst\u001b[39m swalWarning \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.swal2-popup.swal2-modal.swal2-icon-warning'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 103 |\u001b[39m   \u001b[36mawait\u001b[39m expect(swalWarning)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 104 |\u001b[39m\n \u001b[90m 105 |\u001b[39m   \u001b[36mif\u001b[39m (confirm) {\n \u001b[90m 106 |\u001b[39m     \u001b[90m// ✅ Confirm removal\u001b[39m\u001b[0m\n\u001b[2m    at verifyAndRemoveCompletedTask (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\recentTask.ts:103:29)\u001b[22m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_RemoveRecentTask.spec.ts:25:4\u001b[22m"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('tr:has-text(\"AutoRole\")')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('tr:has-text(\"AutoRole\")')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\UserRole.ts:119\n\n\u001b[0m \u001b[90m 117 |\u001b[39m   \u001b[90m// Wait for the row containing the role to appear\u001b[39m\n \u001b[90m 118 |\u001b[39m   \u001b[36mconst\u001b[39m row \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`tr:has-text(\"${roleName}\")`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 119 |\u001b[39m   \u001b[36mawait\u001b[39m expect(row)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m1\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m \u001b[90m// wait until it exists\u001b[39m\n \u001b[90m     |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 120 |\u001b[39m\n \u001b[90m 121 |\u001b[39m   \u001b[90m// Find the Edit link inside that row\u001b[39m\n \u001b[90m 122 |\u001b[39m   \u001b[36mconst\u001b[39m editLink \u001b[33m=\u001b[39m row\u001b[33m.\u001b[39mlocator(\u001b[32m'a:has-text(\"Edit\")'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at UserManagementPage.openEditRoleModal (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\UserRole.ts:119:21)\u001b[22m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\User_Roles\\TS_006_Verify_edit_role.spec.ts:53:38\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-04T04:17:20.619Z",
+                      "startTime": "2025-09-08T08:06:07.739Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_RemoveRecentTas-e21de-rovider-dev-staging-preprod-chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_RemoveRecentTas-e21de-rovider-dev-staging-preprod-chromium\\video.webm"
+                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\User_Roles-TS_006_Verify_e-68766-description-and-permissions-chromium\\test-failed-1.png"
                         },
                         {
                           "name": "error-context",
                           "contentType": "text/markdown",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_RemoveRecentTas-e21de-rovider-dev-staging-preprod-chromium\\error-context.md"
+                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\User_Roles-TS_006_Verify_e-68766-description-and-permissions-chromium\\error-context.md"
                         }
                       ],
                       "errorLocation": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\recentTask.ts",
-                        "column": 29,
-                        "line": 103
+                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\UserRole.ts",
+                        "column": 21,
+                        "line": 119
                       }
                     }
                   ],
                   "status": "unexpected"
                 }
               ],
-              "id": "abc9f064b017e14da77c-3137ae977ccc6c74487c",
-              "file": "VDC/Verify_RemoveRecentTask.spec.ts",
-              "line": 7,
+              "id": "f02e85f3997b670024d1-38b2dec39fb5fa307008",
+              "file": "User_Roles/TS_006_Verify_edit_role.spec.ts",
+              "line": 49,
               "column": 7
             }
           ]
-        }
-      ]
-    },
-    {
-      "title": "VDC\\Verify_rename_VM.spec.ts",
-      "file": "VDC/Verify_rename_VM.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Clone ViMachinertual ",
-          "file": "VDC/Verify_rename_VM.spec.ts",
-          "line": 11,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod",
-              "ok": false,
-              "tags": [
-                "dev",
-                "staging",
-                "preprod"
-              ],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 16,
-                      "parallelIndex": 0,
-                      "status": "timedOut",
-                      "duration": 32086,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_rename_VM.spec.ts",
-                            "column": 62,
-                            "line": 36
-                          },
-                          "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"VDC Autotest\")').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 34 |\u001b[39m\n \u001b[90m 35 |\u001b[39m    \u001b[90m// Click only the link that matches the VDC name\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`a:has-text(\"VDC Autotest\")`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 37 |\u001b[39m\n \u001b[90m 38 |\u001b[39m     \u001b[36mconst\u001b[39m vmRow \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'table tbody tr'\u001b[39m)\u001b[33m.\u001b[39mfilter({\n \u001b[90m 39 |\u001b[39m   has\u001b[33m:\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'td:has-text(\"AutoVM-001\")'\u001b[39m)\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_rename_VM.spec.ts:36:62\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-04T04:17:41.716Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_rename_VM-Clone-4bce9-rovider-dev-staging-preprod-chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_rename_VM-Clone-4bce9-rovider-dev-staging-preprod-chromium\\video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_rename_VM-Clone-4bce9-rovider-dev-staging-preprod-chromium\\error-context.md"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "cf40c68bcb8282c38120-73222cd531b6aeba2c8b",
-              "file": "VDC/Verify_rename_VM.spec.ts",
-              "line": 12,
-              "column": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "VDC\\Verify_run_Backupjob.spec.ts",
-      "file": "VDC/Verify_run_Backupjob.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Update Backup Job modal - full workflow with verification",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 17,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 32054,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_run_Backupjob.spec.ts",
-                        "column": 60,
-                        "line": 30
-                      },
-                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"VDC Autotest\")').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 28 |\u001b[39m\n \u001b[90m 29 |\u001b[39m   \u001b[90m// Click the first link matching the VDC name\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`a:has-text(\"VDC Autotest\")`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m\n \u001b[90m 32 |\u001b[39m   \u001b[90m//Navigate to Backup Job Tab \u001b[39m\n \u001b[90m 33 |\u001b[39m    \u001b[36mconst\u001b[39m backupJobsTab \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'a.nav-link'\u001b[39m\u001b[33m,\u001b[39m { hasText\u001b[33m:\u001b[39m \u001b[32m'Backup Jobs'\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_run_Backupjob.spec.ts:30:60\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:18:15.449Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_run_Backupjob-U-82d8b--workflow-with-verification-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_run_Backupjob-U-82d8b--workflow-with-verification-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_run_Backupjob-U-82d8b--workflow-with-verification-chromium\\error-context.md"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "f54d3624338c285a72be-e80a8fc5d3a067e868e3",
-          "file": "VDC/Verify_run_Backupjob.spec.ts",
-          "line": 7,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\Verify_start_VM.spec.ts",
-      "file": "VDC/Verify_start_VM.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Update Backup Job modal - full workflow with verification",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 18,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 32120,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_start_VM.spec.ts",
-                        "column": 60,
-                        "line": 31
-                      },
-                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"VDC Autotest\")').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 29 |\u001b[39m\n \u001b[90m 30 |\u001b[39m   \u001b[90m// Click the first link matching the VDC name\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 31 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`a:has-text(\"VDC Autotest\")`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[90m//const vmRow = page.locator('tr', { hasText: 'AutoVM-001' });\u001b[39m\n \u001b[90m 34 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_start_VM.spec.ts:31:60\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:18:49.125Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_start_VM-Update-1a737--workflow-with-verification-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_start_VM-Update-1a737--workflow-with-verification-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_start_VM-Update-1a737--workflow-with-verification-chromium\\error-context.md"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "78194b262e325e5cfc54-c4351b654731b02b77bb",
-          "file": "VDC/Verify_start_VM.spec.ts",
-          "line": 8,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\Verify_takeBackup.spec.ts",
-      "file": "VDC/Verify_takeBackup.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod",
-          "ok": false,
-          "tags": [
-            "dev",
-            "staging",
-            "preprod"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 19,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 32006,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_takeBackup.spec.ts",
-                        "column": 60,
-                        "line": 31
-                      },
-                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"VDC Autotest\")').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 29 |\u001b[39m\n \u001b[90m 30 |\u001b[39m   \u001b[90m// Click the first link matching the VDC name\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 31 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`a:has-text(\"VDC Autotest\")`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[90m//await page.reload()\u001b[39m\n \u001b[90m 34 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_takeBackup.spec.ts:31:60\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:19:22.859Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_takeBackup-Shou-bfbcd-rovider-dev-staging-preprod-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_takeBackup-Shou-bfbcd-rovider-dev-staging-preprod-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_takeBackup-Shou-bfbcd-rovider-dev-staging-preprod-chromium\\error-context.md"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "76219cca3f21bc27400c-c4eeef4d356973ee6886",
-          "file": "VDC/Verify_takeBackup.spec.ts",
-          "line": 9,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\Verify_Tasklog_section.spec.ts",
-      "file": "VDC/Verify_Tasklog_section.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod",
-          "ok": false,
-          "tags": [
-            "dev",
-            "staging",
-            "preprod"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 20,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 32121,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_Tasklog_section.spec.ts",
-                        "column": 60,
-                        "line": 31
-                      },
-                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"VDC Autotest\")').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 29 |\u001b[39m\n \u001b[90m 30 |\u001b[39m   \u001b[90m// Click the first link matching the VDC name\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 31 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`a:has-text(\"VDC Autotest\")`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[90m//Verify display Task log section \u001b[39m\n \u001b[90m 34 |\u001b[39m   \u001b[36mconst\u001b[39m taskLogTab \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'a.nav-link[data-tab=\"event-log\"]'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_Tasklog_section.spec.ts:31:60\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:19:56.509Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_Tasklog_section-c1492-rovider-dev-staging-preprod-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_Tasklog_section-c1492-rovider-dev-staging-preprod-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_Tasklog_section-c1492-rovider-dev-staging-preprod-chromium\\error-context.md"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "a379a0314c30a53f9365-e6241b5fb2130f42b729",
-          "file": "VDC/Verify_Tasklog_section.spec.ts",
-          "line": 9,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\Verify_UpdateBackup_job.spec.ts",
-      "file": "VDC/Verify_UpdateBackup_job.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Update Backup Job modal - full workflow with verification",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 21,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 32048,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_UpdateBackup_job.spec.ts",
-                        "column": 60,
-                        "line": 30
-                      },
-                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"VDC Autotest\")').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 28 |\u001b[39m\n \u001b[90m 29 |\u001b[39m   \u001b[90m// Click the first link matching the VDC name\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`a:has-text(\"VDC Autotest\")`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m\n \u001b[90m 32 |\u001b[39m   \u001b[90m//Navigate to Backup Job Tab \u001b[39m\n \u001b[90m 33 |\u001b[39m    \u001b[36mconst\u001b[39m backupJobsTab \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'a.nav-link'\u001b[39m\u001b[33m,\u001b[39m { hasText\u001b[33m:\u001b[39m \u001b[32m'Backup Jobs'\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_UpdateBackup_job.spec.ts:30:60\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:20:30.267Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_UpdateBackup_jo-deab0--workflow-with-verification-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_UpdateBackup_jo-deab0--workflow-with-verification-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_UpdateBackup_jo-deab0--workflow-with-verification-chromium\\error-context.md"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "072ce4d0252276a9f1fc-d91a006c1631e383d1a8",
-          "file": "VDC/Verify_UpdateBackup_job.spec.ts",
-          "line": 7,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\Verify_ViewRecentTask.spec.ts",
-      "file": "VDC/Verify_ViewRecentTask.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Login Success Tests",
-          "file": "VDC/Verify_ViewRecentTask.spec.ts",
-          "line": 6,
-          "column": 6,
-          "specs": [
-            {
-              "title": "should login successfully with Service Provider @dev @staging @preprod",
-              "ok": true,
-              "tags": [
-                "dev",
-                "staging",
-                "preprod"
-              ],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 22,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 7396,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-04T04:21:03.973Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "78e2180de32fc04c454e-5f12a05673cdfd83887a",
-              "file": "VDC/Verify_ViewRecentTask.spec.ts",
-              "line": 7,
-              "column": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "VDC\\Verify_virtual_dataCenter_Usage.spec.ts",
-      "file": "VDC/Verify_virtual_dataCenter_Usage.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Update Backup Job modal - full workflow with verification",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 22,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 32140,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_virtual_dataCenter_Usage.spec.ts",
-                        "column": 60,
-                        "line": 30
-                      },
-                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"VDC Autotest\")').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 28 |\u001b[39m\n \u001b[90m 29 |\u001b[39m   \u001b[90m// Click the first link matching the VDC name\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`a:has-text(\"VDC Autotest\")`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m\n \u001b[90m 32 |\u001b[39m   \u001b[36mawait\u001b[39m openBackupTab(page)\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_virtual_dataCenter_Usage.spec.ts:30:60\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:21:11.677Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_virtual_dataCen-20a5b--workflow-with-verification-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_virtual_dataCen-20a5b--workflow-with-verification-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_virtual_dataCen-20a5b--workflow-with-verification-chromium\\error-context.md"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "d46b8b14ac21f43cd591-20ffddca129237575256",
-          "file": "VDC/Verify_virtual_dataCenter_Usage.spec.ts",
-          "line": 7,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "VDC\\Verify_VirtualDataCenter_Storage_policies.spec.ts",
-      "file": "VDC/Verify_VirtualDataCenter_Storage_policies.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Update Backup Job modal - full workflow with verification",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 23,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 32143,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_VirtualDataCenter_Storage_policies.spec.ts",
-                        "column": 60,
-                        "line": 30
-                      },
-                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"VDC Autotest\")').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 28 |\u001b[39m\n \u001b[90m 29 |\u001b[39m   \u001b[90m// Click the first link matching the VDC name\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`a:has-text(\"VDC Autotest\")`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m\n \u001b[90m 32 |\u001b[39m   \u001b[36mawait\u001b[39m verifyStoragePolicySection(page)\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\VDC\\Verify_VirtualDataCenter_Storage_policies.spec.ts:30:60\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-04T04:21:45.186Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_VirtualDataCent-8f4ab--workflow-with-verification-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_VirtualDataCent-8f4ab--workflow-with-verification-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\VDC-Verify_VirtualDataCent-8f4ab--workflow-with-verification-chromium\\error-context.md"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "de2838ffd31006958def-9e0d250a3b614487e718",
-          "file": "VDC/Verify_VirtualDataCenter_Storage_policies.spec.ts",
-          "line": 7,
-          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-04T04:08:55.438Z",
-    "duration": 802402.243,
-    "expected": 7,
+    "startTime": "2025-09-08T08:05:45.977Z",
+    "duration": 40922.549,
+    "expected": 5,
     "skipped": 0,
-    "unexpected": 24,
+    "unexpected": 1,
     "flaky": 0
   }
 }

@@ -88,17 +88,24 @@ export async function handleDeleteVDC(page: Page, vdcName: string, action: 'conf
   await deleteLink.click();
 
   // Narrow to the specific dialog by accessible name (strict — resolves to a single dialog)
-  const dialog = page.getByRole('dialog', { name: `Delete: ${vdcName}` });
-  await expect(dialog).toBeVisible();
+  // const dialog = page.getByRole('dialog', { name: `Delete: ${vdcName}` });
+  // await expect(dialog).toBeVisible();
+  const dialog = page.getByRole('dialog', { name: new RegExp(`Delete:.*${vdcName}`) });
+await expect(dialog).toBeVisible({ timeout: 10000 });
+
 
   // Verify key contents inside the dialog (scoped)
   // Verify key contents inside the dialog (scoped)
-await expect(dialog.getByRole('heading', { name: `Delete: ${vdcName}` })).toBeVisible();
+const heading = dialog.locator('h5.modal-title', { hasText: `Delete: ${vdcName}` });
+await expect(heading).toBeVisible();
 await expect(dialog.getByText('Are you sure you want to delete this Virtual Data Center?')).toBeVisible();
 await expect(dialog.locator('.badge', { hasText: vdcName })).toBeVisible();
 
 
   if (action === 'confirm') {
+    const nameInput = dialog.locator('#virtualdatacenterdeleteform-name');
+  await expect(nameInput).toBeVisible();
+  await nameInput.fill(vdcName);
     // Confirm delete using the button inside the dialog
     const confirmBtn = dialog.getByRole('button', { name: /Delete VDC|Delete/i });
     await expect(confirmBtn).toBeVisible();
@@ -110,9 +117,11 @@ await expect(dialog.locator('.badge', { hasText: vdcName })).toBeVisible();
     await page.waitForURL(/\/virtual-data-center(\/index)?/, { timeout: 10000 });
 
     // Optionally, assert a success notification if your app shows one:
-    // await expect(page.getByText(/successfully deleted/i)).toBeVisible();
+    
   } else {
     // Cancel flow: click cancel inside the dialog and ensure the dialog is hidden
+
+
     const cancelBtn = dialog.getByRole('button', { name: 'Cancel' });
     await expect(cancelBtn).toBeVisible();
     await expect(cancelBtn).toBeEnabled();

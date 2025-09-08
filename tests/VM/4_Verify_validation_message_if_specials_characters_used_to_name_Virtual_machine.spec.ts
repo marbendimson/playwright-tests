@@ -1,8 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { env, getUserByRole } from '../../global.env';
 import { loginSelectors } from '../../selectors';
-import {fillGeneralConfig,navigateToVDC,selectTemplate,configureSystemSetup} from '../../vmtemplate';
-
+import vmPage from '../../vm-page';
 
 
 
@@ -16,21 +15,23 @@ test('Create VM - All in One Flow', async ({ page }) => {
   await page.click(loginSelectors.submit);
 
   await page.waitForLoadState('networkidle');
-    // Wait for dashboard or success indicator
     await expect(page.locator(loginSelectors.success)).toBeVisible({ timeout: 15000 });
 
- await navigateToVDC(page, 'VDC Autotest');
+
+
+  // Confirm VDC page is loaded
+  await expect(page.locator('h4.pb-2:has-text("Virtual Data Centers")')).toBeVisible({ timeout: 10000 });
+
   // Navigate to VDC
- await fillGeneralConfig(page, 'TestVM-Template', 'linux');
+  await vmPage.navigateToVDC(page, 'VDC Autotest');
 
-await selectTemplate(page, 'testt-VM');
-await configureSystemSetup(page, '1');
+  // Step 1: Basic Info
+  await vmPage.fillBasicInfo(page, 'Test12~!@#$%^&*()', 'linux', 'l26');
 
+  const invalidFeedback = page.locator('.invalid-feedback', {
+    hasText: 'Only alphanumeric characters, hyphens, and full stops are allowed. It cannot start or end with a hyphen or full stop.'
+  });
 
-await expect(page.locator('h2 > a:has-text("TestVM-Template")')).toBeVisible({ timeout: 10000 });
-
- await page.reload()
-await expect(page.locator('h2 > a:has-text("TestVM-Template")')).toBeVisible({ timeout: 10000 });
-
+  await expect(invalidFeedback).toBeVisible({ timeout: 5000 });
 
   });

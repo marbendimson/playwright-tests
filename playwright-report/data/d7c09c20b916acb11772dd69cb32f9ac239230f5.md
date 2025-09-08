@@ -1,0 +1,278 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - button [ref=e7] [cursor=pointer]
+          - generic [ref=e13]:
+            - textbox "Search..." [ref=e15]
+            - generic [ref=e16]: 󰍉
+            - text: 󰅙
+        - generic [ref=e17]:
+          - button "Header Language" [ref=e19] [cursor=pointer]:
+            - img "Header Language" [ref=e20] [cursor=pointer]
+          - button "" [ref=e22] [cursor=pointer]:
+            - generic [ref=e23] [cursor=pointer]: 
+          - button "" [ref=e25] [cursor=pointer]:
+            - generic [ref=e26] [cursor=pointer]: 
+          - generic [ref=e27]:
+            - button "Header Avatar Assurance Service Provider Administrator" [ref=e28] [cursor=pointer]:
+              - generic [ref=e29] [cursor=pointer]:
+                - img "Header Avatar" [ref=e30] [cursor=pointer]
+                - generic [ref=e31] [cursor=pointer]:
+                  - generic [ref=e32] [cursor=pointer]: Assurance
+                  - generic [ref=e33] [cursor=pointer]: Service Provider Administrator
+            - text: 󰀄 󱂛 󰡾 󰃤 󰂾 󰍃 󰍃
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - link [ref=e36] [cursor=pointer]:
+          - /url: /
+          - img [ref=e38] [cursor=pointer]
+        - text: 
+      - text:  󰍃
+      - region "scrollable content" [ref=e43]:
+        - list [ref=e46]:
+          - region "scrollable content" [ref=e50]:
+            - generic [ref=e51]:
+              - listitem [ref=e52]:
+                - link "󰨝 Dashboard" [ref=e53] [cursor=pointer]:
+                  - /url: /dashboard
+                  - generic [ref=e54] [cursor=pointer]: 󰨝
+                  - generic [ref=e55] [cursor=pointer]: Dashboard
+              - listitem [ref=e56]:
+                - link "󰀏 Resellers" [ref=e57] [cursor=pointer]:
+                  - /url: /reseller
+                  - generic [ref=e58] [cursor=pointer]: 󰀏
+                  - generic [ref=e59] [cursor=pointer]: Resellers
+              - listitem [ref=e60]:
+                - link "󰀎 Tenants" [ref=e61] [cursor=pointer]:
+                  - /url: /tenants
+                  - generic [ref=e62] [cursor=pointer]: 󰀎
+                  - generic [ref=e63] [cursor=pointer]: Tenants
+              - listitem [ref=e64]:
+                - link "󰒋 Virtual Data Centers" [ref=e65] [cursor=pointer]:
+                  - /url: /virtual-data-center/index
+                  - generic [ref=e66] [cursor=pointer]: 󰒋
+                  - generic [ref=e67] [cursor=pointer]: Virtual Data Centers
+              - listitem [ref=e68]:
+                - button "󰌖 Catalogue 󰅂" [ref=e69] [cursor=pointer]:
+                  - generic [ref=e70] [cursor=pointer]: 󰌖
+                  - generic [ref=e71] [cursor=pointer]: Catalogue
+                  - text: 󰅂
+              - listitem [ref=e72]:
+                - button "󰛳 Networking 󰅂" [ref=e73] [cursor=pointer]:
+                  - generic [ref=e74] [cursor=pointer]: 󰛳
+                  - generic [ref=e75] [cursor=pointer]: Networking
+                  - text: 󰅂
+              - listitem [ref=e76]:
+                - button "󱀩 Reports 󰅂" [ref=e77] [cursor=pointer]:
+                  - generic [ref=e78] [cursor=pointer]: 󱀩
+                  - generic [ref=e79] [cursor=pointer]: Reports
+                  - text: 󰅂
+              - listitem [ref=e80]:
+                - link "󱥠 User Roles" [ref=e81] [cursor=pointer]:
+                  - /url: /user/role
+                  - generic [ref=e82] [cursor=pointer]: 󱥠
+                  - generic [ref=e83] [cursor=pointer]: User Roles
+              - listitem [ref=e84]:
+                - link "󰒒 Backup Management" [ref=e85] [cursor=pointer]:
+                  - /url: /scheduled-backup/index
+                  - generic [ref=e86] [cursor=pointer]: 󰒒
+                  - generic [ref=e87] [cursor=pointer]: Backup Management
+              - listitem [ref=e88]:
+                - button "󰒓 Settings 󰅂" [ref=e89] [cursor=pointer]:
+                  - generic [ref=e90] [cursor=pointer]: 󰒓
+                  - generic [ref=e91] [cursor=pointer]: Settings
+                  - text: 󰅂
+                - text: 󰅂
+    - generic [ref=e95]:
+      - generic [ref=e98]:
+        - heading "User Roles" [level=4] [ref=e99]
+        - list [ref=e101]:
+          - navigation "breadcrumb" [ref=e102]:
+            - list [ref=e103]:
+              - listitem [ref=e104]:
+                - link "Home" [ref=e105] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e106]: 󰅂 User Roles
+      - generic [ref=e108]:
+        - generic [ref=e109]:
+          - generic [ref=e111]:
+            - generic [ref=e112]:
+              - paragraph [ref=e114]: Role and User Management
+              - generic [ref=e118]: 
+            - heading "Service Provider Administrator" [level=3] [ref=e119]
+          - generic [ref=e123]:
+            - paragraph [ref=e124]: Available Permissions
+            - generic [ref=e125]:
+              - textbox "Search" [ref=e126]
+              - list [ref=e127]:
+                - listitem [ref=e128]:
+                  - paragraph [ref=e129]: Basic
+                - listitem [ref=e130]:
+                  - paragraph [ref=e131]: Catalog CRUD permission
+                - listitem [ref=e132]:
+                  - paragraph [ref=e133]: Catalogue View Permission
+                - listitem [ref=e134]:
+                  - paragraph [ref=e135]: Company User Management
+                - listitem [ref=e136]:
+                  - paragraph [ref=e137]: Console Control Panel
+                - listitem [ref=e138]:
+                  - paragraph [ref=e139]: Cron Task Permission
+                - listitem [ref=e140]:
+                  - paragraph [ref=e141]: Data Center Management
+                - listitem [ref=e142]:
+                  - paragraph [ref=e143]: Data Center Pool
+                - listitem [ref=e144]:
+                  - paragraph [ref=e145]: Data Center VNET
+                - listitem [ref=e146]:
+                  - paragraph [ref=e147]: Database Backup and Restore Permission
+                - listitem [ref=e148]:
+                  - paragraph [ref=e149]: Firewall Management Permission
+                - listitem [ref=e150]:
+                  - paragraph [ref=e151]: Global Search
+                - listitem [ref=e152]:
+                  - paragraph [ref=e153]: ISO
+                - listitem [ref=e154]:
+                  - paragraph [ref=e155]: ISO Import
+                - listitem [ref=e156]:
+                  - paragraph [ref=e157]: Licensing Permission
+                - listitem [ref=e158]:
+                  - paragraph [ref=e159]: Network Admin
+                - listitem [ref=e160]:
+                  - paragraph [ref=e161]: Network View
+                - listitem [ref=e162]:
+                  - paragraph [ref=e163]: RBAC Admin
+                - listitem [ref=e164]:
+                  - paragraph [ref=e165]: Reseller Company
+                - listitem [ref=e166]:
+                  - paragraph [ref=e167]: Reseller Management
+                - listitem [ref=e168]:
+                  - paragraph [ref=e169]: Reseller Permission
+                - listitem [ref=e170]:
+                  - paragraph [ref=e171]: Role Permission
+                - listitem [ref=e172]:
+                  - paragraph [ref=e173]: Scheduled Backup
+                - listitem [ref=e174]:
+                  - paragraph [ref=e175]: Service Provider
+                - listitem [ref=e176]:
+                  - paragraph [ref=e177]: Settings
+                - listitem [ref=e178]:
+                  - paragraph [ref=e179]: SSO Management
+                - listitem [ref=e180]:
+                  - paragraph [ref=e181]: Storage Policy
+                - listitem [ref=e182]:
+                  - paragraph [ref=e183]: Tenant Company
+                - listitem [ref=e184]:
+                  - paragraph [ref=e185]: Tenant Management
+                - listitem [ref=e186]:
+                  - paragraph [ref=e187]: Tenant View Permission
+                - listitem [ref=e188]:
+                  - paragraph [ref=e189]: Tenants
+                - listitem [ref=e190]:
+                  - paragraph [ref=e191]: Updater
+                - listitem [ref=e192]:
+                  - paragraph [ref=e193]: Usage Report Permission
+                - listitem [ref=e194]:
+                  - paragraph [ref=e195]: User Management
+                - listitem [ref=e196]:
+                  - paragraph [ref=e197]: Virtual Data Center Admin Permission
+                - listitem [ref=e198]:
+                  - paragraph [ref=e199]: Virtual Data Center Usage
+                - listitem [ref=e200]:
+                  - paragraph [ref=e201]: Virtual Data Center User Permission
+                - listitem [ref=e202]:
+                  - paragraph [ref=e203]: Virtual Data Center View Permission
+                - listitem [ref=e204]:
+                  - paragraph [ref=e205]: Virtual Machine Admin Permission
+                - listitem [ref=e206]:
+                  - paragraph [ref=e207]: Virtual Machine Backup Permission
+                - listitem [ref=e208]:
+                  - paragraph [ref=e209]: Virtual Machine Template Delete
+                - listitem [ref=e210]:
+                  - paragraph [ref=e211]: Virtual Machine User Permission
+                - listitem [ref=e212]:
+                  - paragraph [ref=e213]: Virtual Machine View Permission
+                - listitem [ref=e214]:
+                  - paragraph [ref=e215]: VM Import
+                - listitem [ref=e216]:
+                  - paragraph [ref=e217]: VM Template Import
+        - generic [ref=e219]:
+          - tablist [ref=e221]:
+            - tab "Roles" [selected] [ref=e222] [cursor=pointer]
+            - tab "Users" [ref=e223] [cursor=pointer]
+          - generic [ref=e225]:
+            - tabpanel [ref=e226]:
+              - generic [ref=e230]:
+                - generic [ref=e234]:
+                  - generic [ref=e236]:
+                    - textbox "Search roles by name" [ref=e238]
+                    - generic [ref=e239]: 
+                  - button " Search" [ref=e241] [cursor=pointer]:
+                    - generic [ref=e242] [cursor=pointer]: 
+                    - text: Search
+                  - link "Create Role" [ref=e244] [cursor=pointer]:
+                    - /url: "#/user/create-role"
+                - generic [ref=e247]:
+                  - generic [ref=e248]:
+                    - text: Showing
+                    - generic [ref=e249]: 1-5
+                    - text: of
+                    - generic [ref=e250]: "5"
+                    - text: items.
+                  - table [ref=e251]:
+                    - rowgroup [ref=e252]:
+                      - row "Name Description" [ref=e253]:
+                        - cell "Name" [ref=e254]:
+                          - link "Name" [ref=e255] [cursor=pointer]:
+                            - /url: /user/role?sort=-name
+                        - cell "Description" [ref=e256]
+                        - cell [ref=e257]
+                    - rowgroup [ref=e258]:
+                      - row "Service Provider - Read Only System Role" [ref=e259]:
+                        - cell "Service Provider - Read Only System Role" [ref=e260]:
+                          - text: Service Provider - Read Only
+                          - generic [ref=e261]: System Role
+                        - cell [ref=e262]
+                        - cell [ref=e263]
+                      - row "Service Provider Administrator System Role Full system access, including creating and managing all resources, users, and permissions. Can assign and revoke resources for Resellers." [ref=e264]:
+                        - cell "Service Provider Administrator System Role" [ref=e265]:
+                          - text: Service Provider Administrator
+                          - generic [ref=e266]: System Role
+                        - cell "Full system access, including creating and managing all resources, users, and permissions. Can assign and revoke resources for Resellers." [ref=e267]:
+                          - generic [ref=e268]: Full system access, including creating and managing all resources, users, and permissions. Can assign and revoke resources for Resellers.
+                        - cell [ref=e269]
+                      - row "Service Provider Support System Role Limited access primarily for troubleshooting and support purposes. Can view all resources but can't modify them significantly." [ref=e270]:
+                        - cell "Service Provider Support System Role" [ref=e271]:
+                          - text: Service Provider Support
+                          - generic [ref=e272]: System Role
+                        - cell "Limited access primarily for troubleshooting and support purposes. Can view all resources but can't modify them significantly." [ref=e273]:
+                          - generic [ref=e274]: Limited access primarily for troubleshooting and support purposes. Can view all resources but can't modify them significantly.
+                        - cell [ref=e275]
+                      - row "Staging-Role Edit Delete" [ref=e276]:
+                        - cell "Staging-Role" [ref=e277]
+                        - cell [ref=e278]
+                        - cell "Edit Delete" [ref=e279]:
+                          - link "Edit" [ref=e280] [cursor=pointer]:
+                            - /url: "#/user/update-role?name=Staging-Role-cd93a375"
+                          - link "Delete" [ref=e281] [cursor=pointer]:
+                            - /url: /user/delete-role?name=Staging-Role-cd93a375
+                      - row "test test Edit Delete" [ref=e282]:
+                        - cell "test" [ref=e283]
+                        - cell "test" [ref=e284]:
+                          - generic [ref=e285]: test
+                        - cell "Edit Delete" [ref=e286]:
+                          - link "Edit" [ref=e287] [cursor=pointer]:
+                            - /url: "#/user/update-role?name=test-b5d6dc9c"
+                          - link "Delete" [ref=e288] [cursor=pointer]:
+                            - /url: /user/delete-role?name=test-b5d6dc9c
+            - text:  
+  - generic [ref=e290]:
+    - heading "Recent Tasks" [level=6] [ref=e291]: Recent Tasks
+    - button "" [ref=e293] [cursor=pointer]:
+      - generic [ref=e294] [cursor=pointer]: 
+  - img
+```

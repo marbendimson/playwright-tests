@@ -218,9 +218,38 @@ export async function verifyVMCreation(
     console.log(`Current VM status: "${statusText}", waiting...`);
 
     // Wait a short interval before retrying
-    await page.waitForTimeout(3000); // 3s
+    await page.waitForTimeout(6000); // 3s
   }
 
   // Timeout reached
   throw new Error(`VM creation did not complete within ${timeoutMs / 1000}s. Last status: "${statusText}"`);
+}
+
+
+export async function verifyVDCDeletionCompleted(
+  page: Page,
+  timeoutMs = 120000
+): Promise<void> {
+  const taskPanel = page.locator('#fixedTaskList');
+  const toggleIcon = page.locator('#taskListToggleIcon');
+
+  async function ensurePanelExpanded() {
+    const iconClass = await toggleIcon.getAttribute('class');
+    if (iconClass?.includes('ri-add-line')) {
+      await toggleIcon.click();
+    }
+    await expect(taskPanel).toBeVisible({ timeout: 5000 });
+  }
+
+  await ensurePanelExpanded();
+
+  const vdcDeletionRow = taskPanel.locator('table tr', {
+    has: page.locator('td', { hasText: 'Tenant Deletion' }),
+  }).first();
+
+  await expect(vdcDeletionRow).toBeVisible({ timeout: timeoutMs });
+  const statusCell = vdcDeletionRow.locator('span.badge');
+
+  // Wait for status to become COMPLETED
+  await expect(statusCell).toHaveText('completed', { timeout: timeoutMs });
 }
