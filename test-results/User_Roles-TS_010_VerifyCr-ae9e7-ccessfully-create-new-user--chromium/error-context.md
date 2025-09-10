@@ -1,7 +1,7 @@
 # Page snapshot
 
 ```yaml
-- generic [active] [ref=e1]:
+- generic [ref=e1]:
   - generic [ref=e2]:
     - banner [ref=e3]:
       - generic [ref=e5]:
@@ -202,77 +202,179 @@
                   - paragraph [ref=e217]: VM Template Import
         - generic [ref=e219]:
           - tablist [ref=e221]:
-            - tab "Roles" [selected] [ref=e222] [cursor=pointer]
-            - tab "Users" [ref=e223] [cursor=pointer]
+            - tab "Roles" [ref=e222] [cursor=pointer]
+            - tab "Users" [selected] [ref=e223] [cursor=pointer]
           - generic [ref=e225]:
+            - text:  
             - tabpanel [ref=e226]:
               - generic [ref=e230]:
                 - generic [ref=e234]:
                   - generic [ref=e236]:
-                    - textbox "Search roles by name" [ref=e238]
+                    - textbox "Search user by email or username" [ref=e238]
                     - generic [ref=e239]: 
                   - button " Search" [ref=e241] [cursor=pointer]:
                     - generic [ref=e242] [cursor=pointer]: 
                     - text: Search
-                  - link "Create Role" [ref=e244] [cursor=pointer]:
-                    - /url: "#/user/create-role"
+                  - link "Create User" [ref=e244] [cursor=pointer]:
+                    - /url: "#"
                 - generic [ref=e247]:
                   - generic [ref=e248]:
                     - text: Showing
-                    - generic [ref=e249]: 1-5
+                    - generic [ref=e249]: 1-8
                     - text: of
-                    - generic [ref=e250]: "5"
+                    - generic [ref=e250]: "8"
                     - text: items.
                   - table [ref=e251]:
                     - rowgroup [ref=e252]:
-                      - row "Name Description" [ref=e253]:
-                        - cell "Name" [ref=e254]:
-                          - link "Name" [ref=e255] [cursor=pointer]:
-                            - /url: /user/role?sort=-name
-                        - cell "Description" [ref=e256]
-                        - cell [ref=e257]
-                    - rowgroup [ref=e258]:
-                      - row "Service Provider - Read Only System Role" [ref=e259]:
-                        - cell "Service Provider - Read Only System Role" [ref=e260]:
-                          - text: Service Provider - Read Only
-                          - generic [ref=e261]: System Role
-                        - cell [ref=e262]
+                      - row "First Name Last Name Status Username Email Role" [ref=e253]:
+                        - cell "First Name" [ref=e254]
+                        - cell "Last Name" [ref=e255]
+                        - cell "Status" [ref=e256]
+                        - cell "Username" [ref=e257]
+                        - cell "Email" [ref=e258]
+                        - cell "Role" [ref=e259]
+                        - cell [ref=e260]
+                    - rowgroup [ref=e261]:
+                      - row "Assurance Active service.provider test@test.com Service Provider Administrator View Edit" [ref=e262]:
                         - cell [ref=e263]
-                      - row "Service Provider Administrator System Role Full system access, including creating and managing all resources, users, and permissions. Can assign and revoke resources for Resellers." [ref=e264]:
-                        - cell "Service Provider Administrator System Role" [ref=e265]:
-                          - text: Service Provider Administrator
-                          - generic [ref=e266]: System Role
-                        - cell "Full system access, including creating and managing all resources, users, and permissions. Can assign and revoke resources for Resellers." [ref=e267]:
-                          - generic [ref=e268]: Full system access, including creating and managing all resources, users, and permissions. Can assign and revoke resources for Resellers.
-                        - cell [ref=e269]
-                      - row "Service Provider Support System Role Limited access primarily for troubleshooting and support purposes. Can view all resources but can't modify them significantly." [ref=e270]:
-                        - cell "Service Provider Support System Role" [ref=e271]:
-                          - text: Service Provider Support
-                          - generic [ref=e272]: System Role
-                        - cell "Limited access primarily for troubleshooting and support purposes. Can view all resources but can't modify them significantly." [ref=e273]:
-                          - generic [ref=e274]: Limited access primarily for troubleshooting and support purposes. Can view all resources but can't modify them significantly.
-                        - cell [ref=e275]
-                      - row "Staging-Role Edit Delete" [ref=e276]:
-                        - cell "Staging-Role" [ref=e277]
-                        - cell [ref=e278]
-                        - cell "Edit Delete" [ref=e279]:
-                          - link "Edit" [ref=e280] [cursor=pointer]:
-                            - /url: "#/user/update-role?name=Staging-Role-cd93a375"
-                          - link "Delete" [ref=e281] [cursor=pointer]:
-                            - /url: /user/delete-role?name=Staging-Role-cd93a375
-                      - row "test test Edit Delete" [ref=e282]:
-                        - cell "test" [ref=e283]
-                        - cell "test" [ref=e284]:
-                          - generic [ref=e285]: test
-                        - cell "Edit Delete" [ref=e286]:
-                          - link "Edit" [ref=e287] [cursor=pointer]:
-                            - /url: "#/user/update-role?name=test-b5d6dc9c"
-                          - link "Delete" [ref=e288] [cursor=pointer]:
-                            - /url: /user/delete-role?name=test-b5d6dc9c
-            - text:  
-  - generic [ref=e290]:
-    - heading "Recent Tasks" [level=6] [ref=e291]: Recent Tasks
-    - button "" [ref=e293] [cursor=pointer]:
-      - generic [ref=e294] [cursor=pointer]: 
+                        - cell "Assurance" [ref=e264]
+                        - cell "Active" [ref=e265]
+                        - cell "service.provider" [ref=e266]
+                        - cell "test@test.com" [ref=e267]
+                        - cell "Service Provider Administrator" [ref=e268]
+                        - cell "View Edit" [ref=e269]:
+                          - link "View" [ref=e270] [cursor=pointer]:
+                            - /url: /user/view?id=1
+                          - link "Edit" [ref=e271] [cursor=pointer]:
+                            - /url: "#/user/update?id=1&view=role"
+                      - row "test test Active test-staigng staging@test.test Service Provider Administrator View Edit Impersonate" [ref=e272]:
+                        - cell "test" [ref=e273]
+                        - cell "test" [ref=e274]
+                        - cell "Active" [ref=e275]
+                        - cell "test-staigng" [ref=e276]
+                        - cell "staging@test.test" [ref=e277]
+                        - cell "Service Provider Administrator" [ref=e278]
+                        - cell "View Edit Impersonate" [ref=e279]:
+                          - link "View" [ref=e280] [cursor=pointer]:
+                            - /url: /user/view?id=100
+                          - link "Edit" [ref=e281] [cursor=pointer]:
+                            - /url: "#/user/update?id=100&view=role"
+                          - link "Impersonate" [ref=e282] [cursor=pointer]:
+                            - /url: /user/impersonate?user_id=100
+                      - row "tett test Active staging_test staging1@test.c Service Provider Administrator View Edit Impersonate" [ref=e283]:
+                        - cell "tett" [ref=e284]
+                        - cell "test" [ref=e285]
+                        - cell "Active" [ref=e286]
+                        - cell "staging_test" [ref=e287]
+                        - cell "staging1@test.c" [ref=e288]
+                        - cell "Service Provider Administrator" [ref=e289]
+                        - cell "View Edit Impersonate" [ref=e290]:
+                          - link "View" [ref=e291] [cursor=pointer]:
+                            - /url: /user/view?id=101
+                          - link "Edit" [ref=e292] [cursor=pointer]:
+                            - /url: "#/user/update?id=101&view=role"
+                          - link "Impersonate" [ref=e293] [cursor=pointer]:
+                            - /url: /user/impersonate?user_id=101
+                      - row "test tesss Active staging.test staging2@test.c Service Provider Administrator View Edit Impersonate" [ref=e294]:
+                        - cell "test" [ref=e295]
+                        - cell "tesss" [ref=e296]
+                        - cell "Active" [ref=e297]
+                        - cell "staging.test" [ref=e298]
+                        - cell "staging2@test.c" [ref=e299]
+                        - cell "Service Provider Administrator" [ref=e300]
+                        - cell "View Edit Impersonate" [ref=e301]:
+                          - link "View" [ref=e302] [cursor=pointer]:
+                            - /url: /user/view?id=102
+                          - link "Edit" [ref=e303] [cursor=pointer]:
+                            - /url: "#/user/update?id=102&view=role"
+                          - link "Impersonate" [ref=e304] [cursor=pointer]:
+                            - /url: /user/impersonate?user_id=102
+                      - row "tes tes Active test-staigng11 testing11@test.c Service Provider Administrator View Edit Impersonate" [ref=e305]:
+                        - cell "tes" [ref=e306]
+                        - cell "tes" [ref=e307]
+                        - cell "Active" [ref=e308]
+                        - cell "test-staigng11" [ref=e309]
+                        - cell "testing11@test.c" [ref=e310]
+                        - cell "Service Provider Administrator" [ref=e311]
+                        - cell "View Edit Impersonate" [ref=e312]:
+                          - link "View" [ref=e313] [cursor=pointer]:
+                            - /url: /user/view?id=103
+                          - link "Edit" [ref=e314] [cursor=pointer]:
+                            - /url: "#/user/update?id=103&view=role"
+                          - link "Impersonate" [ref=e315] [cursor=pointer]:
+                            - /url: /user/impersonate?user_id=103
+                      - row "tess sss Active test_stag-ign.1234 testing@stage.c Service Provider Administrator View Edit Impersonate" [ref=e316]:
+                        - cell "tess" [ref=e317]
+                        - cell "sss" [ref=e318]
+                        - cell "Active" [ref=e319]
+                        - cell "test_stag-ign.1234" [ref=e320]
+                        - cell "testing@stage.c" [ref=e321]
+                        - cell "Service Provider Administrator" [ref=e322]
+                        - cell "View Edit Impersonate" [ref=e323]:
+                          - link "View" [ref=e324] [cursor=pointer]:
+                            - /url: /user/view?id=104
+                          - link "Edit" [ref=e325] [cursor=pointer]:
+                            - /url: "#/user/update?id=104&view=role"
+                          - link "Impersonate" [ref=e326] [cursor=pointer]:
+                            - /url: /user/impersonate?user_id=104
+                      - row "ytre ytre Active hyphen- test123@test.cc Service Provider Administrator View Edit Impersonate" [ref=e327]:
+                        - cell "ytre" [ref=e328]
+                        - cell "ytre" [ref=e329]
+                        - cell "Active" [ref=e330]
+                        - cell "hyphen-" [ref=e331]
+                        - cell "test123@test.cc" [ref=e332]
+                        - cell "Service Provider Administrator" [ref=e333]
+                        - cell "View Edit Impersonate" [ref=e334]:
+                          - link "View" [ref=e335] [cursor=pointer]:
+                            - /url: /user/view?id=105
+                          - link "Edit" [ref=e336] [cursor=pointer]:
+                            - /url: "#/user/update?id=105&view=role"
+                          - link "Impersonate" [ref=e337] [cursor=pointer]:
+                            - /url: /user/impersonate?user_id=105
+                      - row "uytre tre Active stage--test stage1@stagess.c Service Provider Administrator View Edit Impersonate" [ref=e338]:
+                        - cell "uytre" [ref=e339]
+                        - cell "tre" [ref=e340]
+                        - cell "Active" [ref=e341]
+                        - cell "stage--test" [ref=e342]
+                        - cell "stage1@stagess.c" [ref=e343]
+                        - cell "Service Provider Administrator" [ref=e344]
+                        - cell "View Edit Impersonate" [ref=e345]:
+                          - link "View" [ref=e346] [cursor=pointer]:
+                            - /url: /user/view?id=106
+                          - link "Edit" [ref=e347] [cursor=pointer]:
+                            - /url: "#/user/update?id=106&view=role"
+                          - link "Impersonate" [ref=e348] [cursor=pointer]:
+                            - /url: /user/impersonate?user_id=106
+  - generic [ref=e350]:
+    - heading "Recent Tasks" [level=6] [ref=e351]: Recent Tasks
+    - button "" [ref=e353] [cursor=pointer]:
+      - generic [ref=e354] [cursor=pointer]: 
+  - dialog "Create User" [ref=e355]:
+    - generic [ref=e356]:
+      - generic [ref=e357]:
+        - heading "Create User" [level=5] [ref=e358]
+        - button "Close" [ref=e359] [cursor=pointer]
+      - generic [ref=e362]:
+        - generic [ref=e363]:
+          - generic [ref=e364]: Username
+          - textbox "Username" [ref=e365]: Autouser01
+        - generic [ref=e366]:
+          - generic [ref=e367]: Email
+          - textbox "Email" [ref=e368]: autouser01@example.com
+        - generic [ref=e369]:
+          - generic [ref=e370]: Password
+          - textbox "Password" [ref=e371]: Password123!
+        - generic [ref=e372]:
+          - generic [ref=e373]: First Name
+          - textbox "First Name" [ref=e374]: Test
+        - generic [ref=e375]:
+          - generic [ref=e376]: Last Name
+          - textbox "Last Name" [ref=e377]: User
+        - generic [ref=e378]:
+          - generic [ref=e379]: Role
+          - combobox "Select Role..." [active] [ref=e382]:
+            - textbox "Select Role..." [ref=e383]:
+              - generic [ref=e384]: Select Role...
+        - button "Save" [ref=e386] [cursor=pointer]
   - img
 ```

@@ -258,3 +258,87 @@ export class UserManagementPage {
 export interface Permissions {
   [group: string]: string[] | 'all';
 }
+
+export async function deleteRole(page: Page, roleName: string, confirm = true) {
+  // Role-specific delete button (uses href param with roleName)
+  const deleteButton = page.locator(
+    `a.btn.btn-danger.btn-sm[href*="delete-role?name=${roleName}"]`
+  );
+
+  // Verify button is present
+  await expect(deleteButton).toBeVisible();
+  await expect(deleteButton).toBeEnabled();
+
+  // Click the delete button
+  await deleteButton.click();
+
+  // Modal elements
+  const modalTitle = page.locator('#swal2-title');
+  const modalMessage = page.locator('#swal2-html-container');
+  const yesButton = page.locator('button.swal2-confirm');
+  const cancelButton = page.locator('button.swal2-cancel');
+
+  await expect(modalTitle).toHaveText('Are you sure?');
+  await expect(modalMessage).toHaveText('Are you sure you want to delete this role?');
+
+  if (confirm) {
+    // Confirm delete
+    await yesButton.click();
+
+    // Success message
+    const successAlert = page.locator('div.alert.alert-success');
+    await expect(successAlert).toHaveText(/Role deleted successfully/i);
+
+    // Refresh and ensure role is gone
+    await page.reload();
+    await expect(deleteButton).toHaveCount(0);
+  } else {
+    // Cancel delete
+    await cancelButton.click();
+
+    // Role should still exist
+    await expect(deleteButton).toBeVisible();
+  }
+}
+
+export async function openUsersTab(page: Page) {
+  const usersTab = page.locator('a.nav-link', { hasText: 'Users' });
+  await expect(usersTab).toBeVisible();
+  await expect(usersTab).toBeEnabled();
+  await usersTab.click();
+
+  // Verify search input and create button appear
+  const searchInput = page.locator('#usersearch-q');
+  const createUserBtn = page.locator('a.modal-btn.btn.btn-primary', { hasText: 'Create User' });
+
+  await expect(searchInput).toBeVisible();
+  await expect(createUserBtn).toBeVisible();
+}
+
+
+export async function searchUser(page: Page, query: string, expectedEmail?: string) {
+  const searchForm = page.locator('form#w2');
+  const searchInput = searchForm.locator('#usersearch-q');
+  const searchBtn = searchForm.getByRole('button', { name: 'Search' });
+
+  // Clear & fill search
+  await searchInput.fill('');
+  await searchInput.fill(query);
+  await searchBtn.click();
+
+  const noResult = page.locator('div.empty', { hasText: 'No results found.' });
+
+  if (expectedEmail) {
+    // If we expect a specific user
+    const userRow = page.locator('tbody tr', { hasText: expectedEmail });
+    await expect(userRow).toBeVisible({ timeout: 5000 });
+    console.log(`✅ Verified user "${expectedEmail}" is displayed for query "${query}"`);
+    return { found: true };
+  } else {
+    // If no user expected
+    await expect(noResult).toBeVisible({ timeout: 5000 });
+    console.log(`❌ Verified "No results found." is displayed for query "${query}"`);
+    return { found: false };
+  }
+}
+

@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 2
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -50,7 +50,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 2
+          "actualWorkers": 1
         },
         "id": "chromium",
         "name": "chromium",
@@ -66,7 +66,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 2
+          "actualWorkers": 1
         },
         "id": "firefox",
         "name": "firefox",
@@ -82,7 +82,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 2
+          "actualWorkers": 1
         },
         "id": "webkit",
         "name": "webkit",
@@ -103,275 +103,20 @@
   },
   "suites": [
     {
-      "title": "User_Roles\\TS_001_VerifyUserRolesPage.spec.ts",
-      "file": "User_Roles/TS_001_VerifyUserRolesPage.spec.ts",
+      "title": "User_Roles\\TS_010_VerifyCreateNewUser.spec.ts",
+      "file": "User_Roles/TS_010_VerifyCreateNewUser.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Verify User Role page  ",
-          "file": "User_Roles/TS_001_VerifyUserRolesPage.spec.ts",
-          "line": 6,
+          "title": "Verify create new user  ",
+          "file": "User_Roles/TS_010_VerifyCreateNewUser.spec.ts",
+          "line": 8,
           "column": 6,
           "specs": [
             {
-              "title": "should be able to successfully display User role page ",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 9956,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-08T08:05:47.240Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "d5578728b819e97ac938-07b3acd5c5270174cecb",
-              "file": "User_Roles/TS_001_VerifyUserRolesPage.spec.ts",
-              "line": 7,
-              "column": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "User_Roles\\TS_002_Verify_Search_Available_Permissions.spec.ts",
-      "file": "User_Roles/TS_002_Verify_Search_Available_Permissions.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Verify User Role page  ",
-          "file": "User_Roles/TS_002_Verify_Search_Available_Permissions.spec.ts",
-          "line": 6,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Should successfully search available permissions for Service Provider Level  ",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 9844,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-08T08:05:47.212Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "d08502f38a1f19be76e7-ead625f19a245f934dd3",
-              "file": "User_Roles/TS_002_Verify_Search_Available_Permissions.spec.ts",
-              "line": 7,
-              "column": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "User_Roles\\TS_003_VerifyRoles_Section.spec.ts",
-      "file": "User_Roles/TS_003_VerifyRoles_Section.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Verify User Role page  ",
-          "file": "User_Roles/TS_003_VerifyRoles_Section.spec.ts",
-          "line": 6,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Should successfully display list of roles, search bar, Create Role, Edit, Delete button on roles section page  ",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 10138,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-08T08:05:57.372Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "6b269e3be0d6393ac516-4f4f0db2a287c93cf667",
-              "file": "User_Roles/TS_003_VerifyRoles_Section.spec.ts",
-              "line": 7,
-              "column": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "User_Roles\\TS_004_Verify_Search_roles_created.spec.ts",
-      "file": "User_Roles/TS_004_Verify_Search_roles_created.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Verify User Role page  ",
-          "file": "User_Roles/TS_004_Verify_Search_roles_created.spec.ts",
-          "line": 6,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Should successfully search roles by name  and display \"No results found\" if not available   ",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 10118,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-08T08:05:57.595Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "adddc9f87a8fbe4bf6f5-61909f20911ad980187b",
-              "file": "User_Roles/TS_004_Verify_Search_roles_created.spec.ts",
-              "line": 7,
-              "column": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "User_Roles\\TS_005_Verify_create_new_role.spec.ts",
-      "file": "User_Roles/TS_005_Verify_create_new_role.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Verify User Role page",
-          "file": "User_Roles/TS_005_Verify_create_new_role.spec.ts",
-          "line": 6,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Should create a new role with all permissions and verify it exists",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 16472,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-08T08:06:07.533Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "e28d2d81309c5f9574bd-c01920b736ae1e7a6ba0",
-              "file": "User_Roles/TS_005_Verify_create_new_role.spec.ts",
-              "line": 7,
-              "column": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "User_Roles\\TS_006_Verify_edit_role.spec.ts",
-      "file": "User_Roles/TS_006_Verify_edit_role.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Edit Role - Verify Permissions Retention and Update",
-          "file": "User_Roles/TS_006_Verify_edit_role.spec.ts",
-          "line": 6,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Should verify retained permissions and update role description and permissions",
+              "title": "Should successfully create new user  ",
               "ok": false,
               "tags": [],
               "tests": [
@@ -385,58 +130,55 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 18938,
+                      "status": "timedOut",
+                      "duration": 31914,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('tr:has-text(\"AutoRole\")')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('tr:has-text(\"AutoRole\")')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('tr:has-text(\"AutoRole\")')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('tr:has-text(\"AutoRole\")')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n    at UserManagementPage.openEditRoleModal (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\UserRole.ts:119:21)\n    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\User_Roles\\TS_006_Verify_edit_role.spec.ts:53:38",
-                        "location": {
-                          "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\UserRole.ts",
-                          "column": 21,
-                          "line": 119
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\UserRole.ts:119\n\n\u001b[0m \u001b[90m 117 |\u001b[39m   \u001b[90m// Wait for the row containing the role to appear\u001b[39m\n \u001b[90m 118 |\u001b[39m   \u001b[36mconst\u001b[39m row \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`tr:has-text(\"${roleName}\")`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 119 |\u001b[39m   \u001b[36mawait\u001b[39m expect(row)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m1\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m \u001b[90m// wait until it exists\u001b[39m\n \u001b[90m     |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 120 |\u001b[39m\n \u001b[90m 121 |\u001b[39m   \u001b[90m// Find the Edit link inside that row\u001b[39m\n \u001b[90m 122 |\u001b[39m   \u001b[36mconst\u001b[39m editLink \u001b[33m=\u001b[39m row\u001b[33m.\u001b[39mlocator(\u001b[32m'a:has-text(\"Edit\")'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
                       },
                       "errors": [
                         {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
                           "location": {
-                            "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\UserRole.ts",
-                            "column": 21,
-                            "line": 119
+                            "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\CreateUser.ts",
+                            "column": 74,
+                            "line": 76
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('tr:has-text(\"AutoRole\")')\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('tr:has-text(\"AutoRole\")')\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\UserRole.ts:119\n\n\u001b[0m \u001b[90m 117 |\u001b[39m   \u001b[90m// Wait for the row containing the role to appear\u001b[39m\n \u001b[90m 118 |\u001b[39m   \u001b[36mconst\u001b[39m row \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`tr:has-text(\"${roleName}\")`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 119 |\u001b[39m   \u001b[36mawait\u001b[39m expect(row)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m1\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m \u001b[90m// wait until it exists\u001b[39m\n \u001b[90m     |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 120 |\u001b[39m\n \u001b[90m 121 |\u001b[39m   \u001b[90m// Find the Edit link inside that row\u001b[39m\n \u001b[90m 122 |\u001b[39m   \u001b[36mconst\u001b[39m editLink \u001b[33m=\u001b[39m row\u001b[33m.\u001b[39mlocator(\u001b[32m'a:has-text(\"Edit\")'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at UserManagementPage.openEditRoleModal (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\UserRole.ts:119:21)\u001b[22m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\User_Roles\\TS_006_Verify_edit_role.spec.ts:53:38\u001b[22m"
+                          "message": "Error: locator.waitFor: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.select2-results__options[role=\"listbox\"]') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\CreateUser.ts:76\n\n\u001b[0m \u001b[90m 74 |\u001b[39m     \u001b[90m// Open the role dropdown and wait for the options to be visible\u001b[39m\n \u001b[90m 75 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mroleDropdown\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 76 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'.select2-results__options[role=\"listbox\"]'\u001b[39m)\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 77 |\u001b[39m     \u001b[36mconst\u001b[39m roleOption \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`.select2-results__option:has-text(\"${user.role}\")`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 78 |\u001b[39m     \u001b[36mawait\u001b[39m roleOption\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m  \u001b[90m// Click the role option based on the role text\u001b[39m\n \u001b[90m 79 |\u001b[39m   }\u001b[0m\n\u001b[2m    at UserPage.fillCreateUserForm (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\CreateUser.ts:76:74)\u001b[22m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\User_Roles\\TS_010_VerifyCreateNewUser.spec.ts:38:3\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-08T08:06:07.739Z",
+                      "startTime": "2025-09-09T06:12:01.039Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\User_Roles-TS_006_Verify_e-68766-description-and-permissions-chromium\\test-failed-1.png"
+                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\User_Roles-TS_010_VerifyCr-ae9e7-ccessfully-create-new-user--chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\User_Roles-TS_010_VerifyCr-ae9e7-ccessfully-create-new-user--chromium\\video.webm"
                         },
                         {
                           "name": "error-context",
                           "contentType": "text/markdown",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\User_Roles-TS_006_Verify_e-68766-description-and-permissions-chromium\\error-context.md"
+                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\User_Roles-TS_010_VerifyCr-ae9e7-ccessfully-create-new-user--chromium\\error-context.md"
                         }
-                      ],
-                      "errorLocation": {
-                        "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\UserRole.ts",
-                        "column": 21,
-                        "line": 119
-                      }
+                      ]
                     }
                   ],
                   "status": "unexpected"
                 }
               ],
-              "id": "f02e85f3997b670024d1-38b2dec39fb5fa307008",
-              "file": "User_Roles/TS_006_Verify_edit_role.spec.ts",
-              "line": 49,
+              "id": "48daa12ced047dcbe56e-08e05bf7562bbe5f8d85",
+              "file": "User_Roles/TS_010_VerifyCreateNewUser.spec.ts",
+              "line": 9,
               "column": 7
             }
           ]
@@ -446,9 +188,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-08T08:05:45.977Z",
-    "duration": 40922.549,
-    "expected": 5,
+    "startTime": "2025-09-09T06:11:59.622Z",
+    "duration": 33814.142,
+    "expected": 0,
     "skipped": 0,
     "unexpected": 1,
     "flaky": 0
