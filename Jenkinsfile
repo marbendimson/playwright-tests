@@ -19,11 +19,20 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-               sh '''
+                sh '''
                   npm ci
                   npx playwright install
-                  npx playwright install-deps
                 '''
+            }
+        }
+
+        stage('Validate Browser Selection') {
+            steps {
+                script {
+                    if (params.BROWSER == 'webkit') {
+                        error "❌ WebKit is disabled on this agent due to missing system dependencies. Please select chromium or firefox."
+                    }
+                }
             }
         }
 
@@ -31,7 +40,10 @@ pipeline {
             steps {
                 sh """
                   export TEST_ENV=${params.TEST_ENV}
-                  npx playwright test tests/Catalogue/TC_001_Verify_Virtual_Machine_Templatepage.spec.ts --project=${params.BROWSER} --reporter=list,junit,html
+                  npx playwright test tests/Catalogue/TC_001_Verify_Virtual_Machine_Templatepage.spec.ts \
+                    --project=${params.BROWSER} \
+                    --reporter=list,junit,html \
+                    --output=results
                 """
             }
         }
@@ -91,5 +103,3 @@ pipeline {
         }
     }
 }
-
-
