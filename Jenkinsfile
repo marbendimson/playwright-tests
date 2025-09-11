@@ -26,15 +26,10 @@ pipeline {
 
         stage('Run Playwright Tests') {
             steps {
-                // sh """
-                //     export TEST_ENV=${params.TEST_ENV}
-                //     npx playwright test --project=${params.BROWSER} --reporter=list,junit,html
-                // """
                 sh """
-  export TEST_ENV=${params.TEST_ENV}
-  npx playwright test tests/Catalogue/TC_001_Verify_Virtual_Machine_Templatepage.spec.ts --project=${params.BROWSER} --reporter=list,junit,html
-"""
-
+                  export TEST_ENV=${params.TEST_ENV}
+                  npx playwright test tests/Catalogue/TC_001_Verify_Virtual_Machine_Templatepage.spec.ts --project=${params.BROWSER} --reporter=list,junit,html
+                """
             }
         }
 
@@ -51,26 +46,32 @@ pipeline {
 
     post {
         success {
+            echo "Sending Slack SUCCESS notification..."
             slackSend(
                 channel: '#qa-alerts', 
                 color: 'good', 
-                message: "✅ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} SUCCESS", 
-                tokenCredentialId: 'slack-bot-token'
+                message: "✅ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} SUCCESS",
+                tokenCredentialId: 'slack-bot-token' // Secret Text credential containing your Bot Token
             )
         }
         failure {
+            echo "Sending Slack FAILURE notification..."
             slackSend(
                 channel: '#qa-alerts', 
                 color: 'danger', 
-                message: "❌ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} FAILED", 
+                message: "❌ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} FAILED",
                 tokenCredentialId: 'slack-bot-token'
             )
 
-            mail to: 'marben.dimson@hostednetwork.com.au',
-                 subject: "Jenkins Build FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                 body: "Check Jenkins build logs: ${env.BUILD_URL}"
+            echo "Sending failure email..."
+            mail(
+                to: 'marben.dimson@hostednetwork.com.au',
+                subject: "Jenkins Build FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                body: "Check Jenkins build logs: ${env.BUILD_URL}"
+            )
         }
         always {
+            echo "Cleaning workspace..."
             cleanWs()
         }
     }
