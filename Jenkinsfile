@@ -35,8 +35,8 @@ pipeline {
 
         stage('Archive Test Results') {
             steps {
-                junit 'playwright-tests/result/*.xml'
-                archiveArtifacts artifacts: '**/playwright-report/**', allowEmptyArchive: true
+                junit 'results/*.xml'
+                archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
             }
         }
 
