@@ -1,5 +1,9 @@
 pipeline {
-    agent { docker { image 'mcr.microsoft.com/playwright:focal' } }
+    agent any
+
+    tools {
+        nodejs 'node20'  // Use the NodeJS installation you configured in Jenkins
+    }
 
     parameters {
         string(name: 'TEST_ENV', defaultValue: 'preprod', description: 'Environment to run tests')
@@ -16,6 +20,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
+                sh 'npx playwright install --with-deps'
             }
         }
 
