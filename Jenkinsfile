@@ -17,12 +17,12 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
+        stage('Install Project Dependencies') {
             steps {
-                // Clean install npm packages
+                // Install npm dependencies for this workspace
                 sh 'npm ci'
 
-                // Install Playwright browser binaries only (no system dependencies)
+                // Install Playwright browser binaries only (system deps already installed)
                 sh 'npx playwright install'
             }
         }
@@ -30,15 +30,18 @@ pipeline {
         stage('Run Playwright Tests') {
             steps {
                 sh """
-                export TEST_ENV=${params.TEST_ENV}
-                npx playwright test --browser=${params.BROWSER} --reporter=list,junit
+                    export TEST_ENV=${params.TEST_ENV}
+                    npx playwright test --browser=${params.BROWSER} --reporter=list,junit
                 """
             }
         }
 
         stage('Archive Test Results') {
             steps {
+                // Save JUnit XML results
                 junit '**/test-results/results.xml'
+
+                // Archive the Playwright HTML report
                 archiveArtifacts artifacts: '**/playwright-report/**', allowEmptyArchive: true
             }
         }
@@ -46,6 +49,7 @@ pipeline {
 
     post {
         always {
+            // Clean workspace after every run
             cleanWs()
         }
     }
