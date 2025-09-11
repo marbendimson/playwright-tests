@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    parameters {
+        string(name: 'TEST_ENV', defaultValue: 'preprod', description: 'Environment to run the tests (dev, preprod, staging, prod)')
+        choice(name: 'BROWSER', choices: ['chromium', 'firefox', 'webkit'], description: 'Browser to run Playwright tests')
+    }
+
     environment {
         NODE_VERSION = '18'  // Adjust if needed
     }
@@ -8,7 +13,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo 'Checking out code from GitHub...'
+                echo "Checking out code from GitHub..."
                 git branch: 'master', url: 'https://github.com/marbendimson/playwright-tests.git'
             }
         }
@@ -24,15 +29,19 @@ pipeline {
 
         stage('Run Playwright Tests') {
             steps {
-                echo 'Running Playwright test suite...'
-                sh 'npx playwright test --reporter=list,junit'
+                echo "Running Playwright tests in ${params.TEST_ENV} on ${params.BROWSER}..."
+                // Pass the environment and browser as environment variables to your test
+                sh """
+                    export TEST_ENV=${params.TEST_ENV}
+                    npx playwright test --browser=${params.BROWSER} --reporter=list,junit
+                """
             }
         }
 
         stage('Archive Test Results') {
             steps {
                 echo 'Archiving Playwright reports...'
-                junit '**/test-results/results.xml'  // Adjust path if needed
+                junit '**/test-results/results.xml'  // Adjust if your JUnit output path is different
                 archiveArtifacts artifacts: '**/playwright-report/**', allowEmptyArchive: true
             }
         }
