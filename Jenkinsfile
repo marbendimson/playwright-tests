@@ -61,7 +61,7 @@ pipeline {
                 channel: '#qa-alerts', 
                 color: 'good', 
                 message: "✅ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} SUCCESS",
-                tokenCredentialId: 'slack-bot-token'
+                tokenCredentialId: 'Slack-bot-Token'
             )
         }
         failure {
@@ -70,7 +70,7 @@ pipeline {
                 channel: '#qa-alerts', 
                 color: 'danger', 
                 message: "❌ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} FAILED",
-                tokenCredentialId: 'slack-bot-token'
+                tokenCredentialId: 'Slack-bot-Token'
             )
 
             echo "Sending failure email..."
