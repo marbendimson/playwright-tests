@@ -58,6 +58,7 @@ pipeline {
         success {
             echo "Sending Slack SUCCESS notification..."
             slackSend(
+                teamDomain: 'hostednetwork',
                 channel: '#qa-alerts', 
                 color: 'good', 
                 message: "✅ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} SUCCESS",
@@ -67,6 +68,7 @@ pipeline {
         failure {
             echo "Sending Slack FAILURE notification..."
             slackSend(
+                teamDomain: 'hostednetwork',
                 channel: '#qa-alerts', 
                 color: 'danger', 
                 message: "❌ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} FAILED",
