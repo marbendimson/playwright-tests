@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'node20'  // Use the NodeJS installation you configured
+        nodejs 'node20'  // Use your configured NodeJS installation
     }
 
     parameters {
@@ -19,15 +19,20 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
-                sh 'chmod +x ./node_modules/.bin/* || true'
-                sh 'npx playwright install --with-deps'
+                // Clean install npm packages
+                sh 'npm ci'
+
+                // Install Playwright browser binaries only (no system dependencies)
+                sh 'npx playwright install'
             }
         }
 
         stage('Run Playwright Tests') {
             steps {
-                sh "export TEST_ENV=${params.TEST_ENV} && npx playwright test --browser=${params.BROWSER} --reporter=list,junit"
+                sh """
+                export TEST_ENV=${params.TEST_ENV}
+                npx playwright test --browser=${params.BROWSER} --reporter=list,junit
+                """
             }
         }
 
@@ -40,6 +45,8 @@ pipeline {
     }
 
     post {
-        always { cleanWs() }
+        always {
+            cleanWs()
+        }
     }
 }
