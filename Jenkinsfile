@@ -28,13 +28,14 @@ pipeline {
         }
 
         stage('Run Playwright Tests') {
-            steps {
-                sh """
-                    export TEST_ENV=${params.TEST_ENV}
-                    npx playwright test --browser=${params.BROWSER} --reporter=list,junit
-                """
-            }
-        }
+    steps {
+        sh """
+            export TEST_ENV=${params.TEST_ENV}
+            npx playwright test --project=${params.BROWSER} --reporter=list,junit
+        """
+    }
+}
+
 
         stage('Archive Test Results') {
             steps {
