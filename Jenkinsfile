@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'node20'  // Use your configured NodeJS installation
+        nodejs 'node20'  // Your NodeJS installation
     }
 
     parameters {
@@ -17,40 +17,60 @@ pipeline {
             }
         }
 
-        stage('Install Project Dependencies') {
+        stage('Install Dependencies') {
             steps {
-                // Install npm dependencies for this workspace
                 sh 'npm ci'
-
-                // Install Playwright browser binaries only (system deps already installed)
                 sh 'npx playwright install'
             }
         }
 
         stage('Run Playwright Tests') {
-    steps {
-        sh """
-            export TEST_ENV=${params.TEST_ENV}
-            npx playwright test --project=${params.BROWSER} --reporter=list,junit
-        """
-    }
-}
+            steps {
+                // sh """
+                //     export TEST_ENV=${params.TEST_ENV}
+                //     npx playwright test --project=${params.BROWSER} --reporter=list,junit,html
+                // """
+                sh """
+  export TEST_ENV=${params.TEST_ENV}
+  npx playwright test tests/Catalogue/TC_001_Verify_Virtual_Machine_Templatepage.spec.ts --project=${params.BROWSER} --reporter=list,junit,html
+"""
 
+            }
+        }
 
         stage('Archive Test Results') {
             steps {
-                // Save JUnit XML results
+                // Archive JUnit XML results
                 junit '**/test-results/results.xml'
-
-                // Archive the Playwright HTML report
+                
+                // Archive HTML report
                 archiveArtifacts artifacts: '**/playwright-report/**', allowEmptyArchive: true
             }
         }
     }
 
     post {
+        success {
+            slackSend(
+                channel: '#qa-alerts', 
+                color: 'good', 
+                message: "✅ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} SUCCESS", 
+                tokenCredentialId: 'slack-bot-token'
+            )
+        }
+        failure {
+            slackSend(
+                channel: '#qa-alerts', 
+                color: 'danger', 
+                message: "❌ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} FAILED", 
+                tokenCredentialId: 'slack-bot-token'
+            )
+
+            mail to: 'marben.dimson@hostednetwork.com.au',
+                 subject: "Jenkins Build FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                 body: "Check Jenkins build logs: ${env.BUILD_URL}"
+        }
         always {
-            // Clean workspace after every run
             cleanWs()
         }
     }
