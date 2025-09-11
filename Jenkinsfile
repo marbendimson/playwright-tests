@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'node20'  // Use the NodeJS installation you configured in Jenkins
+        nodejs 'node20'  // Use the NodeJS installation you configured
     }
 
     parameters {
@@ -20,6 +20,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
+                sh 'chmod +x ./node_modules/.bin/* || true'
                 sh 'npx playwright install --with-deps'
             }
         }
