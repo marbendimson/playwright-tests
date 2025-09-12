@@ -98,26 +98,26 @@
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.55.0",
-    "workers": 2,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "User_Roles\\TS_010_VerifyCreateNewUser.spec.ts",
-      "file": "User_Roles/TS_010_VerifyCreateNewUser.spec.ts",
+      "title": "Global_page\\1_Verify_global_configuration_page.spec.ts",
+      "file": "Global_page/1_Verify_global_configuration_page.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Verify create new user  ",
-          "file": "User_Roles/TS_010_VerifyCreateNewUser.spec.ts",
-          "line": 8,
+          "title": "Verify Global Configuration Page ",
+          "file": "Global_page/1_Verify_global_configuration_page.spec.ts",
+          "line": 6,
           "column": 6,
           "specs": [
             {
-              "title": "Should successfully create new user  ",
-              "ok": false,
+              "title": "should be able to successfully view Global config page",
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -130,55 +130,737 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "timedOut",
-                      "duration": 31706,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\CreateUser.ts",
-                            "column": 74,
-                            "line": 76
-                          },
-                          "message": "Error: locator.waitFor: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.select2-results__options[role=\"listbox\"]') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\CreateUser.ts:76\n\n\u001b[0m \u001b[90m 74 |\u001b[39m     \u001b[90m// Open the role dropdown and wait for the options to be visible\u001b[39m\n \u001b[90m 75 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mroleDropdown\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 76 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'.select2-results__options[role=\"listbox\"]'\u001b[39m)\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 77 |\u001b[39m     \u001b[36mconst\u001b[39m roleOption \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`.select2-results__option:has-text(\"${user.role}\")`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 78 |\u001b[39m     \u001b[36mawait\u001b[39m roleOption\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m  \u001b[90m// Click the role option based on the role text\u001b[39m\n \u001b[90m 79 |\u001b[39m   }\u001b[0m\n\u001b[2m    at UserPage.fillCreateUserForm (C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\CreateUser.ts:76:74)\u001b[22m\n\u001b[2m    at C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\tests\\User_Roles\\TS_010_VerifyCreateNewUser.spec.ts:38:3\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 9313,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-10T23:57:23.442Z",
+                      "startTime": "2025-09-12T05:48:33.255Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\User_Roles-TS_010_VerifyCr-ae9e7-ccessfully-create-new-user--chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\User_Roles-TS_010_VerifyCr-ae9e7-ccessfully-create-new-user--chromium\\video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\marben.dimson\\Desktop\\Auto\\HN\\MP\\test-results\\User_Roles-TS_010_VerifyCr-ae9e7-ccessfully-create-new-user--chromium\\error-context.md"
-                        }
-                      ]
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
-              "id": "48daa12ced047dcbe56e-08e05bf7562bbe5f8d85",
-              "file": "User_Roles/TS_010_VerifyCreateNewUser.spec.ts",
-              "line": 9,
+              "id": "bec26a59b62733f193b6-cb817ce2c83ac37910d9",
+              "file": "Global_page/1_Verify_global_configuration_page.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Global_page\\10_Verify_create_site_name.spec.ts",
+      "file": "Global_page/10_Verify_create_site_name.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify create site name ",
+          "file": "Global_page/10_Verify_create_site_name.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should successfully create and display the site name ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9436,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-12T05:48:42.974Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8d7646e3bfc9038a5a18-e6e8ecac23de3ee167ea",
+              "file": "Global_page/10_Verify_create_site_name.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Global_page\\11_Verify_Vlan_Start_field.spec.ts",
+      "file": "Global_page/11_Verify_Vlan_Start_field.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify Vlan Start field ",
+          "file": "Global_page/11_Verify_Vlan_Start_field.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should successfully display by default the 11100 in the field",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9779,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-12T05:48:52.432Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8e668317028103439562-a69fbb42501666dfd1b8",
+              "file": "Global_page/11_Verify_Vlan_Start_field.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Global_page\\12_Verify_ON_maintenance_mode.spec.ts",
+      "file": "Global_page/12_Verify_ON_maintenance_mode.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify ON maintenance mode  ",
+          "file": "Global_page/12_Verify_ON_maintenance_mode.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should be able to successfully ON and display Maintence mode word in multiportal ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9369,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-12T05:49:02.233Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "194c32084de02942f10b-075699b8690c750e96cc",
+              "file": "Global_page/12_Verify_ON_maintenance_mode.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Global_page\\13_Verify_OFF_maintenance_mode.spec.ts",
+      "file": "Global_page/13_Verify_OFF_maintenance_mode.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify OFF maintenance mode  ",
+          "file": "Global_page/13_Verify_OFF_maintenance_mode.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should be able to successfully Off and disabled maintenance mode ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9455,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-12T05:49:11.624Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c3cc29c757eae0a13c7f-3474534ec4680cbd16cc",
+              "file": "Global_page/13_Verify_OFF_maintenance_mode.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Global_page\\14_Verify_update_support_email.spec.ts",
+      "file": "Global_page/14_Verify_update_support_email.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify update support email ",
+          "file": "Global_page/14_Verify_update_support_email.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should be able to successfully update support email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9242,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-12T05:49:21.100Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4f7a6c6dfacf0065caac-2896190bb2ae324eeea8",
+              "file": "Global_page/14_Verify_update_support_email.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Global_page\\2_Verify_select_logo.spec.ts",
+      "file": "Global_page/2_Verify_select_logo.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify select logo ",
+          "file": "Global_page/2_Verify_select_logo.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should successfully select and display logo ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9027,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-12T05:49:30.364Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "50424bf5e1dff5bd3cb3-1eeca14511252320e020",
+              "file": "Global_page/2_Verify_select_logo.spec.ts",
+              "line": 8,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Global_page\\3_Verify_logo_upload_moreThan_5mbSize.spec.ts",
+      "file": "Global_page/3_Verify_logo_upload_moreThan_5mbSize.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify logo upload more than 5mb size ",
+          "file": "Global_page/3_Verify_logo_upload_moreThan_5mbSize.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should not be able to successfully upload image and display prompt message ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9231,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-12T05:49:39.416Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7bc16fedb61273b0fd77-68ad5a9541df22f558a6",
+              "file": "Global_page/3_Verify_logo_upload_moreThan_5mbSize.spec.ts",
+              "line": 8,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Global_page\\4_Verify_upload_non-img_file.spec.ts",
+      "file": "Global_page/4_Verify_upload_non-img_file.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify Upload non-img file ",
+          "file": "Global_page/4_Verify_upload_non-img_file.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should display prompt message successfully ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9450,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-12T05:49:48.668Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bffbdff8bd7da713fa8a-2a9c4534447b5acf717d",
+              "file": "Global_page/4_Verify_upload_non-img_file.spec.ts",
+              "line": 8,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Global_page\\5_Verify_small_logo.spec.ts",
+      "file": "Global_page/5_Verify_small_logo.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify select small logo ",
+          "file": "Global_page/5_Verify_small_logo.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should be able to successfully select and display small logo ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9147,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-12T05:49:58.138Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "631eda7de0b3bafde116-e323e2095d5ffe93e134",
+              "file": "Global_page/5_Verify_small_logo.spec.ts",
+              "line": 8,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Global_page\\6_Verify_logo_upload_morThan_5mbSize_small.spec.ts",
+      "file": "Global_page/6_Verify_logo_upload_morThan_5mbSize_small.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify logo upload more than 5mb size (small) ",
+          "file": "Global_page/6_Verify_logo_upload_morThan_5mbSize_small.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should not be able to successfully upload image and display prompt message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9256,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-12T05:50:07.305Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0a9d27f8106c7318931c-4fdf88e108a7074e105e",
+              "file": "Global_page/6_Verify_logo_upload_morThan_5mbSize_small.spec.ts",
+              "line": 8,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Global_page\\7_Verify_upload_non-img_file_small.spec.ts",
+      "file": "Global_page/7_Verify_upload_non-img_file_small.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify upload non-img file  ",
+          "file": "Global_page/7_Verify_upload_non-img_file_small.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should display prompt message successfully  ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9521,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-12T05:50:16.579Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e0a40295ad023bfc972-b1d5f2ec1f4a7d33e1f1",
+              "file": "Global_page/7_Verify_upload_non-img_file_small.spec.ts",
+              "line": 8,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Global_page\\8_Verify_OFF_debug_mode.spec.ts",
+      "file": "Global_page/8_Verify_OFF_debug_mode.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify OFF Debug mode",
+          "file": "Global_page/8_Verify_OFF_debug_mode.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should be able to successfully turn OFF Debug mode",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9287,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-12T05:50:26.117Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fc5ad527986e2ee2e501-174ec5ef15025dd24593",
+              "file": "Global_page/8_Verify_OFF_debug_mode.spec.ts",
+              "line": 6,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Global_page\\9_Verify_On_debug_mode.spec.ts",
+      "file": "Global_page/9_Verify_On_debug_mode.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Verify On Debug mode  ",
+          "file": "Global_page/9_Verify_On_debug_mode.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should be able to successfully On debug mode ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9160,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-12T05:50:35.422Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ae38b960cd6956b666ac-9987eba9271d7d7408f0",
+              "file": "Global_page/9_Verify_On_debug_mode.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Global_page\\TS_001_Verify_internalNetwork_page.spec.ts",
+      "file": "Global_page/TS_001_Verify_internalNetwork_page.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Internal Networks Page",
+          "file": "Global_page/TS_001_Verify_internalNetwork_page.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should login and display Internal Networks page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8888,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-12T05:50:44.600Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0ad27222c0c6107d10b1-bbda348590c462a17b6a",
+              "file": "Global_page/TS_001_Verify_internalNetwork_page.spec.ts",
+              "line": 7,
               "column": 7
             }
           ]
@@ -188,11 +870,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-10T23:57:22.289Z",
-    "duration": 33745.167,
-    "expected": 0,
+    "startTime": "2025-09-12T05:48:32.018Z",
+    "duration": 141722.324,
+    "expected": 15,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }
