@@ -69,88 +69,39 @@ pipeline {
         }
     }
 
-    // post {
-    //     success {
-    //         echo "Sending Slack SUCCESS notification..."
-    //         slackSend(
-    //             teamDomain: 'hostednetwork',
-    //             channel: '#qa-alerts', 
-    //             color: 'good', 
-    //             message: "✅ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} SUCCESS",
-    //             tokenCredentialId: 'Slack-bot-Token'
-    //         )
-    //     }
-    //     failure {
-    //         echo "Sending Slack FAILURE notification..."
-    //         slackSend(
-    //             teamDomain: 'hostednetwork',
-    //             channel: '#qa-alerts', 
-    //             color: 'danger', 
-    //             message: "❌ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} FAILED",
-    //             tokenCredentialId: 'Slack-bot-Token'
-    //         )
-
-    //         echo "Sending failure email..."
-    //         mail(
-    //             to: 'marben.dimson@hostednetwork.com.au',
-    //             subject: "Jenkins Build FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-    //             body: "Check Jenkins build logs: ${env.BUILD_URL}"
-    //         )
-    //     }
-    //     always {
-    //         echo "Cleaning workspace..."
-    //         cleanWs()
-    //     }
-    // }
     post {
-    success {
-        echo "Sending Slack SUCCESS notification..."
-        slackSend(
-            teamDomain: 'hostednetwork',
-            channel: '#qa-alerts',
-            color: 'good',
-            message: "✅ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} SUCCESS",
-            tokenCredentialId: 'Slack-bot-Token'
-        )
+        success {
+            echo "Sending Slack SUCCESS notification..."
+            slackSend(
+                teamDomain: 'hostednetwork',
+                channel: '#qa-alerts', 
+                color: 'good', 
+                message: "✅ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} SUCCESS",
+                tokenCredentialId: 'Slack-bot-Token'
+            )
+        }
+        failure {
+            echo "Sending Slack FAILURE notification..."
+            slackSend(
+                teamDomain: 'hostednetwork',
+                channel: '#qa-alerts', 
+                color: 'danger', 
+                message: "❌ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} FAILED",
+                tokenCredentialId: 'Slack-bot-Token'
+            )
 
-        echo "Sending success email..."
-        emailext(
-            to: 'marben.dimson@hostednetwork.com.au',
-            subject: "✅ Jenkins Build SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-            body: """
-                <p>Build <b>${env.JOB_NAME} #${env.BUILD_NUMBER}</b> completed <b>SUCCESSFULLY</b>.</p>
-                <p>See details: <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
-            """,
-            mimeType: 'text/html'
-        )
+            echo "Sending failure email..."
+            mail(
+                to: 'marben.dimson@hostednetwork.com.au',
+                subject: "Jenkins Build FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                body: "Check Jenkins build logs: ${env.BUILD_URL}"
+            )
+        }
+        always {
+            echo "Cleaning workspace..."
+            cleanWs()
+        }
     }
-    failure {
-        echo "Sending Slack FAILURE notification..."
-        slackSend(
-            teamDomain: 'hostednetwork',
-            channel: '#qa-alerts',
-            color: 'danger',
-            message: "❌ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} FAILED",
-            tokenCredentialId: 'Slack-bot-Token'
-        )
-
-        echo "Sending failure email with logs..."
-        emailext(
-            to: 'marben.dimson@hostednetwork.com.au',
-            subject: "❌ Jenkins Build FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-            body: """
-                <p>Build <b>${env.JOB_NAME} #${env.BUILD_NUMBER}</b> has <b>FAILED</b>.</p>
-                <p>Check <a href="${env.BUILD_URL}">Jenkins build logs</a> for details.</p>
-            """,
-            mimeType: 'text/html',
-            attachLog: true,
-            compressLog: true
-        )
-    }
-    always {
-        echo "Cleaning workspace..."
-        cleanWs()
-    }
-}
+    
 
 }
