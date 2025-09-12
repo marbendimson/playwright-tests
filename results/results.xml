@@ -1,6 +1,6 @@
-<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="33.814142">
-<testsuite name="User_Roles\TS_010_VerifyCreateNewUser.spec.ts" timestamp="2025-09-09T06:11:59.825Z" hostname="chromium" tests="1" failures="1" skipped="0" time="31.914" errors="0">
-<testcase name="Verify create new user   › Should successfully create new user  " classname="User_Roles\TS_010_VerifyCreateNewUser.spec.ts" time="31.914">
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="33.745167">
+<testsuite name="User_Roles\TS_010_VerifyCreateNewUser.spec.ts" timestamp="2025-09-10T23:57:22.341Z" hostname="chromium" tests="1" failures="1" skipped="0" time="31.706" errors="0">
+<testcase name="Verify create new user   › Should successfully create new user  " classname="User_Roles\TS_010_VerifyCreateNewUser.spec.ts" time="31.706">
 <failure message="TS_010_VerifyCreateNewUser.spec.ts:9:7 Should successfully create new user  " type="FAILURE">
 <![CDATA[  [chromium] › User_Roles\TS_010_VerifyCreateNewUser.spec.ts:9:7 › Verify create new user   › Should successfully create new user   
 
