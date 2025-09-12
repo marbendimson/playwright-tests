@@ -40,7 +40,7 @@ pipeline {
             steps {
                 sh """
                   export TEST_ENV=${params.TEST_ENV}
-                  npx playwright test tests/Catalogue/TC_001_Verify_Virtual_Machine_Templatepage.spec.ts \
+                  npx playwright test tests/Catalogue/ \
                     --project=${params.BROWSER} \
                     --reporter=list,junit,html \
                     --output=results
