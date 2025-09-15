@@ -40,7 +40,7 @@ pipeline {
             steps {
                 sh """
                   export TEST_ENV=${params.TEST_ENV}
-                  npx playwright test tests/Catalogue \
+                  npx playwright test tests/Global_page \
                     --project=${params.BROWSER} \
                     --output=results
                 """

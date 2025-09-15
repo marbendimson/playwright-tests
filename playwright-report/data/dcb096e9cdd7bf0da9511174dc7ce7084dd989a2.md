@@ -1,0 +1,211 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - button [ref=e7] [cursor=pointer]
+          - generic [ref=e13]:
+            - textbox "Search..." [ref=e15]
+            - generic [ref=e16]: 󰍉
+            - text: 󰅙
+        - generic [ref=e17]:
+          - button "Header Language" [ref=e19] [cursor=pointer]:
+            - img "Header Language" [ref=e20] [cursor=pointer]
+          - button "" [ref=e22] [cursor=pointer]:
+            - generic [ref=e23] [cursor=pointer]: 
+          - button "" [ref=e25] [cursor=pointer]:
+            - generic [ref=e26] [cursor=pointer]: 
+          - generic [ref=e27]:
+            - button "Header Avatar Assurance Service Provider Administrator" [ref=e28] [cursor=pointer]:
+              - generic [ref=e29] [cursor=pointer]:
+                - img "Header Avatar" [ref=e30] [cursor=pointer]
+                - generic [ref=e31] [cursor=pointer]:
+                  - generic [ref=e32] [cursor=pointer]: Assurance
+                  - generic [ref=e33] [cursor=pointer]: Service Provider Administrator
+            - text: 󰀄 󱂛 󰡾 󰃤 󰂾 󰍃 󰍃
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - link [ref=e36] [cursor=pointer]:
+          - /url: /
+          - img [ref=e38] [cursor=pointer]
+        - text: 
+      - text:  󰍃
+      - region "scrollable content" [ref=e43]:
+        - list [ref=e46]:
+          - region "scrollable content" [ref=e50]:
+            - generic [ref=e51]:
+              - listitem [ref=e52]:
+                - link "󰨝 Dashboard" [ref=e53] [cursor=pointer]:
+                  - /url: /dashboard
+                  - generic [ref=e54] [cursor=pointer]: 󰨝
+                  - generic [ref=e55] [cursor=pointer]: Dashboard
+              - listitem [ref=e56]:
+                - link "󰀏 Resellers" [ref=e57] [cursor=pointer]:
+                  - /url: /reseller
+                  - generic [ref=e58] [cursor=pointer]: 󰀏
+                  - generic [ref=e59] [cursor=pointer]: Resellers
+              - listitem [ref=e60]:
+                - link "󰀎 Tenants" [ref=e61] [cursor=pointer]:
+                  - /url: /tenants
+                  - generic [ref=e62] [cursor=pointer]: 󰀎
+                  - generic [ref=e63] [cursor=pointer]: Tenants
+              - listitem [ref=e64]:
+                - link "󰒋 Virtual Data Centers" [ref=e65] [cursor=pointer]:
+                  - /url: /virtual-data-center/index
+                  - generic [ref=e66] [cursor=pointer]: 󰒋
+                  - generic [ref=e67] [cursor=pointer]: Virtual Data Centers
+              - listitem [ref=e68]:
+                - button "󰌖 Catalogue 󰅂" [ref=e69] [cursor=pointer]:
+                  - generic [ref=e70] [cursor=pointer]: 󰌖
+                  - generic [ref=e71] [cursor=pointer]: Catalogue
+                  - text: 󰅂
+              - listitem [ref=e72]:
+                - button "󰛳 Networking 󰅂" [ref=e73] [cursor=pointer]:
+                  - generic [ref=e74] [cursor=pointer]: 󰛳
+                  - generic [ref=e75] [cursor=pointer]: Networking
+                  - text: 󰅂
+              - listitem [ref=e76]:
+                - button "󱀩 Reports 󰅂" [ref=e77] [cursor=pointer]:
+                  - generic [ref=e78] [cursor=pointer]: 󱀩
+                  - generic [ref=e79] [cursor=pointer]: Reports
+                  - text: 󰅂
+              - listitem [ref=e80]:
+                - link "󱥠 User Roles" [ref=e81] [cursor=pointer]:
+                  - /url: /user/role
+                  - generic [ref=e82] [cursor=pointer]: 󱥠
+                  - generic [ref=e83] [cursor=pointer]: User Roles
+              - listitem [ref=e84]:
+                - link "󰒒 Backup Management" [ref=e85] [cursor=pointer]:
+                  - /url: /scheduled-backup/index
+                  - generic [ref=e86] [cursor=pointer]: 󰒒
+                  - generic [ref=e87] [cursor=pointer]: Backup Management
+              - listitem [ref=e88]:
+                - button "󰒓 Settings 󰅂" [expanded] [ref=e89] [cursor=pointer]:
+                  - generic [ref=e90] [cursor=pointer]: 󰒓
+                  - generic [ref=e91] [cursor=pointer]: Settings
+                  - text: 󰅂
+                - list [ref=e93]:
+                  - listitem [ref=e94]:
+                    - link "Data Centers" [ref=e95] [cursor=pointer]:
+                      - /url: /data-center
+                      - generic [ref=e96] [cursor=pointer]: Data Centers
+                  - listitem [ref=e97]:
+                    - button "Import 󰅂" [expanded] [ref=e98] [cursor=pointer]:
+                      - generic [ref=e99] [cursor=pointer]: Import
+                      - text: 󰅂
+                    - list [ref=e101]:
+                      - listitem [ref=e102]:
+                        - link "Virtual Machines" [ref=e103] [cursor=pointer]:
+                          - /url: /virtual-machine/vm-import
+                          - generic [ref=e104] [cursor=pointer]: Virtual Machines
+                      - listitem [ref=e105]:
+                        - link "Templates" [ref=e106] [cursor=pointer]:
+                          - /url: /catalogue/vm-template-import
+                          - generic [ref=e107] [cursor=pointer]: Templates
+                      - listitem [ref=e108]:
+                        - link "ISOs" [ref=e109] [cursor=pointer]:
+                          - /url: /iso/iso-import
+                          - generic [ref=e110] [cursor=pointer]: ISOs
+                  - listitem [ref=e111]:
+                    - link "Global Configurations" [ref=e112] [cursor=pointer]:
+                      - /url: /config/index
+                      - generic [ref=e113] [cursor=pointer]: Global Configurations
+                  - listitem [ref=e114]:
+                    - link "Console Control Panel" [ref=e115] [cursor=pointer]:
+                      - /url: /console/index
+                      - generic [ref=e116] [cursor=pointer]: Console Control Panel
+                  - listitem [ref=e117]:
+                    - link "Cron Tasks" [ref=e118] [cursor=pointer]:
+                      - /url: /cron-task/index
+                      - generic [ref=e119] [cursor=pointer]: Cron Tasks
+                  - listitem [ref=e120]:
+                    - link "Database Backup" [ref=e121] [cursor=pointer]:
+                      - /url: /backup/index
+                      - generic [ref=e122] [cursor=pointer]: Database Backup
+                  - listitem [ref=e123]:
+                    - link "Check for Update" [ref=e124] [cursor=pointer]:
+                      - /url: /updater
+                      - generic [ref=e125] [cursor=pointer]: Check for Update
+                  - listitem [ref=e126]:
+                    - link "License Information" [ref=e127] [cursor=pointer]:
+                      - /url: /config/license
+                      - generic [ref=e128] [cursor=pointer]: License Information
+                  - listitem [ref=e129]:
+                    - link "API Clients" [ref=e130] [cursor=pointer]:
+                      - /url: /oauth-client
+                      - generic [ref=e131] [cursor=pointer]: API Clients
+                  - listitem [ref=e132]:
+                    - link "SSO Configuration" [ref=e133] [cursor=pointer]:
+                      - /url: /sso-configuration/index
+                      - generic [ref=e134] [cursor=pointer]: SSO Configuration
+                  - listitem [ref=e135]:
+                    - link "Login Security Logs" [ref=e136] [cursor=pointer]:
+                      - /url: /login-attempt/index
+                      - generic [ref=e137] [cursor=pointer]: Login Security Logs
+                  - listitem [ref=e138]:
+                    - link "Diagnostics" [ref=e139] [cursor=pointer]:
+                      - /url: /config/diagnostics
+                      - generic [ref=e140] [cursor=pointer]: Diagnostics
+                  - listitem [ref=e141]:
+                    - link "System Info" [ref=e142] [cursor=pointer]:
+                      - /url: /config/system
+                      - generic [ref=e143] [cursor=pointer]: System Info
+    - generic [ref=e147]:
+      - generic [ref=e150]:
+        - heading "VM Template Import" [level=4] [ref=e151]
+        - list [ref=e153]:
+          - navigation "breadcrumb" [ref=e154]:
+            - list [ref=e155]:
+              - listitem [ref=e156]:
+                - link "Home" [ref=e157] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e158]:
+                - text: 󰅂
+                - link "VM Templates" [ref=e159] [cursor=pointer]:
+                  - /url: /catalogue/index
+              - listitem [ref=e160]: 󰅂 Sync Wizard
+      - generic [ref=e165]:
+        - heading "Import Templates from Proxmox to MultiPortal" [level=4] [ref=e167]
+        - tablist [ref=e169]:
+          - tab "Data Center" [ref=e170] [cursor=pointer]
+          - tab "VM Templates" [ref=e171] [cursor=pointer]
+          - tab "Virtual Data Center" [selected] [ref=e172] [cursor=pointer]
+        - generic [ref=e174]:
+          - text:    
+          - tabpanel "Virtual Data Center" [ref=e175]:
+            - generic [ref=e176]:
+              - generic [ref=e177]:
+                - heading "Virtual Data Center" [level=5] [ref=e178]
+                - paragraph [ref=e179]: Choose the location for your Virtual Machine Template
+              - generic [ref=e181]:
+                - generic [ref=e182]:
+                  - checkbox "Is Public" [ref=e183]
+                  - text: Is Public
+                - paragraph
+              - generic [ref=e184]:
+                - generic [ref=e185]:
+                  - generic [ref=e186]: Tenant
+                  - combobox "TenantCreate" [ref=e189]:
+                    - textbox "TenantCreate" [ref=e190]
+                  - paragraph
+                - generic [ref=e191]:
+                  - generic [ref=e192]: Virtual Data Center
+                  - combobox "VDC Autotest" [ref=e195]:
+                    - textbox "VDC Autotest" [ref=e196]
+                  - paragraph
+            - generic [ref=e197]:
+              - button " Back" [ref=e198] [cursor=pointer]:
+                - generic [ref=e199] [cursor=pointer]: 
+                - text: Back
+              - button "Importing. Please wait..." [disabled]:
+                - generic: Importing. Please wait...
+                - status
+  - generic [ref=e201]:
+    - heading "Recent Tasks" [level=6] [ref=e202]: Recent Tasks
+    - button "" [ref=e204] [cursor=pointer]:
+      - generic [ref=e205] [cursor=pointer]: 
+  - img
+```

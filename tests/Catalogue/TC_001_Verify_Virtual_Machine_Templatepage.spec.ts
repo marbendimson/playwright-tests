@@ -31,7 +31,7 @@ test.describe('Verify Virtual Machine Template page', () => {
 const templateRow = page.locator('table tbody tr', {
       has: page.locator('a', { hasText: new RegExp(templateName, 'i') }),
     });
-await expect(templateRow).toBeVisible();
+await expect(templateRow.first()).toBeVisible();
 
 await expect(templateRow.locator('td').nth(2)).toHaveText('No');
 
