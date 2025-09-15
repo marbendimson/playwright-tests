@@ -1,104 +1,1702 @@
-<testsuites id="" name="" tests="14" failures="1" skipped="0" errors="0" time="78.54904">
-<testsuite name="Global_page\1_Verify_global_configuration_page.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.711" errors="0">
-<testcase name="Verify Global Configuration Page  › should be able to successfully view Global config page" classname="Global_page\1_Verify_global_configuration_page.spec.ts" time="10.711">
+<testsuites id="" name="" tests="291" failures="0" skipped="289" errors="0" time="28.020493000000002">
+<testsuite name="Catalogue\TC_001_Verify_Virtual_Machine_Templatepage.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="0" time="13.437" errors="0">
+<testcase name="Verify Virtual Machine Template page › should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod" classname="Catalogue\TC_001_Verify_Virtual_Machine_Templatepage.spec.ts" time="13.437">
 </testcase>
 </testsuite>
-<testsuite name="Global_page\10_Verify_create_site_name.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="11.918" errors="0">
-<testcase name="Verify create site name  › Should successfully create and display the site name " classname="Global_page\10_Verify_create_site_name.spec.ts" time="11.918">
+<testsuite name="Catalogue\TC_002_Verify_delete_VMTemplate.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.725" errors="0">
+<testcase name="Verify Virtual Machine Template page › should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod" classname="Catalogue\TC_002_Verify_delete_VMTemplate.spec.ts" time="12.725">
 </testcase>
 </testsuite>
-<testsuite name="Global_page\11_Verify_Vlan_Start_field.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="11.719" errors="0">
-<testcase name="Verify Vlan Start field  › Should successfully display by default the 11100 in the field" classname="Global_page\11_Verify_Vlan_Start_field.spec.ts" time="11.719">
+<testsuite name="Catalogue\TC_003_Verify_Import_Virtual_Machine_public.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="2.54" errors="0">
+<testcase name="Verify Virtual Machine Template page › should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod" classname="Catalogue\TC_003_Verify_Import_Virtual_Machine_public.spec.ts" time="2.54">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
-<testsuite name="Global_page\12_Verify_ON_maintenance_mode.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.193" errors="0">
-<testcase name="Verify ON maintenance mode   › should be able to successfully ON and display Maintence mode word in multiportal " classname="Global_page\12_Verify_ON_maintenance_mode.spec.ts" time="10.193">
+<testsuite name="Catalogue\TC_004_Verify_ISOpage.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="2.651" errors="0">
+<testcase name="Verify view virtual machine template page › Should successfully display virtual machine Template page without UI or typo issues @dev @staging @preprod" classname="Catalogue\TC_004_Verify_ISOpage.spec.ts" time="2.651">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
-<testsuite name="Global_page\13_Verify_OFF_maintenance_mode.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="1" skipped="0" time="14.836" errors="0">
-<testcase name="Verify OFF maintenance mode   › should be able to successfully Off and disabled maintenance mode " classname="Global_page\13_Verify_OFF_maintenance_mode.spec.ts" time="14.836">
-<failure message="13_Verify_OFF_maintenance_mode.spec.ts:7:7 should be able to successfully Off and disabled maintenance mode " type="FAILURE">
-<![CDATA[  [chromium] › Global_page\13_Verify_OFF_maintenance_mode.spec.ts:7:7 › Verify OFF maintenance mode   › should be able to successfully Off and disabled maintenance mode  
-
-    Error: expect(locator).toHaveJSProperty(expected) failed
-
-    Locator:  locator('tr:has(td.text-white:has-text("Maintenance Mode"))').locator('input[name="Setting[maintenance_mode]"]')
-    Expected: false
-    Received: true
-    Timeout:  5000ms
-
-    Call log:
-      - Expect "toHaveJSProperty" with timeout 5000ms
-      - waiting for locator('tr:has(td.text-white:has-text("Maintenance Mode"))').locator('input[name="Setting[maintenance_mode]"]')
-        9 × locator resolved to <input id="w2" value="1" type="checkbox" name="Setting[maintenance_mode]" data-krajee-bootstrapswitch="bootstrapSwitch_2d390c3d"/>
-          - unexpected value "true"
-
-
-      37 | // Verify the hidden checkbox is checked
-      38 | const mainInput = maintenanceRow.locator('input[name="Setting[maintenance_mode]"]');
-    > 39 | await expect(mainInput).toHaveJSProperty('checked', false);
-         |                         ^
-      40 |
-      41 | // Save settings
-      42 | const saveBtn = page.getByRole('button', { name: 'Save' });
-        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\Global_page\13_Verify_OFF_maintenance_mode.spec.ts:39:25
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ..\test-results\Global_page-13_Verify_OFF_-3daa3--disabled-maintenance-mode--chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ..\test-results\Global_page-13_Verify_OFF_-3daa3--disabled-maintenance-mode--chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ..\test-results\Global_page-13_Verify_OFF_-3daa3--disabled-maintenance-mode--chromium\error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|..\test-results\Global_page-13_Verify_OFF_-3daa3--disabled-maintenance-mode--chromium\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\Global_page-13_Verify_OFF_-3daa3--disabled-maintenance-mode--chromium\video.webm]]
-
-[[ATTACHMENT|..\test-results\Global_page-13_Verify_OFF_-3daa3--disabled-maintenance-mode--chromium\error-context.md]]
-]]>
-</system-out>
+<testsuite name="Catalogue\TC_005_Verify_upload_ISO_storage_as_public.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should upload ISO via local file successfully @dev @staging @preprod" classname="Catalogue\TC_005_Verify_upload_ISO_storage_as_public.spec.ts" time="0">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
-<testsuite name="Global_page\14_Verify_update_support_email.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.031" errors="0">
-<testcase name="Verify update support email  › Should be able to successfully update support email" classname="Global_page\14_Verify_update_support_email.spec.ts" time="10.031">
+<testsuite name="Catalogue\TC_006_Verify_uploading_of_ISO_storage_from_specificVirtualDataCenter.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should upload ISO via local file successfully @dev @staging @preprod" classname="Catalogue\TC_006_Verify_uploading_of_ISO_storage_from_specificVirtualDataCenter.spec.ts" time="0">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
-<testsuite name="Global_page\2_Verify_select_logo.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.063" errors="0">
-<testcase name="Verify select logo  › Should successfully select and display logo " classname="Global_page\2_Verify_select_logo.spec.ts" time="9.063">
+<testsuite name="Catalogue\TC_007_Verify_download_ISO_storage_from_URL.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should display the ISO Upload form and allow uploading via Public URL @dev @staging @preprod" classname="Catalogue\TC_007_Verify_download_ISO_storage_from_URL.spec.ts" time="0">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
-<testsuite name="Global_page\3_Verify_logo_upload_moreThan_5mbSize.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.456" errors="0">
-<testcase name="Verify logo upload more than 5mb size  › Should not be able to successfully upload image and display prompt message " classname="Global_page\3_Verify_logo_upload_moreThan_5mbSize.spec.ts" time="9.456">
+<testsuite name="Catalogue\TC_008_Verify_download_ISO_storage_for_specific_virtualdatacenter.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should display the ISO Upload form and allow uploading via URL @dev @staging @preprod" classname="Catalogue\TC_008_Verify_download_ISO_storage_for_specific_virtualdatacenter.spec.ts" time="0">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
-<testsuite name="Global_page\4_Verify_upload_non-img_file.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.817" errors="0">
-<testcase name="Verify Upload non-img file  › Should display prompt message successfully " classname="Global_page\4_Verify_upload_non-img_file.spec.ts" time="9.817">
+<testsuite name="Catalogue\TC_009_Verify_view_virtualMachine_Template.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify view virtual machine template page › Should successfully display virtual machine Template page without any UI and Typo issues  @dev @staging @preprod" classname="Catalogue\TC_009_Verify_view_virtualMachine_Template.spec.ts" time="0">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
-<testsuite name="Global_page\5_Verify_small_logo.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.114" errors="0">
-<testcase name="Verify select small logo  › should be able to successfully select and display small logo " classname="Global_page\5_Verify_small_logo.spec.ts" time="9.114">
+<testsuite name="Catalogue\TC_010_Verify_delete_ISO_from_Proxmox.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Storage Management › Should delete a public ISO from storage @dev @staging @preprod" classname="Catalogue\TC_010_Verify_delete_ISO_from_Proxmox.spec.ts" time="0">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
-<testsuite name="Global_page\6_Verify_logo_upload_morThan_5mbSize_small.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.539" errors="0">
-<testcase name="Verify logo upload more than 5mb size (small)  › Should not be able to successfully upload image and display prompt message" classname="Global_page\6_Verify_logo_upload_morThan_5mbSize_small.spec.ts" time="9.539">
+<testsuite name="Catalogue\TC_011_Verify_deleteISO_without_deleting_proxmoxData.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Storage Management › Should delete a public ISO from storage @dev @staging @preprod" classname="Catalogue\TC_011_Verify_deleteISO_without_deleting_proxmoxData.spec.ts" time="0">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
-<testsuite name="Global_page\7_Verify_upload_non-img_file_small.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.931" errors="0">
-<testcase name="Verify upload non-img file   › Should display prompt message successfully  " classname="Global_page\7_Verify_upload_non-img_file_small.spec.ts" time="9.931">
+<testsuite name="Delete\TC_VerifyDeleteTenant.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="should verify modal contents and delete tenant" classname="Delete\TC_VerifyDeleteTenant.spec.ts" time="0">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
-<testsuite name="Global_page\8_Verify_OFF_debug_mode.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.371" errors="0">
-<testcase name="Verify OFF Debug mode › should be able to successfully turn OFF Debug mode" classname="Global_page\8_Verify_OFF_debug_mode.spec.ts" time="9.371">
+<testsuite name="Delete\TS_017VerifyDeleteReseller.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Delete\TS_017VerifyDeleteReseller.spec.ts" time="0">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
-<testsuite name="Global_page\9_Verify_On_debug_mode.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.244" errors="0">
-<testcase name="Verify On Debug mode   › should be able to successfully On debug mode " classname="Global_page\9_Verify_On_debug_mode.spec.ts" time="9.244">
+<testsuite name="Global_page\1_Verify_global_configuration_page.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify Global Configuration Page  › should be able to successfully view Global config page" classname="Global_page\1_Verify_global_configuration_page.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\10_Verify_create_site_name.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify create site name  › Should successfully create and display the site name " classname="Global_page\10_Verify_create_site_name.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\11_Verify_Vlan_Start_field.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify Vlan Start field  › Should successfully display by default the 11100 in the field" classname="Global_page\11_Verify_Vlan_Start_field.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\12_Verify_ON_maintenance_mode.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify ON maintenance mode   › should be able to successfully ON and display Maintence mode word in multiportal " classname="Global_page\12_Verify_ON_maintenance_mode.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\13_Verify_OFF_maintenance_mode.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify OFF maintenance mode   › should be able to successfully Off and disabled maintenance mode " classname="Global_page\13_Verify_OFF_maintenance_mode.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\14_Verify_update_support_email.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify update support email  › Should be able to successfully update support email" classname="Global_page\14_Verify_update_support_email.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\2_Verify_select_logo.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify select logo  › Should successfully select and display logo " classname="Global_page\2_Verify_select_logo.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\3_Verify_logo_upload_moreThan_5mbSize.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify logo upload more than 5mb size  › Should not be able to successfully upload image and display prompt message " classname="Global_page\3_Verify_logo_upload_moreThan_5mbSize.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\4_Verify_upload_non-img_file.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify Upload non-img file  › Should display prompt message successfully " classname="Global_page\4_Verify_upload_non-img_file.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\5_Verify_small_logo.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify select small logo  › should be able to successfully select and display small logo " classname="Global_page\5_Verify_small_logo.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\6_Verify_logo_upload_morThan_5mbSize_small.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify logo upload more than 5mb size (small)  › Should not be able to successfully upload image and display prompt message" classname="Global_page\6_Verify_logo_upload_morThan_5mbSize_small.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\7_Verify_upload_non-img_file_small.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify upload non-img file   › Should display prompt message successfully  " classname="Global_page\7_Verify_upload_non-img_file_small.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\8_Verify_OFF_debug_mode.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify OFF Debug mode › should be able to successfully turn OFF Debug mode" classname="Global_page\8_Verify_OFF_debug_mode.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\9_Verify_On_debug_mode.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify On Debug mode   › should be able to successfully On debug mode " classname="Global_page\9_Verify_On_debug_mode.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="login\login-error.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="6" failures="0" skipped="6" time="0" errors="0">
+<testcase name="Login Error Tests › should show error for invalid credentials @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Error Tests › should show error for empty username @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Error Tests › should show error for empty password @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Error Tests › should show error for empty form @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Error Tests › should show error for wrong username format @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Error Tests › should show error for short password @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="login\login-success.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="3" failures="0" skipped="3" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="login\login-success.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Success Tests › should login successfully with Administrator @dev @staging @preprod" classname="login\login-success.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Success Tests › should login successfully with Manager @dev @staging @preprod" classname="login\login-success.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Network\TS_001_Verify_internalNetwork_page.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Internal Networks Page › should login and display Internal Networks page" classname="Network\TS_001_Verify_internalNetwork_page.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Network\TS_002_Verify_create_internal.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Internal Networks Page › should login and display Internal Networks page" classname="Network\TS_002_Verify_create_internal.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Network\TS_003_Verify_EditInternalNetwork.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Internal Networks Page › should login and display Internal Networks page, then edit a network" classname="Network\TS_003_Verify_EditInternalNetwork.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Network\TS_004_Verify_deleteInternalNetwork.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Internal Networks Page › should login and display Internal Networks page" classname="Network\TS_004_Verify_deleteInternalNetwork.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_001_Verify_reseller_page.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_001_Verify_reseller_page.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_002_Verify_create_reseller.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_002_Verify_create_reseller.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_003_Verify_search_reseller.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_003_Verify_search_reseller.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_004_Verify_update_reseller_details.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_004_Verify_update_reseller_details.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_005_Verify_create_reseller.user.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_005_Verify_create_reseller.user.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_006_Verify_view_reseller_user.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_006_Verify_view_reseller_user.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_007_VerifyImpersonateResellerUser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_007_VerifyImpersonateResellerUser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_008_Verify_edit_reseller_user.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_008_Verify_edit_reseller_user.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_009_Verifydeletecreatedreselleruser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_009_Verifydeletecreatedreselleruser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_018 VerifyCreateTenant.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_018 VerifyCreateTenant.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_018.1VerifyCreateTenantNameUsingSpecialCharacter.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_018.1VerifyCreateTenantNameUsingSpecialCharacter.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_028VerifyTenantsPage.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_028VerifyTenantsPage.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_031VerifyViewTenant_Details.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_031VerifyViewTenant_Details.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_032VerifyUpdateTenant.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_032VerifyUpdateTenant.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_035VerifyCreateTenantUser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_035VerifyCreateTenantUser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_037VerifyUpdateCreateTenantUser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_037VerifyUpdateCreateTenantUser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_038VerifyImpersonateTenantUser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_038VerifyImpersonateTenantUser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_039VerifyCreateNewVDC.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_039VerifyCreateNewVDC.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_001_VerifyUserRolesPage.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › should be able to successfully display User role page " classname="User_Roles\TS_001_VerifyUserRolesPage.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_002_Verify_Search_Available_Permissions.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › Should successfully search available permissions for Service Provider Level  " classname="User_Roles\TS_002_Verify_Search_Available_Permissions.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_003_VerifyRoles_Section.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › Should successfully display list of roles, search bar, Create Role, Edit, Delete button on roles section page  " classname="User_Roles\TS_003_VerifyRoles_Section.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_004_Verify_Search_roles_created.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › Should successfully search roles by name  and display &quot;No results found&quot; if not available   " classname="User_Roles\TS_004_Verify_Search_roles_created.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_005_Verify_create_new_role.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page › Should create a new role with all permissions and verify it exists" classname="User_Roles\TS_005_Verify_create_new_role.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_006_Verify_edit_role.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Edit Role - Verify Permissions Retention and Update › Should verify retained permissions and update role description and permissions" classname="User_Roles\TS_006_Verify_edit_role.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_007_VerifyDeleteRole.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › should be able to successfully display User role page " classname="User_Roles\TS_007_VerifyDeleteRole.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_008_VerifyUser_section.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › should be able to successfully display User role page " classname="User_Roles\TS_008_VerifyUser_section.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_010_VerifyCreateNewUser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify create new user   › Should successfully create new user  " classname="User_Roles\TS_010_VerifyCreateNewUser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\10_Verify_rename_VM.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Clone ViMachinertual  › Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\10_Verify_rename_VM.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\10_VerifyNamingVirtualMachineTemplateEndinHyphen.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM Template name start or ends in Hyphen" classname="VDC\10_VerifyNamingVirtualMachineTemplateEndinHyphen.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\11_VerfiyNamingVirtualMachineTemplateSpecialCharacters.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM Template naming with special characters " classname="VDC\11_VerfiyNamingVirtualMachineTemplateSpecialCharacters.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\11_Verify_Convert_VM.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Clone Virtual Machine › Should be able to successfully Convert Virtual Machine to Template - Service Provider @dev @staging @preprod" classname="VDC\11_Verify_Convert_VM.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\8_Verify_create_VMTemplate.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VDC\8_Verify_create_VMTemplate.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\9_VerifyNamingVirtualMachineTemplatestartinHyphen.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM Template name start or ends in Hyphen" classname="VDC\9_VerifyNamingVirtualMachineTemplatestartinHyphen.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_Backup_section.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_Backup_section.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_clone_vm.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Clone ViMachinertual  › Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_clone_vm.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_create_Backup_Job.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_create_Backup_Job.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_delete_Backupjob.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_delete_Backupjob.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_delete_VDC.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_delete_VDC.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_delete_vm.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Delete Virtual Machine › Should be able to successfully delete Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_delete_vm.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_Edit_VirtualDataCenter.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_Edit_VirtualDataCenter.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_RemoveRecentTask.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="VDC\Verify_RemoveRecentTask.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_run_Backupjob.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_run_Backupjob.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_takeBackup.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_takeBackup.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_Tasklog_section.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_Tasklog_section.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_UpdateBackup_job.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_UpdateBackup_job.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_ViewRecentTask.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="VDC\Verify_ViewRecentTask.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_virtual_dataCenter_Usage.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_virtual_dataCenter_Usage.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_VirtualDataCenter_Storage_policies.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_VirtualDataCenter_Storage_policies.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\1_Verify_create_VM.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\1_Verify_create_VM.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\2_Verify_validation_message_if_naming_Virtual_machine_start_in_hyphens.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\2_Verify_validation_message_if_naming_Virtual_machine_start_in_hyphens.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\3_Verify_validation_message_if_naming_Virtual_machine _end_in_hyphens.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\3_Verify_validation_message_if_naming_Virtual_machine _end_in_hyphens.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\4_Verify_validation_message_if_specials_characters_used_to_name_Virtual_machine.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\4_Verify_validation_message_if_specials_characters_used_to_name_Virtual_machine.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\5_Verify _validation_message_if_leave_empty_hardware_settings.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\5_Verify _validation_message_if_leave_empty_hardware_settings.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\6_Verify_validation_message_when_input_0_value_hardware_settings.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\6_Verify_validation_message_when_input_0_value_hardware_settings.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\7_VerifyLeaveEmptyStoragePolicy.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\7_VerifyLeaveEmptyStoragePolicy.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\8_Verify_start_VM.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VM\8_Verify_start_VM.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\9_Verify_stop_VM.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VM\9_Verify_stop_VM.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_001_Verify_Virtual_Machine_Templatepage.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify Virtual Machine Template page › should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod" classname="Catalogue\TC_001_Verify_Virtual_Machine_Templatepage.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_002_Verify_delete_VMTemplate.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify Virtual Machine Template page › should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod" classname="Catalogue\TC_002_Verify_delete_VMTemplate.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_003_Verify_Import_Virtual_Machine_public.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify Virtual Machine Template page › should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod" classname="Catalogue\TC_003_Verify_Import_Virtual_Machine_public.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_004_Verify_ISOpage.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify view virtual machine template page › Should successfully display virtual machine Template page without UI or typo issues @dev @staging @preprod" classname="Catalogue\TC_004_Verify_ISOpage.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_005_Verify_upload_ISO_storage_as_public.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should upload ISO via local file successfully @dev @staging @preprod" classname="Catalogue\TC_005_Verify_upload_ISO_storage_as_public.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_006_Verify_uploading_of_ISO_storage_from_specificVirtualDataCenter.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should upload ISO via local file successfully @dev @staging @preprod" classname="Catalogue\TC_006_Verify_uploading_of_ISO_storage_from_specificVirtualDataCenter.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_007_Verify_download_ISO_storage_from_URL.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should display the ISO Upload form and allow uploading via Public URL @dev @staging @preprod" classname="Catalogue\TC_007_Verify_download_ISO_storage_from_URL.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_008_Verify_download_ISO_storage_for_specific_virtualdatacenter.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should display the ISO Upload form and allow uploading via URL @dev @staging @preprod" classname="Catalogue\TC_008_Verify_download_ISO_storage_for_specific_virtualdatacenter.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_009_Verify_view_virtualMachine_Template.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify view virtual machine template page › Should successfully display virtual machine Template page without any UI and Typo issues  @dev @staging @preprod" classname="Catalogue\TC_009_Verify_view_virtualMachine_Template.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_010_Verify_delete_ISO_from_Proxmox.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Storage Management › Should delete a public ISO from storage @dev @staging @preprod" classname="Catalogue\TC_010_Verify_delete_ISO_from_Proxmox.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_011_Verify_deleteISO_without_deleting_proxmoxData.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Storage Management › Should delete a public ISO from storage @dev @staging @preprod" classname="Catalogue\TC_011_Verify_deleteISO_without_deleting_proxmoxData.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Delete\TC_VerifyDeleteTenant.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="should verify modal contents and delete tenant" classname="Delete\TC_VerifyDeleteTenant.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Delete\TS_017VerifyDeleteReseller.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Delete\TS_017VerifyDeleteReseller.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\1_Verify_global_configuration_page.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify Global Configuration Page  › should be able to successfully view Global config page" classname="Global_page\1_Verify_global_configuration_page.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\10_Verify_create_site_name.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify create site name  › Should successfully create and display the site name " classname="Global_page\10_Verify_create_site_name.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\11_Verify_Vlan_Start_field.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify Vlan Start field  › Should successfully display by default the 11100 in the field" classname="Global_page\11_Verify_Vlan_Start_field.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\12_Verify_ON_maintenance_mode.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify ON maintenance mode   › should be able to successfully ON and display Maintence mode word in multiportal " classname="Global_page\12_Verify_ON_maintenance_mode.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\13_Verify_OFF_maintenance_mode.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify OFF maintenance mode   › should be able to successfully Off and disabled maintenance mode " classname="Global_page\13_Verify_OFF_maintenance_mode.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\14_Verify_update_support_email.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify update support email  › Should be able to successfully update support email" classname="Global_page\14_Verify_update_support_email.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\2_Verify_select_logo.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify select logo  › Should successfully select and display logo " classname="Global_page\2_Verify_select_logo.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\3_Verify_logo_upload_moreThan_5mbSize.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify logo upload more than 5mb size  › Should not be able to successfully upload image and display prompt message " classname="Global_page\3_Verify_logo_upload_moreThan_5mbSize.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\4_Verify_upload_non-img_file.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify Upload non-img file  › Should display prompt message successfully " classname="Global_page\4_Verify_upload_non-img_file.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\5_Verify_small_logo.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify select small logo  › should be able to successfully select and display small logo " classname="Global_page\5_Verify_small_logo.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\6_Verify_logo_upload_morThan_5mbSize_small.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify logo upload more than 5mb size (small)  › Should not be able to successfully upload image and display prompt message" classname="Global_page\6_Verify_logo_upload_morThan_5mbSize_small.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\7_Verify_upload_non-img_file_small.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify upload non-img file   › Should display prompt message successfully  " classname="Global_page\7_Verify_upload_non-img_file_small.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\8_Verify_OFF_debug_mode.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify OFF Debug mode › should be able to successfully turn OFF Debug mode" classname="Global_page\8_Verify_OFF_debug_mode.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\9_Verify_On_debug_mode.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify On Debug mode   › should be able to successfully On debug mode " classname="Global_page\9_Verify_On_debug_mode.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="login\login-error.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="6" failures="0" skipped="6" time="0" errors="0">
+<testcase name="Login Error Tests › should show error for invalid credentials @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Error Tests › should show error for empty username @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Error Tests › should show error for empty password @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Error Tests › should show error for empty form @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Error Tests › should show error for wrong username format @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Error Tests › should show error for short password @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="login\login-success.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="3" failures="0" skipped="3" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="login\login-success.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Success Tests › should login successfully with Administrator @dev @staging @preprod" classname="login\login-success.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Success Tests › should login successfully with Manager @dev @staging @preprod" classname="login\login-success.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Network\TS_001_Verify_internalNetwork_page.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Internal Networks Page › should login and display Internal Networks page" classname="Network\TS_001_Verify_internalNetwork_page.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Network\TS_002_Verify_create_internal.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Internal Networks Page › should login and display Internal Networks page" classname="Network\TS_002_Verify_create_internal.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Network\TS_003_Verify_EditInternalNetwork.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Internal Networks Page › should login and display Internal Networks page, then edit a network" classname="Network\TS_003_Verify_EditInternalNetwork.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Network\TS_004_Verify_deleteInternalNetwork.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Internal Networks Page › should login and display Internal Networks page" classname="Network\TS_004_Verify_deleteInternalNetwork.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_001_Verify_reseller_page.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_001_Verify_reseller_page.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_002_Verify_create_reseller.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_002_Verify_create_reseller.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_003_Verify_search_reseller.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_003_Verify_search_reseller.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_004_Verify_update_reseller_details.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_004_Verify_update_reseller_details.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_005_Verify_create_reseller.user.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_005_Verify_create_reseller.user.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_006_Verify_view_reseller_user.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_006_Verify_view_reseller_user.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_007_VerifyImpersonateResellerUser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_007_VerifyImpersonateResellerUser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_008_Verify_edit_reseller_user.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_008_Verify_edit_reseller_user.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_009_Verifydeletecreatedreselleruser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_009_Verifydeletecreatedreselleruser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_018 VerifyCreateTenant.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_018 VerifyCreateTenant.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_018.1VerifyCreateTenantNameUsingSpecialCharacter.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_018.1VerifyCreateTenantNameUsingSpecialCharacter.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_028VerifyTenantsPage.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_028VerifyTenantsPage.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_031VerifyViewTenant_Details.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_031VerifyViewTenant_Details.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_032VerifyUpdateTenant.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_032VerifyUpdateTenant.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_035VerifyCreateTenantUser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_035VerifyCreateTenantUser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_037VerifyUpdateCreateTenantUser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_037VerifyUpdateCreateTenantUser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_038VerifyImpersonateTenantUser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_038VerifyImpersonateTenantUser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_039VerifyCreateNewVDC.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_039VerifyCreateNewVDC.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_001_VerifyUserRolesPage.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › should be able to successfully display User role page " classname="User_Roles\TS_001_VerifyUserRolesPage.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_002_Verify_Search_Available_Permissions.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › Should successfully search available permissions for Service Provider Level  " classname="User_Roles\TS_002_Verify_Search_Available_Permissions.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_003_VerifyRoles_Section.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › Should successfully display list of roles, search bar, Create Role, Edit, Delete button on roles section page  " classname="User_Roles\TS_003_VerifyRoles_Section.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_004_Verify_Search_roles_created.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › Should successfully search roles by name  and display &quot;No results found&quot; if not available   " classname="User_Roles\TS_004_Verify_Search_roles_created.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_005_Verify_create_new_role.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page › Should create a new role with all permissions and verify it exists" classname="User_Roles\TS_005_Verify_create_new_role.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_006_Verify_edit_role.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Edit Role - Verify Permissions Retention and Update › Should verify retained permissions and update role description and permissions" classname="User_Roles\TS_006_Verify_edit_role.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_007_VerifyDeleteRole.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › should be able to successfully display User role page " classname="User_Roles\TS_007_VerifyDeleteRole.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_008_VerifyUser_section.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › should be able to successfully display User role page " classname="User_Roles\TS_008_VerifyUser_section.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_010_VerifyCreateNewUser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify create new user   › Should successfully create new user  " classname="User_Roles\TS_010_VerifyCreateNewUser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\10_Verify_rename_VM.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Clone ViMachinertual  › Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\10_Verify_rename_VM.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\10_VerifyNamingVirtualMachineTemplateEndinHyphen.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM Template name start or ends in Hyphen" classname="VDC\10_VerifyNamingVirtualMachineTemplateEndinHyphen.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\11_VerfiyNamingVirtualMachineTemplateSpecialCharacters.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM Template naming with special characters " classname="VDC\11_VerfiyNamingVirtualMachineTemplateSpecialCharacters.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\11_Verify_Convert_VM.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Clone Virtual Machine › Should be able to successfully Convert Virtual Machine to Template - Service Provider @dev @staging @preprod" classname="VDC\11_Verify_Convert_VM.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\8_Verify_create_VMTemplate.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VDC\8_Verify_create_VMTemplate.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\9_VerifyNamingVirtualMachineTemplatestartinHyphen.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM Template name start or ends in Hyphen" classname="VDC\9_VerifyNamingVirtualMachineTemplatestartinHyphen.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_Backup_section.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_Backup_section.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_clone_vm.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Clone ViMachinertual  › Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_clone_vm.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_create_Backup_Job.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_create_Backup_Job.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_delete_Backupjob.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_delete_Backupjob.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_delete_VDC.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_delete_VDC.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_delete_vm.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Delete Virtual Machine › Should be able to successfully delete Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_delete_vm.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_Edit_VirtualDataCenter.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_Edit_VirtualDataCenter.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_RemoveRecentTask.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="VDC\Verify_RemoveRecentTask.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_run_Backupjob.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_run_Backupjob.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_takeBackup.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_takeBackup.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_Tasklog_section.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_Tasklog_section.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_UpdateBackup_job.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_UpdateBackup_job.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_ViewRecentTask.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="VDC\Verify_ViewRecentTask.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_virtual_dataCenter_Usage.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_virtual_dataCenter_Usage.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_VirtualDataCenter_Storage_policies.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_VirtualDataCenter_Storage_policies.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\1_Verify_create_VM.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\1_Verify_create_VM.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\2_Verify_validation_message_if_naming_Virtual_machine_start_in_hyphens.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\2_Verify_validation_message_if_naming_Virtual_machine_start_in_hyphens.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\3_Verify_validation_message_if_naming_Virtual_machine _end_in_hyphens.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\3_Verify_validation_message_if_naming_Virtual_machine _end_in_hyphens.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\4_Verify_validation_message_if_specials_characters_used_to_name_Virtual_machine.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\4_Verify_validation_message_if_specials_characters_used_to_name_Virtual_machine.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\5_Verify _validation_message_if_leave_empty_hardware_settings.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\5_Verify _validation_message_if_leave_empty_hardware_settings.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\6_Verify_validation_message_when_input_0_value_hardware_settings.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\6_Verify_validation_message_when_input_0_value_hardware_settings.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\7_VerifyLeaveEmptyStoragePolicy.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\7_VerifyLeaveEmptyStoragePolicy.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\8_Verify_start_VM.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VM\8_Verify_start_VM.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\9_Verify_stop_VM.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VM\9_Verify_stop_VM.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_001_Verify_Virtual_Machine_Templatepage.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify Virtual Machine Template page › should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod" classname="Catalogue\TC_001_Verify_Virtual_Machine_Templatepage.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_002_Verify_delete_VMTemplate.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify Virtual Machine Template page › should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod" classname="Catalogue\TC_002_Verify_delete_VMTemplate.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_003_Verify_Import_Virtual_Machine_public.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify Virtual Machine Template page › should be able to successfully display Template page from Catalogue dropdown  @dev @staging @preprod" classname="Catalogue\TC_003_Verify_Import_Virtual_Machine_public.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_004_Verify_ISOpage.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify view virtual machine template page › Should successfully display virtual machine Template page without UI or typo issues @dev @staging @preprod" classname="Catalogue\TC_004_Verify_ISOpage.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_005_Verify_upload_ISO_storage_as_public.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should upload ISO via local file successfully @dev @staging @preprod" classname="Catalogue\TC_005_Verify_upload_ISO_storage_as_public.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_006_Verify_uploading_of_ISO_storage_from_specificVirtualDataCenter.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should upload ISO via local file successfully @dev @staging @preprod" classname="Catalogue\TC_006_Verify_uploading_of_ISO_storage_from_specificVirtualDataCenter.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_007_Verify_download_ISO_storage_from_URL.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should display the ISO Upload form and allow uploading via Public URL @dev @staging @preprod" classname="Catalogue\TC_007_Verify_download_ISO_storage_from_URL.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_008_Verify_download_ISO_storage_for_specific_virtualdatacenter.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Upload Flow › Should display the ISO Upload form and allow uploading via URL @dev @staging @preprod" classname="Catalogue\TC_008_Verify_download_ISO_storage_for_specific_virtualdatacenter.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_009_Verify_view_virtualMachine_Template.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify view virtual machine template page › Should successfully display virtual machine Template page without any UI and Typo issues  @dev @staging @preprod" classname="Catalogue\TC_009_Verify_view_virtualMachine_Template.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_010_Verify_delete_ISO_from_Proxmox.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Storage Management › Should delete a public ISO from storage @dev @staging @preprod" classname="Catalogue\TC_010_Verify_delete_ISO_from_Proxmox.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Catalogue\TC_011_Verify_deleteISO_without_deleting_proxmoxData.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Virtual Machine Template Page — ISO Storage Management › Should delete a public ISO from storage @dev @staging @preprod" classname="Catalogue\TC_011_Verify_deleteISO_without_deleting_proxmoxData.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Delete\TC_VerifyDeleteTenant.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="should verify modal contents and delete tenant" classname="Delete\TC_VerifyDeleteTenant.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Delete\TS_017VerifyDeleteReseller.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Delete\TS_017VerifyDeleteReseller.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\1_Verify_global_configuration_page.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify Global Configuration Page  › should be able to successfully view Global config page" classname="Global_page\1_Verify_global_configuration_page.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\10_Verify_create_site_name.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify create site name  › Should successfully create and display the site name " classname="Global_page\10_Verify_create_site_name.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\11_Verify_Vlan_Start_field.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify Vlan Start field  › Should successfully display by default the 11100 in the field" classname="Global_page\11_Verify_Vlan_Start_field.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\12_Verify_ON_maintenance_mode.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify ON maintenance mode   › should be able to successfully ON and display Maintence mode word in multiportal " classname="Global_page\12_Verify_ON_maintenance_mode.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\13_Verify_OFF_maintenance_mode.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify OFF maintenance mode   › should be able to successfully Off and disabled maintenance mode " classname="Global_page\13_Verify_OFF_maintenance_mode.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\14_Verify_update_support_email.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify update support email  › Should be able to successfully update support email" classname="Global_page\14_Verify_update_support_email.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\2_Verify_select_logo.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify select logo  › Should successfully select and display logo " classname="Global_page\2_Verify_select_logo.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\3_Verify_logo_upload_moreThan_5mbSize.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify logo upload more than 5mb size  › Should not be able to successfully upload image and display prompt message " classname="Global_page\3_Verify_logo_upload_moreThan_5mbSize.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\4_Verify_upload_non-img_file.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify Upload non-img file  › Should display prompt message successfully " classname="Global_page\4_Verify_upload_non-img_file.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\5_Verify_small_logo.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify select small logo  › should be able to successfully select and display small logo " classname="Global_page\5_Verify_small_logo.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\6_Verify_logo_upload_morThan_5mbSize_small.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify logo upload more than 5mb size (small)  › Should not be able to successfully upload image and display prompt message" classname="Global_page\6_Verify_logo_upload_morThan_5mbSize_small.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\7_Verify_upload_non-img_file_small.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify upload non-img file   › Should display prompt message successfully  " classname="Global_page\7_Verify_upload_non-img_file_small.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\8_Verify_OFF_debug_mode.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify OFF Debug mode › should be able to successfully turn OFF Debug mode" classname="Global_page\8_Verify_OFF_debug_mode.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Global_page\9_Verify_On_debug_mode.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify On Debug mode   › should be able to successfully On debug mode " classname="Global_page\9_Verify_On_debug_mode.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="login\login-error.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="6" failures="0" skipped="6" time="0" errors="0">
+<testcase name="Login Error Tests › should show error for invalid credentials @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Error Tests › should show error for empty username @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Error Tests › should show error for empty password @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Error Tests › should show error for empty form @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Error Tests › should show error for wrong username format @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Error Tests › should show error for short password @dev @staging @preprod" classname="login\login-error.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="login\login-success.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="3" failures="0" skipped="3" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="login\login-success.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Success Tests › should login successfully with Administrator @dev @staging @preprod" classname="login\login-success.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login Success Tests › should login successfully with Manager @dev @staging @preprod" classname="login\login-success.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Network\TS_001_Verify_internalNetwork_page.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Internal Networks Page › should login and display Internal Networks page" classname="Network\TS_001_Verify_internalNetwork_page.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Network\TS_002_Verify_create_internal.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Internal Networks Page › should login and display Internal Networks page" classname="Network\TS_002_Verify_create_internal.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Network\TS_003_Verify_EditInternalNetwork.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Internal Networks Page › should login and display Internal Networks page, then edit a network" classname="Network\TS_003_Verify_EditInternalNetwork.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Network\TS_004_Verify_deleteInternalNetwork.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Internal Networks Page › should login and display Internal Networks page" classname="Network\TS_004_Verify_deleteInternalNetwork.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_001_Verify_reseller_page.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_001_Verify_reseller_page.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_002_Verify_create_reseller.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_002_Verify_create_reseller.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_003_Verify_search_reseller.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_003_Verify_search_reseller.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_004_Verify_update_reseller_details.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_004_Verify_update_reseller_details.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_005_Verify_create_reseller.user.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_005_Verify_create_reseller.user.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_006_Verify_view_reseller_user.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_006_Verify_view_reseller_user.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_007_VerifyImpersonateResellerUser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_007_VerifyImpersonateResellerUser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_008_Verify_edit_reseller_user.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_008_Verify_edit_reseller_user.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="reseller\TS_009_Verifydeletecreatedreselleruser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="reseller\TS_009_Verifydeletecreatedreselleruser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_018 VerifyCreateTenant.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_018 VerifyCreateTenant.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_018.1VerifyCreateTenantNameUsingSpecialCharacter.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_018.1VerifyCreateTenantNameUsingSpecialCharacter.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_028VerifyTenantsPage.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_028VerifyTenantsPage.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_031VerifyViewTenant_Details.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_031VerifyViewTenant_Details.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_032VerifyUpdateTenant.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_032VerifyUpdateTenant.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_035VerifyCreateTenantUser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_035VerifyCreateTenantUser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_037VerifyUpdateCreateTenantUser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_037VerifyUpdateCreateTenantUser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_038VerifyImpersonateTenantUser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_038VerifyImpersonateTenantUser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Tenant\TC_039VerifyCreateNewVDC.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="Tenant\TC_039VerifyCreateNewVDC.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_001_VerifyUserRolesPage.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › should be able to successfully display User role page " classname="User_Roles\TS_001_VerifyUserRolesPage.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_002_Verify_Search_Available_Permissions.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › Should successfully search available permissions for Service Provider Level  " classname="User_Roles\TS_002_Verify_Search_Available_Permissions.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_003_VerifyRoles_Section.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › Should successfully display list of roles, search bar, Create Role, Edit, Delete button on roles section page  " classname="User_Roles\TS_003_VerifyRoles_Section.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_004_Verify_Search_roles_created.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › Should successfully search roles by name  and display &quot;No results found&quot; if not available   " classname="User_Roles\TS_004_Verify_Search_roles_created.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_005_Verify_create_new_role.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page › Should create a new role with all permissions and verify it exists" classname="User_Roles\TS_005_Verify_create_new_role.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_006_Verify_edit_role.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Edit Role - Verify Permissions Retention and Update › Should verify retained permissions and update role description and permissions" classname="User_Roles\TS_006_Verify_edit_role.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_007_VerifyDeleteRole.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › should be able to successfully display User role page " classname="User_Roles\TS_007_VerifyDeleteRole.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_008_VerifyUser_section.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify User Role page   › should be able to successfully display User role page " classname="User_Roles\TS_008_VerifyUser_section.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="User_Roles\TS_010_VerifyCreateNewUser.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Verify create new user   › Should successfully create new user  " classname="User_Roles\TS_010_VerifyCreateNewUser.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\10_Verify_rename_VM.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Clone ViMachinertual  › Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\10_Verify_rename_VM.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\10_VerifyNamingVirtualMachineTemplateEndinHyphen.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM Template name start or ends in Hyphen" classname="VDC\10_VerifyNamingVirtualMachineTemplateEndinHyphen.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\11_VerfiyNamingVirtualMachineTemplateSpecialCharacters.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM Template naming with special characters " classname="VDC\11_VerfiyNamingVirtualMachineTemplateSpecialCharacters.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\11_Verify_Convert_VM.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Clone Virtual Machine › Should be able to successfully Convert Virtual Machine to Template - Service Provider @dev @staging @preprod" classname="VDC\11_Verify_Convert_VM.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\8_Verify_create_VMTemplate.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VDC\8_Verify_create_VMTemplate.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\9_VerifyNamingVirtualMachineTemplatestartinHyphen.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM Template name start or ends in Hyphen" classname="VDC\9_VerifyNamingVirtualMachineTemplatestartinHyphen.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_Backup_section.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_Backup_section.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_clone_vm.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Clone ViMachinertual  › Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_clone_vm.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_create_Backup_Job.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_create_Backup_Job.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_delete_Backupjob.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_delete_Backupjob.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_delete_VDC.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_delete_VDC.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_delete_vm.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Delete Virtual Machine › Should be able to successfully delete Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_delete_vm.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_Edit_VirtualDataCenter.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_Edit_VirtualDataCenter.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_RemoveRecentTask.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="VDC\Verify_RemoveRecentTask.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_run_Backupjob.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_run_Backupjob.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_takeBackup.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_takeBackup.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_Tasklog_section.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Should be able to successfully Clone Virtual Machine - Service Provider @dev @staging @preprod" classname="VDC\Verify_Tasklog_section.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_UpdateBackup_job.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_UpdateBackup_job.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_ViewRecentTask.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Login Success Tests › should login successfully with Service Provider @dev @staging @preprod" classname="VDC\Verify_ViewRecentTask.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_virtual_dataCenter_Usage.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_virtual_dataCenter_Usage.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VDC\Verify_VirtualDataCenter_Storage_policies.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VDC\Verify_VirtualDataCenter_Storage_policies.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\1_Verify_create_VM.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\1_Verify_create_VM.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\2_Verify_validation_message_if_naming_Virtual_machine_start_in_hyphens.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\2_Verify_validation_message_if_naming_Virtual_machine_start_in_hyphens.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\3_Verify_validation_message_if_naming_Virtual_machine _end_in_hyphens.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\3_Verify_validation_message_if_naming_Virtual_machine _end_in_hyphens.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\4_Verify_validation_message_if_specials_characters_used_to_name_Virtual_machine.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\4_Verify_validation_message_if_specials_characters_used_to_name_Virtual_machine.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\5_Verify _validation_message_if_leave_empty_hardware_settings.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\5_Verify _validation_message_if_leave_empty_hardware_settings.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\6_Verify_validation_message_when_input_0_value_hardware_settings.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\6_Verify_validation_message_when_input_0_value_hardware_settings.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\7_VerifyLeaveEmptyStoragePolicy.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Create VM - All in One Flow" classname="VM\7_VerifyLeaveEmptyStoragePolicy.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\8_Verify_start_VM.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VM\8_Verify_start_VM.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="VM\9_Verify_stop_VM.spec.ts" timestamp="2025-09-15T01:53:31.086Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Update Backup Job modal - full workflow with verification" classname="VM\9_Verify_stop_VM.spec.ts" time="0">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
 </testsuites>

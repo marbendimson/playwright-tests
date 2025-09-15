@@ -42,9 +42,14 @@ pipeline {
                   export TEST_ENV=${params.TEST_ENV}
                   npx playwright test tests/Catalogue \
                     --project=${params.BROWSER} \
-                    --reporter=list,junit,html \
                     --output=results
                 """
+            }
+        }
+        stage('List Results Directory') {
+            steps {
+                echo "Listing contents of results directory for debugging:"
+                sh 'ls -l results'
             }
         }
 
@@ -71,24 +76,38 @@ pipeline {
 
     post {
         success {
-            echo "Sending Slack SUCCESS notification..."
-            slackSend(
-                teamDomain: 'hostednetwork',
-                channel: '#qa-alerts', 
-                color: 'good', 
-                message: "✅ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} SUCCESS",
-                tokenCredentialId: 'Slack-bot-Token'
-            )
+            // echo "Sending Slack SUCCESS notification..."
+            // slackSend(
+            //     teamDomain: 'hostednetwork',
+            //     channel: '#qa-alerts', 
+            //     color: 'good', 
+            //     message: "✅ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} SUCCESS",
+            //     tokenCredentialId: 'Slack-bot-Token'
+            // )
+        
+        echo "Sending success email..."
+        script {
+            try {
+                mail(
+                    to: 'marben.dimson@hostednetwork.com.au',
+                    subject: "Jenkins Build SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                    body: "Build succeeded! Check Jenkins build page: ${env.BUILD_URL}"
+                )
+            } catch (Exception e) {
+                echo "⚠️ Failed to send success email: ${e.message}"
+            }
         }
+        }
+    
         failure {
-            echo "Sending Slack FAILURE notification..."
-            slackSend(
-                teamDomain: 'hostednetwork',
-                channel: '#qa-alerts', 
-                color: 'danger', 
-                message: "❌ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} FAILED",
-                tokenCredentialId: 'Slack-bot-Token'
-            )
+            // echo "Sending Slack FAILURE notification..."
+            // slackSend(
+            //     teamDomain: 'hostednetwork',
+            //     channel: '#qa-alerts', 
+            //     color: 'danger', 
+            //     message: "❌ Build ${env.JOB_NAME} #${env.BUILD_NUMBER} FAILED",
+            //     tokenCredentialId: 'Slack-bot-Token'
+            // )
 
             echo "Sending failure email..."
             mail(
