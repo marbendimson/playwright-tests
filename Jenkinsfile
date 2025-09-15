@@ -40,7 +40,7 @@ pipeline {
             steps {
                 sh """
                   export TEST_ENV=${params.TEST_ENV}
-                  npx playwright test tests/Global_page \
+                  npx playwright test tests/Catalogue \
                     --project=${params.BROWSER} \
                     --reporter=list,junit,html \
                     --output=results
@@ -50,7 +50,7 @@ pipeline {
 
         stage('Archive Test Results') {
             steps {
-                junit 'results/*.xml'
+                junit 'results/results.xml'
                 archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
             }
         }

@@ -1,166 +1,104 @@
-<testsuites id="" name="" tests="4" failures="4" skipped="0" errors="0" time="104.358204">
-<testsuite name="Network\TS_001_Verify_internalNetwork_page.spec.ts" timestamp="2025-09-12T07:29:59.314Z" hostname="chromium" tests="1" failures="1" skipped="0" time="24.356" errors="0">
-<testcase name="Internal Networks Page › should login and display Internal Networks page" classname="Network\TS_001_Verify_internalNetwork_page.spec.ts" time="24.356">
-<failure message="TS_001_Verify_internalNetwork_page.spec.ts:7:7 should login and display Internal Networks page" type="FAILURE">
-<![CDATA[  [chromium] › Network\TS_001_Verify_internalNetwork_page.spec.ts:7:7 › Internal Networks Page › should login and display Internal Networks page 
+<testsuites id="" name="" tests="14" failures="1" skipped="0" errors="0" time="78.54904">
+<testsuite name="Global_page\1_Verify_global_configuration_page.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.711" errors="0">
+<testcase name="Verify Global Configuration Page  › should be able to successfully view Global config page" classname="Global_page\1_Verify_global_configuration_page.spec.ts" time="10.711">
+</testcase>
+</testsuite>
+<testsuite name="Global_page\10_Verify_create_site_name.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="11.918" errors="0">
+<testcase name="Verify create site name  › Should successfully create and display the site name " classname="Global_page\10_Verify_create_site_name.spec.ts" time="11.918">
+</testcase>
+</testsuite>
+<testsuite name="Global_page\11_Verify_Vlan_Start_field.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="11.719" errors="0">
+<testcase name="Verify Vlan Start field  › Should successfully display by default the 11100 in the field" classname="Global_page\11_Verify_Vlan_Start_field.spec.ts" time="11.719">
+</testcase>
+</testsuite>
+<testsuite name="Global_page\12_Verify_ON_maintenance_mode.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.193" errors="0">
+<testcase name="Verify ON maintenance mode   › should be able to successfully ON and display Maintence mode word in multiportal " classname="Global_page\12_Verify_ON_maintenance_mode.spec.ts" time="10.193">
+</testcase>
+</testsuite>
+<testsuite name="Global_page\13_Verify_OFF_maintenance_mode.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="1" skipped="0" time="14.836" errors="0">
+<testcase name="Verify OFF maintenance mode   › should be able to successfully Off and disabled maintenance mode " classname="Global_page\13_Verify_OFF_maintenance_mode.spec.ts" time="14.836">
+<failure message="13_Verify_OFF_maintenance_mode.spec.ts:7:7 should be able to successfully Off and disabled maintenance mode " type="FAILURE">
+<![CDATA[  [chromium] › Global_page\13_Verify_OFF_maintenance_mode.spec.ts:7:7 › Verify OFF maintenance mode   › should be able to successfully Off and disabled maintenance mode  
 
-    Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://dev.multiportal.io/login
+    Error: expect(locator).toHaveJSProperty(expected) failed
+
+    Locator:  locator('tr:has(td.text-white:has-text("Maintenance Mode"))').locator('input[name="Setting[maintenance_mode]"]')
+    Expected: false
+    Received: true
+    Timeout:  5000ms
+
     Call log:
-      - navigating to "https://dev.multiportal.io/login", waiting until "load"
+      - Expect "toHaveJSProperty" with timeout 5000ms
+      - waiting for locator('tr:has(td.text-white:has-text("Maintenance Mode"))').locator('input[name="Setting[maintenance_mode]"]')
+        9 × locator resolved to <input id="w2" value="1" type="checkbox" name="Setting[maintenance_mode]" data-krajee-bootstrapswitch="bootstrapSwitch_2d390c3d"/>
+          - unexpected value "true"
 
 
-       8 |     const user = getUserByRole('Service Provider');
-       9 |
-    > 10 |     await page.goto(env.baseURL + '/login');
-         |                ^
-      11 |     await page.fill(loginSelectors.username, user.username);
-      12 |     await page.fill(loginSelectors.password, user.password);
-      13 |      await page.click(loginSelectors.submit);
-        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\Network\TS_001_Verify_internalNetwork_page.spec.ts:10:16
+      37 | // Verify the hidden checkbox is checked
+      38 | const mainInput = maintenanceRow.locator('input[name="Setting[maintenance_mode]"]');
+    > 39 | await expect(mainInput).toHaveJSProperty('checked', false);
+         |                         ^
+      40 |
+      41 | // Save settings
+      42 | const saveBtn = page.getByRole('button', { name: 'Save' });
+        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\Global_page\13_Verify_OFF_maintenance_mode.spec.ts:39:25
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ..\test-results\Network-TS_001_Verify_inte-2181a-play-Internal-Networks-page-chromium\test-failed-1.png
+    ..\test-results\Global_page-13_Verify_OFF_-3daa3--disabled-maintenance-mode--chromium\test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ..\test-results\Network-TS_001_Verify_inte-2181a-play-Internal-Networks-page-chromium\video.webm
+    ..\test-results\Global_page-13_Verify_OFF_-3daa3--disabled-maintenance-mode--chromium\video.webm
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    Error Context: ..\test-results\Network-TS_001_Verify_inte-2181a-play-Internal-Networks-page-chromium\error-context.md
+    Error Context: ..\test-results\Global_page-13_Verify_OFF_-3daa3--disabled-maintenance-mode--chromium\error-context.md
 ]]>
 </failure>
 <system-out>
 <![CDATA[
-[[ATTACHMENT|..\test-results\Network-TS_001_Verify_inte-2181a-play-Internal-Networks-page-chromium\test-failed-1.png]]
+[[ATTACHMENT|..\test-results\Global_page-13_Verify_OFF_-3daa3--disabled-maintenance-mode--chromium\test-failed-1.png]]
 
-[[ATTACHMENT|..\test-results\Network-TS_001_Verify_inte-2181a-play-Internal-Networks-page-chromium\video.webm]]
+[[ATTACHMENT|..\test-results\Global_page-13_Verify_OFF_-3daa3--disabled-maintenance-mode--chromium\video.webm]]
 
-[[ATTACHMENT|..\test-results\Network-TS_001_Verify_inte-2181a-play-Internal-Networks-page-chromium\error-context.md]]
+[[ATTACHMENT|..\test-results\Global_page-13_Verify_OFF_-3daa3--disabled-maintenance-mode--chromium\error-context.md]]
 ]]>
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="Network\TS_002_Verify_create_internal.spec.ts" timestamp="2025-09-12T07:29:59.314Z" hostname="chromium" tests="1" failures="1" skipped="0" time="24.338" errors="0">
-<testcase name="Internal Networks Page › should login and display Internal Networks page" classname="Network\TS_002_Verify_create_internal.spec.ts" time="24.338">
-<failure message="TS_002_Verify_create_internal.spec.ts:8:7 should login and display Internal Networks page" type="FAILURE">
-<![CDATA[  [chromium] › Network\TS_002_Verify_create_internal.spec.ts:8:7 › Internal Networks Page › should login and display Internal Networks page 
-
-    Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://dev.multiportal.io/login
-    Call log:
-      - navigating to "https://dev.multiportal.io/login", waiting until "load"
-
-
-       9 |     const user = getUserByRole('Service Provider');
-      10 |
-    > 11 |     await page.goto(env.baseURL + '/login');
-         |                ^
-      12 |     await page.fill(loginSelectors.username, user.username);
-      13 |     await page.fill(loginSelectors.password, user.password);
-      14 |     await page.click(loginSelectors.submit);
-        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\Network\TS_002_Verify_create_internal.spec.ts:11:16
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ..\test-results\Network-TS_002_Verify_crea-130f3-play-Internal-Networks-page-chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ..\test-results\Network-TS_002_Verify_crea-130f3-play-Internal-Networks-page-chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ..\test-results\Network-TS_002_Verify_crea-130f3-play-Internal-Networks-page-chromium\error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|..\test-results\Network-TS_002_Verify_crea-130f3-play-Internal-Networks-page-chromium\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\Network-TS_002_Verify_crea-130f3-play-Internal-Networks-page-chromium\video.webm]]
-
-[[ATTACHMENT|..\test-results\Network-TS_002_Verify_crea-130f3-play-Internal-Networks-page-chromium\error-context.md]]
-]]>
-</system-out>
+<testsuite name="Global_page\14_Verify_update_support_email.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.031" errors="0">
+<testcase name="Verify update support email  › Should be able to successfully update support email" classname="Global_page\14_Verify_update_support_email.spec.ts" time="10.031">
 </testcase>
 </testsuite>
-<testsuite name="Network\TS_003_Verify_EditInternalNetwork.spec.ts" timestamp="2025-09-12T07:29:59.314Z" hostname="chromium" tests="1" failures="1" skipped="0" time="24.443" errors="0">
-<testcase name="Internal Networks Page › should login and display Internal Networks page, then edit a network" classname="Network\TS_003_Verify_EditInternalNetwork.spec.ts" time="24.443">
-<failure message="TS_003_Verify_EditInternalNetwork.spec.ts:8:7 should login and display Internal Networks page, then edit a network" type="FAILURE">
-<![CDATA[  [chromium] › Network\TS_003_Verify_EditInternalNetwork.spec.ts:8:7 › Internal Networks Page › should login and display Internal Networks page, then edit a network 
-
-    Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://dev.multiportal.io/login
-    Call log:
-      - navigating to "https://dev.multiportal.io/login", waiting until "load"
-
-
-      10 |
-      11 |     // Login
-    > 12 |     await page.goto(`${env.baseURL}/login`);
-         |                ^
-      13 |     await page.fill(loginSelectors.username, user.username);
-      14 |     await page.fill(loginSelectors.password, user.password);
-      15 |     await page.click(loginSelectors.submit);
-        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\Network\TS_003_Verify_EditInternalNetwork.spec.ts:12:16
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ..\test-results\Network-TS_003_Verify_Edit-727a8-ks-page-then-edit-a-network-chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ..\test-results\Network-TS_003_Verify_Edit-727a8-ks-page-then-edit-a-network-chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ..\test-results\Network-TS_003_Verify_Edit-727a8-ks-page-then-edit-a-network-chromium\error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|..\test-results\Network-TS_003_Verify_Edit-727a8-ks-page-then-edit-a-network-chromium\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\Network-TS_003_Verify_Edit-727a8-ks-page-then-edit-a-network-chromium\video.webm]]
-
-[[ATTACHMENT|..\test-results\Network-TS_003_Verify_Edit-727a8-ks-page-then-edit-a-network-chromium\error-context.md]]
-]]>
-</system-out>
+<testsuite name="Global_page\2_Verify_select_logo.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.063" errors="0">
+<testcase name="Verify select logo  › Should successfully select and display logo " classname="Global_page\2_Verify_select_logo.spec.ts" time="9.063">
 </testcase>
 </testsuite>
-<testsuite name="Network\TS_004_Verify_deleteInternalNetwork.spec.ts" timestamp="2025-09-12T07:29:59.314Z" hostname="chromium" tests="1" failures="1" skipped="0" time="24.439" errors="0">
-<testcase name="Internal Networks Page › should login and display Internal Networks page" classname="Network\TS_004_Verify_deleteInternalNetwork.spec.ts" time="24.439">
-<failure message="TS_004_Verify_deleteInternalNetwork.spec.ts:8:7 should login and display Internal Networks page" type="FAILURE">
-<![CDATA[  [chromium] › Network\TS_004_Verify_deleteInternalNetwork.spec.ts:8:7 › Internal Networks Page › should login and display Internal Networks page 
-
-    Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://dev.multiportal.io/login
-    Call log:
-      - navigating to "https://dev.multiportal.io/login", waiting until "load"
-
-
-       9 |     const user = getUserByRole('Service Provider');
-      10 |
-    > 11 |     await page.goto(env.baseURL + '/login');
-         |                ^
-      12 |     await page.fill(loginSelectors.username, user.username);
-      13 |     await page.fill(loginSelectors.password, user.password);
-      14 |     await page.click(loginSelectors.submit);
-        at C:\Users\marben.dimson\Desktop\Auto\HN\MP\tests\Network\TS_004_Verify_deleteInternalNetwork.spec.ts:11:16
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ..\test-results\Network-TS_004_Verify_dele-97fa7-play-Internal-Networks-page-chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ..\test-results\Network-TS_004_Verify_dele-97fa7-play-Internal-Networks-page-chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ..\test-results\Network-TS_004_Verify_dele-97fa7-play-Internal-Networks-page-chromium\error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|..\test-results\Network-TS_004_Verify_dele-97fa7-play-Internal-Networks-page-chromium\test-failed-1.png]]
-
-[[ATTACHMENT|..\test-results\Network-TS_004_Verify_dele-97fa7-play-Internal-Networks-page-chromium\video.webm]]
-
-[[ATTACHMENT|..\test-results\Network-TS_004_Verify_dele-97fa7-play-Internal-Networks-page-chromium\error-context.md]]
-]]>
-</system-out>
+<testsuite name="Global_page\3_Verify_logo_upload_moreThan_5mbSize.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.456" errors="0">
+<testcase name="Verify logo upload more than 5mb size  › Should not be able to successfully upload image and display prompt message " classname="Global_page\3_Verify_logo_upload_moreThan_5mbSize.spec.ts" time="9.456">
+</testcase>
+</testsuite>
+<testsuite name="Global_page\4_Verify_upload_non-img_file.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.817" errors="0">
+<testcase name="Verify Upload non-img file  › Should display prompt message successfully " classname="Global_page\4_Verify_upload_non-img_file.spec.ts" time="9.817">
+</testcase>
+</testsuite>
+<testsuite name="Global_page\5_Verify_small_logo.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.114" errors="0">
+<testcase name="Verify select small logo  › should be able to successfully select and display small logo " classname="Global_page\5_Verify_small_logo.spec.ts" time="9.114">
+</testcase>
+</testsuite>
+<testsuite name="Global_page\6_Verify_logo_upload_morThan_5mbSize_small.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.539" errors="0">
+<testcase name="Verify logo upload more than 5mb size (small)  › Should not be able to successfully upload image and display prompt message" classname="Global_page\6_Verify_logo_upload_morThan_5mbSize_small.spec.ts" time="9.539">
+</testcase>
+</testsuite>
+<testsuite name="Global_page\7_Verify_upload_non-img_file_small.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.931" errors="0">
+<testcase name="Verify upload non-img file   › Should display prompt message successfully  " classname="Global_page\7_Verify_upload_non-img_file_small.spec.ts" time="9.931">
+</testcase>
+</testsuite>
+<testsuite name="Global_page\8_Verify_OFF_debug_mode.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.371" errors="0">
+<testcase name="Verify OFF Debug mode › should be able to successfully turn OFF Debug mode" classname="Global_page\8_Verify_OFF_debug_mode.spec.ts" time="9.371">
+</testcase>
+</testsuite>
+<testsuite name="Global_page\9_Verify_On_debug_mode.spec.ts" timestamp="2025-09-15T00:43:48.436Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.244" errors="0">
+<testcase name="Verify On Debug mode   › should be able to successfully On debug mode " classname="Global_page\9_Verify_On_debug_mode.spec.ts" time="9.244">
 </testcase>
 </testsuite>
 </testsuites>
